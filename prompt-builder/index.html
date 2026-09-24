@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="description" content="免費 Prompt 產生器：揀香港生活場景（返工、搵工、租樓、學生、小生意、政府表格），逐格填【】，即時砌好完整 prompt，一撳複製。全部喺你部機組合，唔會傳出。" />
+  <meta property="og:title" content="Prompt 產生器｜揀場景・填空・一撳複製｜JD Tech" />
+  <meta property="og:description" content="30 個香港場景，逐格填【】即時砌好 prompt。免費、唔使登入、資料唔會傳出。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jainaspp.github.io/jd-tech-landing/prompt-builder/" />
+  <meta property="og:image" content="https://jainaspp.github.io/jd-tech-landing/assets/og-share.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="JD Tech｜粵語 AI 日更 — 免費 AI 工具 3 步實測" />
+  <meta property="og:site_name" content="JD Tech" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prompt 產生器｜揀場景・填空・一撳複製｜JD Tech" />
+  <meta name="twitter:description" content="30 個香港場景，逐格填【】即時砌好 prompt。免費、唔使登入、資料唔會傳出。" />
+  <meta name="twitter:image" content="https://jainaspp.github.io/jd-tech-landing/assets/og-share.png" />
+  <link rel="canonical" href="https://jainaspp.github.io/jd-tech-landing/prompt-builder/" />
+  <title>Prompt 產生器｜揀場景・填空・一撳複製｜JD Tech</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="icon" href="../assets/favicon.ico" sizes="any" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" sizes="180x180" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "主頁",
+          "item": "https://jainaspp.github.io/jd-tech-landing/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Prompt 產生器",
+          "item": "https://jainaspp.github.io/jd-tech-landing/prompt-builder/"
+        }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Prompt 產生器｜JD Tech",
+      "url": "https://jainaspp.github.io/jd-tech-landing/prompt-builder/",
+      "description": "揀香港生活場景，逐格填【】，即時砌好完整 AI prompt 並複製。全部喺瀏覽器組合，唔會傳出。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "inLanguage": "zh-HK",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "HKD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "JD Tech",
+        "logo": "https://jainaspp.github.io/jd-tech-landing/assets/apple-touch-icon.png",
+        "sameAs": [
+          "https://www.instagram.com/rabithead1881/"
+        ]
+      }
+    }
+  ]
+}
+  </script>
+  <style>
+    .pb-privacy {
+      margin: 4px 0 18px;
+      padding: 12px 14px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 204, 128, 0.55);
+      background: rgba(255, 204, 128, 0.08);
+      color: #ffe0b2;
+      font-size: 0.86rem;
+      line-height: 1.55;
+    }
+    .pb-privacy strong { color: #ffcc80; }
+    .pb-step { margin-top: 22px; }
+    .pb-step[hidden] { display: none; }
+    .pb-fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+    .pb-fieldset legend { padding: 0; }
+    .pb-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pb-chip { position: relative; }
+    .pb-chip input, .pb-scn input, .pb-opt input {
+      position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0;
+    }
+    .pb-chip span {
+      display: inline-flex; align-items: center; min-height: 44px;
+      padding: 8px 14px; border-radius: 999px;
+      border: 1px solid rgba(0, 229, 255, 0.4); background: var(--bg-card);
+      color: var(--text); font-size: 0.88rem; font-weight: 700; cursor: pointer;
+    }
+    .pb-chip input:checked + span { background: var(--accent); color: #0A0A0A; border-color: var(--accent); }
+    .pb-chip input:focus-visible + span,
+    .pb-scn input:focus-visible + .pb-scn-card,
+    .pb-opt input:focus-visible + span { outline: 3px solid #ffffff; outline-offset: 2px; }
+    .pb-scn-list { display: flex; flex-direction: column; gap: 8px; }
+    .pb-scn { position: relative; display: block; }
+    .pb-scn-card {
+      display: block; padding: 12px 14px; border-radius: 12px; cursor: pointer;
+      border: 1px solid var(--border); background: var(--bg-card);
+    }
+    .pb-scn-title { display: block; font-weight: 700; font-size: 0.92rem; line-height: 1.4; }
+    .pb-scn-desc { display: block; font-size: 0.78rem; color: var(--muted); line-height: 1.45; margin-top: 2px; }
+    .pb-scn input:checked + .pb-scn-card { border-color: var(--accent); background: rgba(0, 229, 255, 0.1); }
+    .pb-scn input:checked + .pb-scn-card .pb-scn-title { color: var(--accent); }
+    .pb-form-head { font-size: 1rem; font-weight: 700; line-height: 1.4; margin-bottom: 4px; }
+    .pb-form-head:focus { outline: none; }
+    .pb-meta { font-size: 0.8rem; color: var(--muted); line-height: 1.5; margin-bottom: 12px; }
+    .pb-meta strong { color: #e8e8e8; }
+    .pb-field { margin-bottom: 14px; }
+    .pb-label, .pb-field legend {
+      display: block; font-size: 0.86rem; font-weight: 700; color: #e8e8e8; margin-bottom: 6px;
+    }
+    .pb-raw { display: block; font-weight: 400; font-size: 0.74rem; color: var(--muted); margin-top: 1px; }
+    .pb-input {
+      width: 100%; min-height: 46px; padding: 10px 12px; border-radius: 10px;
+      border: 1px solid rgba(0, 229, 255, 0.35); background: #0d0d0d; color: var(--text);
+      font-size: 1rem; font-family: inherit; line-height: 1.5;
+    }
+    textarea.pb-input { min-height: 96px; resize: vertical; }
+    select.pb-input { appearance: auto; }
+    .pb-input::placeholder { color: #8a8a8a; }
+    .pb-input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+    .pb-opts { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pb-opt { position: relative; }
+    .pb-opt span {
+      display: inline-flex; align-items: center; min-height: 44px; padding: 8px 14px;
+      border-radius: 10px; border: 1px solid rgba(0, 229, 255, 0.35); background: #0d0d0d;
+      color: var(--text); font-size: 0.9rem; cursor: pointer;
+    }
+    .pb-opt input:checked + span { background: rgba(0, 229, 255, 0.16); border-color: var(--accent); color: var(--accent); font-weight: 700; }
+    .pb-opt input[type="checkbox"]:checked + span::before { content: "✓ "; }
+    .pb-opt-clear {
+      margin-top: 4px; background: none; border: 0; color: var(--muted); font: inherit;
+      font-size: 0.78rem; cursor: pointer; padding: 8px 0; min-height: 36px; text-decoration: underline;
+    }
+    .pb-opt-clear:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .pb-warn { font-size: 0.78rem; color: #ffcc80; margin-top: 6px; line-height: 1.45; }
+    .pb-actions { display: flex; gap: 10px; margin-top: 10px; }
+    .pb-actions .btn { flex: 1; }
+    .pb-btn-ghost {
+      background: transparent; color: var(--accent); border: 1px solid rgba(0, 229, 255, 0.5);
+      width: auto; flex: 0 0 auto !important; padding: 12px 16px;
+    }
+    .pb-out-wrap .code-block pre { padding: 14px; min-height: 120px; }
+    .pb-out-wrap mark.pb-filled { background: rgba(0, 229, 255, 0.18); color: #ffffff; border-radius: 3px; padding: 0 1px; }
+    .pb-out-wrap .pb-missing { color: #ffcc80; background: rgba(255, 204, 128, 0.1); border-radius: 3px; }
+    .pb-status { font-size: 0.82rem; color: var(--muted); margin-top: 8px; min-height: 1.3em; }
+    .pb-status.ok { color: var(--accent); }
+    .pb-status.err { color: #ff8a80; }
+    .pb-fallback { margin-top: 8px; }
+    .pb-next { font-size: 0.86rem; color: #e8e8e8; line-height: 1.6; margin-top: 16px; }
+    .pb-next a, .pb-pack a, .pb-intro a { color: var(--accent); text-decoration: none; font-weight: 700; }
+    .pb-next a:hover, .pb-pack a:hover, .pb-intro a:hover { text-decoration: underline; }
+    .pb-pack { font-size: 0.84rem; color: var(--muted); line-height: 1.6; margin-top: 10px; }
+    .pb-intro { font-size: 0.9rem; color: #e8e8e8; line-height: 1.6; margin-bottom: 12px; }
+    .pb-legend-note { font-size: 0.78rem; color: var(--muted); margin: -4px 0 10px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="top-nav" aria-label="導航">
+      <a href="../">← 返主頁</a>
+      <a href="../prompts-hk/">Prompt 庫（30 條）</a>
+    </nav>
+
+    <header class="tut-header">
+      <div class="badge">JD Tech</div>
+      <h1>Prompt 產生器｜揀場景・填空・一撳複製</h1>
+      <p class="sub">30 個香港生活場景　·　免費　·　唔使登入</p>
+    </header>
+
+    <p class="pb-intro">由 <a href="../prompts-hk/">香港實用 Prompt 庫</a> 30 條 prompt 砌出嚟：揀分類 → 揀場景 → 逐格填【】，下面即時出完整 prompt，複製去 AI 工具就用得。</p>
+
+    <p class="pb-privacy" role="note"><strong>私隱：</strong>你輸入嘅內容只喺你部機入面組合，唔會傳出。身份證、銀行戶口、密碼一律唔好貼入 AI。</p>
+
+    <noscript>
+      <p class="pb-privacy">呢個產生器要開 JavaScript 先用到。可以直接去 <a href="../prompts-hk/">Prompt 庫</a> 抄 30 條 prompt，自己填【】。</p>
+    </noscript>
+
+    <section class="pb-step" id="pb-step-cat" aria-labelledby="pb-cat-title">
+      <fieldset class="pb-fieldset">
+        <legend><h2 id="pb-cat-title" class="section-title">① 揀分類</h2></legend>
+        <div class="pb-chips" id="pb-cats"></div>
+      </fieldset>
+    </section>
+
+    <section class="pb-step" id="pb-step-scn" aria-labelledby="pb-scn-title" hidden>
+      <fieldset class="pb-fieldset">
+        <legend><h2 id="pb-scn-title" class="section-title">② 揀場景</h2></legend>
+        <div class="pb-scn-list" id="pb-scns"></div>
+      </fieldset>
+    </section>
+
+    <section class="pb-step" id="pb-step-form" aria-labelledby="pb-form-title" hidden>
+      <h2 class="section-title" id="pb-form-title">③ 填【】</h2>
+      <p class="pb-form-head" id="pb-form-head" tabindex="-1"></p>
+      <p class="pb-meta" id="pb-meta"></p>
+      <p class="pb-legend-note">留空嘅格會保持【】，方便你睇到仲欠咩。</p>
+      <form id="pb-form" autocomplete="off" novalidate></form>
+    </section>
+
+    <section class="pb-step pb-out-wrap" id="pb-step-out" aria-labelledby="pb-out-title" hidden>
+      <h2 class="section-title" id="pb-out-title">④ 完整 prompt（即時更新）</h2>
+      <p class="pb-meta" id="pb-missing-count" aria-live="polite"></p>
+      <div class="code-block">
+        <pre id="pb-output" aria-label="組合好嘅 prompt"></pre>
+      </div>
+      <div class="pb-actions">
+        <button type="button" class="btn btn-primary" id="pb-copy">複製</button>
+        <button type="button" class="btn pb-btn-ghost" id="pb-reset">清空重填</button>
+      </div>
+      <p class="pb-status" id="pb-status" role="status" aria-live="polite"></p>
+      <div class="pb-fallback" id="pb-fallback" hidden>
+        <label class="pb-label" for="pb-fallback-text">自動複製唔到：撳入框全選，再手動複製</label>
+        <textarea class="pb-input" id="pb-fallback-text" readonly rows="6"></textarea>
+      </div>
+
+      <p class="pb-next" id="pb-next"></p>
+      <p class="pb-pack">想要 104 條連填好例子同改良貼士？→ <a href="https://jainaspark4.gumroad.com/l/jd-tech-hk-ai-prompt-pack" target="_blank" rel="noopener">香港實戰 AI Prompt Pack（HK$10.40）</a></p>
+    </section>
+
+    <div class="ending-cta">
+      <a class="btn btn-primary" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">追蹤 @rabithead1881</a>
+      <p class="ending-note">每日 07:00・12:00 粵語實測，留言「1」攞密碼入 Workflow 庫。</p>
+    </div>
+
+    <footer>
+      <nav class="footer-legal" aria-label="網站資訊">
+        <a href="../about/">關於</a>
+        <span aria-hidden="true">·</span>
+        <a href="../privacy/">私隱政策</a>
+        <span aria-hidden="true">·</span>
+        <a href="../reels/">Reel 目錄</a>
+      </nav>
+      <p class="disclaimer">AI 輸出唔係法律、財務或醫療意見；日期、金額、承諾同法例一定要人手核對。</p>
+      <a class="ig-handle" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">@rabithead1881</a>
+    </footer>
+  </div>
+
+  <script src="prompts-data.js"></script>
+  <script src="app.js"></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9ea0b7b1a8e14721b7368c280696dbce"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
