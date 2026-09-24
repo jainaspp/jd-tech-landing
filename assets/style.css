@@ -798,3 +798,12 @@ footer {
   border-top: 1px solid rgba(160,160,160,0.25);
   margin: 22px 0;
 }
+
+/* Prompt Pack CTA (prompts-hk) */
+.prose .pack-note {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+.prose .pack-note a { font-weight: 700; }
+.pack-cta { margin-top: 28px; }
+.pack-cta .section-note { text-align: left; margin-top: 0; }
