@@ -4,7 +4,14 @@
 (function () {
   "use strict";
   var DATA = window.PB_DATA;
-  var HAS_TOOLS_PAGE = false; // set true once /tools/ exists
+  var HAS_TOOLS_PAGE = true; // /tools/ (香港 AI 工具庫) is live
+  // toolName (from prompts-data.js) -> existing /tools/<slug>/ page
+  var TOOL_SLUGS = {
+    "ChatGPT": "chatgpt", "Gemini": "gemini", "Claude": "claude",
+    "Copilot": "copilot", "Microsoft Copilot": "copilot", "Perplexity": "perplexity",
+    "Canva": "canva", "Gamma": "gamma", "Notta": "notta",
+    "NotebookLM": "notebooklm", "Gemini Notebook": "notebooklm", "CapCut": "capcut"
+  };
   var ROOT = "../";
 
   var $ = function (id) { return document.getElementById(id); };
@@ -213,8 +220,13 @@
     n.appendChild(document.createTextNode("　·　"));
     n.appendChild(el("a", { href: ROOT + "learn/" }, "全部工具教學"));
     if (HAS_TOOLS_PAGE) {
+      var slug = TOOL_SLUGS[current.toolName];
+      if (slug) {
+        n.appendChild(document.createTextNode("　·　"));
+        n.appendChild(el("a", { href: ROOT + "tools/" + slug + "/" }, current.toolName + " 香港用唔用到"));
+      }
       n.appendChild(document.createTextNode("　·　"));
-      n.appendChild(el("a", { href: ROOT + "tools/" }, "工具清單"));
+      n.appendChild(el("a", { href: ROOT + "tools/" }, "香港 AI 工具庫"));
     }
   }
 
