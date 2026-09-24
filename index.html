@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="description" content="JD Tech 粵語 AI 日更：免費工具 3 步實測、最新 Reel 同常用工具清單。每日 07:00・12:00 更新。" />
+  <meta property="og:title" content="JD Tech｜粵語 AI 工具清單" />
+  <meta property="og:description" content="粵語 AI｜免費工具 3 步｜跟住抄" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <title>JD Tech｜粵語 AI 工具清單</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&amp;family=Noto+Sans+HK:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0A0A0A;
+      --bg-card: #141414;
+      --bg-card-hover: #1a1a1a;
+      --border: rgba(0, 229, 255, 0.22);
+      --text: #ffffff;
+      --muted: #a0a0a0;
+      --accent: #00E5FF;
+      --glow: 0 0 20px rgba(0, 229, 255, 0.35);
+      --radius: 14px;
+      --max: 440px;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: "Noto Sans HK", "Noto Sans TC", -apple-system, BlinkMacSystemFont,
+        "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background:
+        radial-gradient(ellipse 120% 70% at 50% -15%, rgba(0, 229, 255, 0.1), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100dvh;
+      padding: 20px 16px calc(28px + var(--safe-bottom));
+    }
+
+    .wrap { max-width: var(--max); margin: 0 auto; }
+
+    header {
+      text-align: center;
+      padding: 8px 4px 18px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      border-radius: 999px;
+      padding: 4px 12px;
+      margin-bottom: 14px;
+      box-shadow: var(--glow);
+    }
+
+    h1 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: var(--text);
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    .sub {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .pitch {
+      font-size: 0.92rem;
+      color: var(--text);
+      margin-bottom: 18px;
+      line-height: 1.45;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 52px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:active { transform: scale(0.98); }
+
+    .btn-primary {
+      color: #0A0A0A;
+      background: var(--accent);
+      box-shadow: 0 4px 24px rgba(0, 229, 255, 0.4);
+    }
+
+    .cta-micro {
+      margin-top: 10px;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    section { margin-top: 24px; }
+
+    .section-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px var(--accent);
+      flex-shrink: 0;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 10px;
+    }
+
+    .reel {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      padding: 14px;
+    }
+
+    .reel:hover { background: var(--bg-card-hover); border-radius: var(--radius); }
+
+    .reel-thumb {
+      width: 64px;
+      height: 64px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      background: linear-gradient(145deg, rgba(0, 229, 255, 0.28), rgba(0, 229, 255, 0.06));
+      border: 1px solid rgba(0, 229, 255, 0.35);
+      display: grid;
+      place-items: center;
+      font-size: 1.25rem;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .reel-body { flex: 1; min-width: 0; }
+
+    .reel-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 4px;
+    }
+
+    .reel-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .section-note {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .section-note a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .tools-head {
+      display: grid;
+      grid-template-columns: 0.9fr 1fr 1.1fr;
+      gap: 6px;
+      padding: 0 4px 8px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+    }
+
+    .tool {
+      display: grid;
+      grid-template-columns: 0.9fr 1fr 1.1fr;
+      gap: 6px;
+      align-items: start;
+      text-decoration: none;
+      color: inherit;
+      padding: 12px 10px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 8px;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .tool:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(0, 229, 255, 0.45);
+    }
+
+    .tool-name {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--accent);
+    }
+
+    .tool-fit,
+    .tool-how {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .tool-how { color: #d0d0d0; }
+
+    .tools-cta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+
+    footer {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(160, 160, 160, 0.25);
+      text-align: center;
+    }
+
+    .disclaimer {
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .ig-handle {
+      display: block;
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="badge">JD Tech</div>
+      <h1>粵語 AI 日更｜免費工具 3 步實測</h1>
+      <p class="sub">每日 07:00・12:00 更新｜留言數字＝即日可抄 workflow</p>
+      <p class="pitch">喺 IG 跟住抄：免費／平價 AI 工具，3 步做到日常真正用得着。</p>
+      <a
+        class="btn btn-primary"
+        href="https://www.instagram.com/rabithead1881/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >追蹤 @rabithead1881</a>
+      <p class="cta-micro">日更兩條｜粵語講清楚｜唔踩雷</p>
+    </header>
+
+    <section aria-labelledby="reels-title">
+      <h2 id="reels-title" class="section-title">最新 Reel｜跟住做</h2>
+      <a
+        class="card reel"
+        href="https://www.instagram.com/reel/Ddp-T6BKRQG/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="reel-thumb" aria-hidden="true">1</div>
+        <div class="reel-body">
+          <div class="reel-title">Canva 海報 3 步｜零設計底都出得</div>
+          <div class="reel-meta">上晝實測｜留言「1」拎步驟</div>
+        </div>
+      </a>
+      <a
+        class="card reel"
+        href="https://www.instagram.com/reel/DdpeQOwqwRi/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="reel-thumb" aria-hidden="true">2</div>
+        <div class="reel-body">
+          <div class="reel-title">Copilot 讀長文 3 步｜一頁拎重點</div>
+          <div class="reel-meta">朝早實測｜留言「2」拎 prompt</div>
+        </div>
+      </a>
+      <p class="section-note">
+        更多日更 →
+        <a href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">返 IG 主頁睇 Grid</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="tools-title">
+      <h2 id="tools-title" class="section-title">常用工具｜免費／平價優先</h2>
+      <div class="tools-head" aria-hidden="true">
+        <span>工具</span>
+        <span>適合做咩</span>
+        <span>我點用</span>
+      </div>
+      <a class="tool" href="https://www.canva.com/" target="_blank" rel="noopener noreferrer">
+        <span class="tool-name">Canva</span>
+        <span class="tool-fit">海報／封面</span>
+        <span class="tool-how">3 步出一張可發</span>
+      </a>
+      <a class="tool" href="https://copilot.microsoft.com/" target="_blank" rel="noopener noreferrer">
+        <span class="tool-name">Copilot</span>
+        <span class="tool-fit">長網頁／長文</span>
+        <span class="tool-how">拎重點＋可抄摘要</span>
+      </a>
+      <a class="tool" href="https://www.notta.ai/" target="_blank" rel="noopener noreferrer">
+        <span class="tool-name">Notta</span>
+        <span class="tool-fit">會議錄音</span>
+        <span class="tool-how">轉筆記＋行動項</span>
+      </a>
+      <a class="tool" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">
+        <span class="tool-name">ChatGPT</span>
+        <span class="tool-fit">文案／清單</span>
+        <span class="tool-how">粵語 workflow 模板</span>
+      </a>
+      <a class="tool" href="https://notebooklm.google.com/" target="_blank" rel="noopener noreferrer">
+        <span class="tool-name">NotebookLM</span>
+        <span class="tool-fit">一疊資料</span>
+        <span class="tool-how">問答＋提綱</span>
+      </a>
+      <a class="tool" href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">
+        <span class="tool-name">Gemini</span>
+        <span class="tool-fit">多模態問答</span>
+        <span class="tool-how">圖文一齊問</span>
+      </a>
+      <a class="tool" href="https://claude.ai/" target="_blank" rel="noopener noreferrer">
+        <span class="tool-name">Claude</span>
+        <span class="tool-fit">長文／程式</span>
+        <span class="tool-how">精讀＋改稿</span>
+      </a>
+      <a class="tool" href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">
+        <span class="tool-name">Perplexity</span>
+        <span class="tool-fit">帶出處搜尋</span>
+        <span class="tool-how">查資料＋引用</span>
+      </a>
+      <a class="tool" href="https://gamma.app/" target="_blank" rel="noopener noreferrer">
+        <span class="tool-name">Gamma</span>
+        <span class="tool-fit">簡報</span>
+        <span class="tool-how">幾句出一疊 slide</span>
+      </a>
+      <a class="tool" href="https://www.capcut.com/" target="_blank" rel="noopener noreferrer">
+        <span class="tool-name">CapCut</span>
+        <span class="tool-fit">短影音剪輯</span>
+        <span class="tool-how">Reel／Shorts 出片</span>
+      </a>
+      <p class="tools-cta">想要某工具完整 3 步 → 返 IG 留言工具名</p>
+    </section>
+
+    <footer>
+      <p class="disclaimer">
+        日更實測以公開免費／平價功能為準；介面會改，以當日 Reel 步驟為準。唔賣課、唔收委託——只分享可抄 workflow。
+      </p>
+      <a class="ig-handle" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">
+        @rabithead1881
+      </a>
+    </footer>
+  </div>
+</body>
+</html>
