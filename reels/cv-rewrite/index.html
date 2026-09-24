@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="description" content="跟 Reel 用 Gemini（或你可以正常使用嘅 ChatGPT）改履歷：貼舊 CV、貼職位 JD、叫 AI 一次交三樣。附可抄 Prompt、核對清單同官方說明。" />
+  <meta property="og:title" content="AI 改 CV 3 步：對齊職位 JD｜JD Tech" />
+  <meta property="og:description" content="跟 Reel 用 Gemini（或你可以正常使用嘅 ChatGPT）改履歷：貼舊 CV、貼職位 JD、叫 AI 一次交三樣。附可抄 Prompt、核對清單同官方說明。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://jainaspp.github.io/jd-tech-landing/reels/cv-rewrite/" />
+  <meta property="og:image" content="https://jainaspp.github.io/jd-tech-landing/assets/og-share.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="JD Tech｜粵語 AI 日更 — 免費 AI 工具 3 步實測" />
+  <meta property="og:site_name" content="JD Tech" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI 改 CV 3 步：對齊職位 JD｜JD Tech" />
+  <meta name="twitter:description" content="跟 Reel 用 Gemini（或你可以正常使用嘅 ChatGPT）改履歷：貼舊 CV、貼職位 JD、叫 AI 一次交三樣。附可抄 Prompt、核對清單同官方說明。" />
+  <meta name="twitter:image" content="https://jainaspp.github.io/jd-tech-landing/assets/og-share.png" />
+  <link rel="canonical" href="https://jainaspp.github.io/jd-tech-landing/reels/cv-rewrite/" />
+  <title>AI 改 CV 3 步：對齊職位 JD｜JD Tech</title>
+  <link rel="stylesheet" href="../../assets/style.css" />
+  <link rel="icon" href="../../assets/favicon.ico" sizes="any" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" sizes="180x180" />
+  <style>.code-block pre{padding-right:72px}.official-why{color:var(--muted);font-size:.85rem}.reel-steps li p{margin:.3em 0}</style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "主頁",
+          "item": "https://jainaspp.github.io/jd-tech-landing/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Reel 總目錄",
+          "item": "https://jainaspp.github.io/jd-tech-landing/reels/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI 改 CV 3 步：對齊職位 JD",
+          "item": "https://jainaspp.github.io/jd-tech-landing/reels/cv-rewrite/"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "AI 改 CV 3 步：對齊職位 JD",
+      "description": "跟 Reel 用 Gemini（或你可以正常使用嘅 ChatGPT）改履歷：貼舊 CV、貼職位 JD、叫 AI 一次交三樣。附可抄 Prompt、核對清單同官方說明。",
+      "url": "https://jainaspp.github.io/jd-tech-landing/reels/cv-rewrite/",
+      "inLanguage": "zh-HK",
+      "datePublished": "2026-09-21",
+      "dateModified": "2026-09-25",
+      "author": {
+        "@type": "Organization",
+        "name": "JD Tech",
+        "sameAs": [
+          "https://www.instagram.com/rabithead1881/"
+        ],
+        "logo": "https://jainaspp.github.io/jd-tech-landing/assets/apple-touch-icon.png"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "JD Tech",
+        "sameAs": [
+          "https://www.instagram.com/rabithead1881/"
+        ],
+        "logo": "https://jainaspp.github.io/jd-tech-landing/assets/apple-touch-icon.png"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "JD Tech",
+        "url": "https://jainaspp.github.io/jd-tech-landing/"
+      },
+      "citation": [
+        "https://support.google.com/gemini/answer/14903178?hl=en",
+        "https://support.google.com/gemini/answer/13575153?hl=en",
+        "https://support.google.com/gemini/answer/13594961",
+        "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq",
+        "https://help.openai.com/en/articles/7730893-data-controls-faq",
+        "https://help.openai.com/en/articles/7947663-chatgpt-supported-countries"
+      ],
+      "isBasedOn": "https://www.instagram.com/reel/Ddk26_eKk1r/",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "貼舊履歷",
+          "text": "開 Gemini，先貼你舊履歷嘅文字。",
+          "url": "https://jainaspp.github.io/jd-tech-landing/reels/cv-rewrite/#step-1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "貼職位 JD",
+          "text": "喺同一個對話再貼職位 JD，話明你想對齊呢份工。",
+          "url": "https://jainaspp.github.io/jd-tech-landing/reels/cv-rewrite/#step-2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "叫佢一次交三樣",
+          "text": "叫 AI 用 STAR 寫法改子彈，同時交三樣：改寫版、改咗／加咗邊啲數字、對齊咗 JD 邊啲關鍵字。",
+          "url": "https://jainaspp.github.io/jd-tech-landing/reels/cv-rewrite/#step-3"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- generated by /workspace/kol-content/reel-pages/gen.py from specs/cv-rewrite.json — edit the spec, not this file -->
+</head>
+<body>
+  <div class="wrap">
+    <nav class="top-nav" aria-label="導航">
+      <a href="../">← Reel 目錄</a>
+      <a href="../../">主頁</a>
+    </nav>
+
+    <header class="tut-header">
+      <div class="badge">JD Tech｜Reel 詳解</div>
+      <h1>AI 改 CV 3 步：對齊職位 JD</h1>
+      <p class="sub">投得唔中？免費 3 步改好 CV。</p>
+      <p class="updated"><time datetime="2026-09-25">最後核實：2026-09-25</time></p>
+    </header>
+
+    <article class="prose">
+      <p>跟 Reel 用 Gemini（或你可以正常使用嘅 ChatGPT）改履歷：貼舊 CV、貼職位 JD、叫 AI 一次交三樣。附可抄 Prompt、核對清單同官方說明。</p>
+
+      <blockquote><strong>Reel 一句講晒：</strong>投得唔中？免費 3 步改好 CV。</blockquote>
+
+      <h2>你會學到</h2>
+      <ul>
+        <li>點樣將舊履歷同職位 JD 一齊交畀 AI</li>
+        <li>點樣用 STAR 寫法改工作經歷子彈</li>
+        <li>點解要叫 AI「一次交三樣」，方便你捉出估出嚟嘅數字</li>
+      </ul>
+
+      <h2>開始前準備</h2>
+      <ul>
+        <li>Gemini 帳戶（或你所在地區可以正常使用嘅 ChatGPT 帳戶）</li>
+        <li>舊履歷嘅文字版（唔好用有身份證、住址嘅掃描檔）</li>
+        <li>目標職位嘅 Job Description（JD）全文</li>
+      </ul>
+
+      <h2>3 步做法</h2>
+      <ol class="reel-steps">
+        <li id="step-1"><p><strong>貼舊履歷：</strong>開 Gemini，先貼你舊履歷嘅文字。</p><p>貼之前刪走電話、住址、身份證號碼、出生日期。AI 改寫唔需要呢啲資料，少貼少風險。</p><p>只貼要改嘅部分（通常係工作經歷），教育同技能表可以之後先處理。</p></li>
+        <li id="step-2"><p><strong>貼職位 JD：</strong>喺同一個對話再貼職位 JD，話明你想對齊呢份工。</p><p>JD 係最重要嘅參照：AI 要知道僱主想要咩，先識得將你做過嘅嘢講到對口。</p><p>一次只對一份 JD。同一份履歷投十個唔同工種，對齊度會變得好空泛。</p></li>
+        <li id="step-3"><p><strong>叫佢一次交三樣：</strong>叫 AI 用 STAR 寫法改子彈，同時交三樣：改寫版、改咗／加咗邊啲數字、對齊咗 JD 邊啲關鍵字。</p><p>STAR 即係情境（Situation）、任務（Task）、行動（Action）、結果（Result）。每條子彈講清你喺咩情況做咗咩，帶來咩結果。</p><p>「一次交三樣」嘅重點係透明：數字清單令你一眼睇到邊個數係你原本有、邊個係 AI 加嘅。冇根據嘅數字一律刪走或者自己補真實數據，然後人手讀一次先寄出。</p></li>
+      </ol>
+
+      <h2>可抄 Prompt</h2>
+      <p><strong>改 CV 主 Prompt</strong></p>
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>你係求職教練。我會貼：①我舊履歷 ②目標職位 JD。
+請用繁體中文輸出三部分：
+A. 改寫後嘅工作經歷子彈（每條用 STAR：情境／任務／行動／結果，盡量帶可核實數字）
+B. 你新加或改動咗邊啲數字（列出「原文 → 新文」；冇根據就標「待我補充」）
+C. 對齊咗 JD 邊啲關鍵字（表：關鍵字｜我履歷邊句）
+規則：唔好捏造我冇做過嘅職責、證書、語言能力。
+①履歷：
+【貼上】
+②JD：
+【貼上】</pre>
+      </div>
+      <p><strong>只改一段、保持香港語氣</strong></p>
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>只改【工作經歷】段落；教育同技能表唔好動。
+語氣：香港僱主常見書面語，唔好太美式 CV 腔。</pre>
+      </div>
+
+      <h2>常見錯誤／注意事項</h2>
+      <ul>
+        <li><strong>唔要「三樣」只要改寫版：</strong>你會分唔到邊啲數字係 AI 估嘅。</li>
+        <li><strong>照抄誇大咗嘅業績：</strong>AI 可能將「協助」寫成「主導」、「兼職」寫成「全職」，面試一問就穿。逐句對返舊履歷。</li>
+        <li><strong>上載有個人資料嘅原檔：</strong>改為貼已刪敏感資料嘅文字。</li>
+        <li><strong>JD 關鍵字硬塞：</strong>讀落唔自然就刪，招聘人員睇得出。</li>
+        <li><strong>寄錯版本：</strong>檔名寫清「職位＋日期」。</li>
+      </ul>
+
+      <h2>香港用戶留意</h2>
+      <p>OpenAI 官方支援地區名單截至最後核實日未列出 Hong Kong。本站唔教任何規避方法；香港用戶可以用 Gemini 做同一件事（Gemini 網頁版官方地區名單包括 Hong Kong）。</p>
+
+      <h2>官方說明</h2>
+      <ul>
+        <li><a href="https://support.google.com/gemini/answer/14903178?hl=en" target="_blank" rel="noopener noreferrer">Upload &amp; analyze files in Gemini Apps（Gemini Apps Help）</a><br /><span class="official-why">官方上載檔案步驟（Add files → Upload files）同檔案上限</span></li>
+        <li><a href="https://support.google.com/gemini/answer/13575153?hl=en" target="_blank" rel="noopener noreferrer">Where you can use the Gemini web app（Gemini Apps Help）</a><br /><span class="official-why">官方地區名單（包括 Hong Kong）</span></li>
+        <li><a href="https://support.google.com/gemini/answer/13594961" target="_blank" rel="noopener noreferrer">Gemini Apps Privacy Hub（Gemini Apps Help）</a><br /><span class="official-why">官方講 Gemini 點樣處理你貼入去嘅內容同活動紀錄設定</span></li>
+        <li><a href="https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq" target="_blank" rel="noopener noreferrer">ChatGPT Free Tier FAQ（OpenAI Help Center）</a><br /><span class="official-why">官方講免費用戶用得到咩功能（包括上載檔案、上網搜尋）</span></li>
+        <li><a href="https://help.openai.com/en/articles/7730893-data-controls-faq" target="_blank" rel="noopener noreferrer">Data controls in ChatGPT（OpenAI Help Center）</a><br /><span class="official-why">官方講點樣關閉「用對話改進模型」</span></li>
+        <li><a href="https://help.openai.com/en/articles/7947663-chatgpt-supported-countries" target="_blank" rel="noopener noreferrer">ChatGPT Supported Countries（OpenAI Help Center）</a><br /><span class="official-why">官方支援地區名單（截至最後核實日未見 Hong Kong）</span></li>
+      </ul>
+      <p class="updated"><time datetime="2026-09-25">最後核實：2026-09-25</time>（以上連結當日逐條打開核對；介面同額度可能更新，以官方為準）</p>
+
+      <h2>原帖</h2>
+      <p><a href="https://www.instagram.com/reel/Ddk26_eKk1r/" target="_blank" rel="noopener noreferrer">睇原 Reel ↗</a>（2026-09-21 發佈）</p>
+    </article>
+
+    <section aria-labelledby="related-title">
+      <h2 id="related-title" class="section-title">相關頁面</h2>
+      <a class="card link-card" href="../../prompts-hk/#2-1-改-cv-子彈點-香港中英夾雜-jd">
+        <div class="link-card-title">可抄 Prompt：改 CV 子彈點 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+        <div class="link-card-desc">香港中英夾雜 JD 版本</div>
+      </a>
+      <a class="card link-card" href="../../prompts-hk/#2-2-求職信-中小企-初創">
+        <div class="link-card-title">可抄 Prompt：求職信 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+        <div class="link-card-desc">中小企／初創適用</div>
+      </a>
+      <a class="card link-card" href="../../learn/chatgpt/">
+        <div class="link-card-title">ChatGPT 教學 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+        <div class="link-card-desc">自訂指令同日常用法</div>
+      </a>
+      <a class="card link-card" href="../../compare/chatgpt-vs-gemini/">
+        <div class="link-card-title">ChatGPT vs Gemini <span class="link-card-arrow" aria-hidden="true">→</span></div>
+        <div class="link-card-desc">香港人點揀（含地區說明）</div>
+      </a>
+    </section>
+
+    <div class="ending-cta">
+      <a class="btn btn-primary" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">追蹤 @rabithead1881</a>
+      <p class="ending-note">每日 07:00・12:00 粵語實測，留言「1」攞密碼入 Workflow 庫。</p>
+    </div>
+
+    <p class="more-learn"><a href="../">← 返 Reel 總目錄</a></p>
+
+    <footer>
+      <nav class="footer-legal" aria-label="網站資訊">
+        <a href="../../about/">關於</a>
+        <span aria-hidden="true">·</span>
+        <a href="../../privacy/">私隱政策</a>
+        <span aria-hidden="true">·</span>
+        <a href="../../reels/">Reel 目錄</a>
+      </nav>
+      <a class="ig-handle" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">@rabithead1881</a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(text);
+        }
+        return new Promise(function (resolve, reject) {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "fixed";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            var ok = document.execCommand("copy");
+            document.body.removeChild(ta);
+            ok ? resolve() : reject(new Error("copy failed"));
+          } catch (e) {
+            document.body.removeChild(ta);
+            reject(e);
+          }
+        });
+      }
+      document.querySelectorAll(".code-block").forEach(function (block) {
+        var btn = block.querySelector(".copy-btn");
+        var pre = block.querySelector("pre");
+        if (!btn || !pre) return;
+        btn.addEventListener("click", function () {
+          copyText(pre.textContent || "").then(function () {
+            btn.textContent = "已複製";
+            btn.classList.add("copied");
+            setTimeout(function () { btn.textContent = "複製"; btn.classList.remove("copied"); }, 1600);
+          }).catch(function () {
+            btn.textContent = "失敗";
+            setTimeout(function () { btn.textContent = "複製"; }, 1600);
+          });
+        });
+      });
+    })();
+  </script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9ea0b7b1a8e14721b7368c280696dbce"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

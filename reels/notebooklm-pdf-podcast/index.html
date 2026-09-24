@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="description" content="跟 Reel 用 NotebookLM（官方說明而家叫 Gemini Notebook）將 PDF 變成 Audio Overview 語音摘要：上傳文件、撳 Audio Overview、聽完核對。附香港地區說明同官方連結。" />
+  <meta property="og:title" content="NotebookLM 3 步：厚 PDF 變 Podcast 式語音摘要｜JD Tech" />
+  <meta property="og:description" content="跟 Reel 用 NotebookLM（官方說明而家叫 Gemini Notebook）將 PDF 變成 Audio Overview 語音摘要：上傳文件、撳 Audio Overview、聽完核對。附香港地區說明同官方連結。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://jainaspp.github.io/jd-tech-landing/reels/notebooklm-pdf-podcast/" />
+  <meta property="og:image" content="https://jainaspp.github.io/jd-tech-landing/assets/og-share.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="JD Tech｜粵語 AI 日更 — 免費 AI 工具 3 步實測" />
+  <meta property="og:site_name" content="JD Tech" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NotebookLM 3 步：厚 PDF 變 Podcast 式語音摘要｜JD Tech" />
+  <meta name="twitter:description" content="跟 Reel 用 NotebookLM（官方說明而家叫 Gemini Notebook）將 PDF 變成 Audio Overview 語音摘要：上傳文件、撳 Audio Overview、聽完核對。附香港地區說明同官方連結。" />
+  <meta name="twitter:image" content="https://jainaspp.github.io/jd-tech-landing/assets/og-share.png" />
+  <link rel="canonical" href="https://jainaspp.github.io/jd-tech-landing/reels/notebooklm-pdf-podcast/" />
+  <title>NotebookLM 3 步：厚 PDF 變 Podcast 式語音摘要｜JD Tech</title>
+  <link rel="stylesheet" href="../../assets/style.css" />
+  <link rel="icon" href="../../assets/favicon.ico" sizes="any" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" sizes="180x180" />
+  <style>.code-block pre{padding-right:72px}.official-why{color:var(--muted);font-size:.85rem}.reel-steps li p{margin:.3em 0}</style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "主頁",
+          "item": "https://jainaspp.github.io/jd-tech-landing/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Reel 總目錄",
+          "item": "https://jainaspp.github.io/jd-tech-landing/reels/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "NotebookLM 3 步：厚 PDF 變 Podcast 式語音摘要",
+          "item": "https://jainaspp.github.io/jd-tech-landing/reels/notebooklm-pdf-podcast/"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "NotebookLM 3 步：厚 PDF 變 Podcast 式語音摘要",
+      "description": "跟 Reel 用 NotebookLM（官方說明而家叫 Gemini Notebook）將 PDF 變成 Audio Overview 語音摘要：上傳文件、撳 Audio Overview、聽完核對。附香港地區說明同官方連結。",
+      "url": "https://jainaspp.github.io/jd-tech-landing/reels/notebooklm-pdf-podcast/",
+      "inLanguage": "zh-HK",
+      "datePublished": "2026-09-21",
+      "dateModified": "2026-09-25",
+      "author": {
+        "@type": "Organization",
+        "name": "JD Tech",
+        "sameAs": [
+          "https://www.instagram.com/rabithead1881/"
+        ],
+        "logo": "https://jainaspp.github.io/jd-tech-landing/assets/apple-touch-icon.png"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "JD Tech",
+        "sameAs": [
+          "https://www.instagram.com/rabithead1881/"
+        ],
+        "logo": "https://jainaspp.github.io/jd-tech-landing/assets/apple-touch-icon.png"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "JD Tech",
+        "url": "https://jainaspp.github.io/jd-tech-landing/"
+      },
+      "citation": [
+        "https://support.google.com/notebooklm/answer/16212820?hl=en",
+        "https://support.google.com/notebooklm/answer/16215270",
+        "https://support.google.com/notebooklm/answer/16164461?co=GENIE.Platform%3DDesktop&hl=en",
+        "https://support.google.com/notebooklm/answer/16213268?hl=en"
+      ],
+      "isBasedOn": "https://www.instagram.com/reel/DdkWoswKfWE/",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "上傳文件",
+          "text": "開 NotebookLM，新增 notebook，喺來源位置加入你嘅 PDF。",
+          "url": "https://jainaspp.github.io/jd-tech-landing/reels/notebooklm-pdf-podcast/#step-1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "撳 Audio Overview",
+          "text": "喺 Studio 面板揀 Audio Overview，揀格式同語言，再生成。",
+          "url": "https://jainaspp.github.io/jd-tech-landing/reels/notebooklm-pdf-podcast/#step-2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "聽，然後核對",
+          "text": "等幾分鐘生成完就可以播放或下載；聽到重要數字，返原文核對。",
+          "url": "https://jainaspp.github.io/jd-tech-landing/reels/notebooklm-pdf-podcast/#step-3"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- generated by /workspace/kol-content/reel-pages/gen.py from specs/notebooklm-pdf-podcast.json — edit the spec, not this file -->
+</head>
+<body>
+  <div class="wrap">
+    <nav class="top-nav" aria-label="導航">
+      <a href="../">← Reel 目錄</a>
+      <a href="../../">主頁</a>
+    </nav>
+
+    <header class="tut-header">
+      <div class="badge">JD Tech｜Reel 詳解</div>
+      <h1>NotebookLM 3 步：厚 PDF 變 Podcast 式語音摘要</h1>
+      <p class="sub">厚 PDF 睇到眼花？免費 3 步變 Podcast。</p>
+      <p class="updated"><time datetime="2026-09-25">最後核實：2026-09-25</time></p>
+    </header>
+
+    <article class="prose">
+      <p>跟 Reel 用 NotebookLM（官方說明而家叫 Gemini Notebook）將 PDF 變成 Audio Overview 語音摘要：上傳文件、撳 Audio Overview、聽完核對。附香港地區說明同官方連結。</p>
+
+      <blockquote><strong>Reel 一句講晒：</strong>厚 PDF 睇到眼花？免費 3 步變 Podcast。</blockquote>
+
+      <h2>你會學到</h2>
+      <ul>
+        <li>點樣將 PDF 加入 notebook 做來源</li>
+        <li>Audio Overview 有咩格式、點樣叫佢集中講某部分</li>
+        <li>點解聽完仍然要返原文核對數字</li>
+      </ul>
+
+      <h2>開始前準備</h2>
+      <ul>
+        <li>Google 帳戶，而且你身處官方支援嘅國家／地區（見下面「香港用戶留意」）</li>
+        <li>要消化嘅 PDF（或 Google Docs、網址等其他官方支援嘅來源）</li>
+        <li>電腦瀏覽器：官方提醒手機 App 部分功能可能有限制</li>
+      </ul>
+
+      <h2>3 步做法</h2>
+      <ol class="reel-steps">
+        <li id="step-1"><p><strong>上傳文件：</strong>開 NotebookLM，新增 notebook，喺來源位置加入你嘅 PDF。</p><p>官方支援嘅來源包括 PDF、Word（docx）、PowerPoint（pptx）、Google Docs／Slides、網址、公開 YouTube 影片等。</p><p>一個 notebook 放同一個主題嘅資料就夠。唔相關或者舊版本嘅文件先剔走，答案會乾淨好多。</p></li>
+        <li id="step-2"><p><strong>撳 Audio Overview：</strong>喺 Studio 面板揀 Audio Overview，揀格式同語言，再生成。</p><p>官方格式有 Deep Dive（預設，兩位 AI 主持深入對談）、The Brief（一位講者，兩分鐘內講重點）、The Critique、The Debate。Reel 講嘅「兩個 AI 主持講畀你聽」就係預設嘅 Deep Dive。</p><p>生成前可以輸入一句提示，叫佢集中講某部分（例如只講付款同限期）。官方語言列表有 Chinese (Traditional)，但冇寫明係粵語口語，出嚟未必係廣東話。</p></li>
+        <li id="step-3"><p><strong>聽，然後核對：</strong>等幾分鐘生成完就可以播放或下載；聽到重要數字，返原文核對。</p><p>官方寫明 Audio Overview（包括把聲）係 AI 生成，可能有不準確或者雜音。佢係幫你入門嘅導讀，唔係正式紀錄。</p><p>要分享畀人聽，官方要求 notebook 已分享畀對方或者設定為任何有連結嘅人可睇——分享前先確認入面冇敏感資料。</p></li>
+      </ol>
+
+      <h2>可抄 Prompt</h2>
+      <p><strong>生成 Audio Overview 前嘅焦點提示</strong></p>
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>只集中講【付款條款同所有限期】，用淺白講法，假設聽眾第一次睇呢份文件；提到數字時講埋係出自邊一部分。</pre>
+      </div>
+      <p><strong>聽完之後喺對話框追問</strong></p>
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>只根據已選來源，用繁體中文列出：
+1. 一句結論
+2. 最多 7 個重點，每點註明來自邊份來源
+3. 原文唔清楚或者冇寫嘅地方
+冇寫過嘅唔好補。</pre>
+      </div>
+
+      <h2>常見錯誤／注意事項</h2>
+      <ul>
+        <li><strong>將音檔當正式會議紀錄或者法律解釋：</strong>官方提醒可能有錯，重要內容要返原文。</li>
+        <li><strong>一個 notebook 塞晒唔相關嘅文件：</strong>模型可能將舊價目同新價目混埋講。</li>
+        <li><strong>以為一定係廣東話：</strong>官方語言列表只寫 Chinese (Traditional)，冇保證粵語口語。</li>
+        <li><strong>隨手公開分享：</strong>分享 Audio Overview 要開放 notebook 權限，有報價、個人資料嘅本唔好公開。</li>
+      </ul>
+
+      <h2>香港用戶留意</h2>
+      <p>NotebookLM 喺官方說明而家叫 Gemini Notebook。佢嘅官方支援國家／地區名單截至最後核實日未見 Hong Kong。本站唔教任何規避方法；如果你喺香港用唔到，可以改用 Gemini 網頁版上載 PDF 問問題（Gemini 網頁版官方地區名單包括 Hong Kong）——Gemini 網頁版有冇同樣嘅語音摘要功能，以官方說明同你帳戶畫面為準。</p>
+
+      <h2>官方說明</h2>
+      <ul>
+        <li><a href="https://support.google.com/notebooklm/answer/16212820?hl=en" target="_blank" rel="noopener noreferrer">Generate Audio Overview in Gemini Notebook（Gemini Notebook Help）</a><br /><span class="official-why">官方 Audio Overview 步驟、格式（Deep Dive／The Brief 等）同「可能有錯」提示</span></li>
+        <li><a href="https://support.google.com/notebooklm/answer/16215270" target="_blank" rel="noopener noreferrer">Add or discover new sources for your notebook（Gemini Notebook Help）</a><br /><span class="official-why">官方來源類型（包括 PDF）同限制</span></li>
+        <li><a href="https://support.google.com/notebooklm/answer/16164461?co=GENIE.Platform%3DDesktop&amp;hl=en" target="_blank" rel="noopener noreferrer">Learn about Gemini Notebook（Gemini Notebook Help）</a><br /><span class="official-why">官方支援國家／地區名單（截至最後核實日未見 Hong Kong）</span></li>
+        <li><a href="https://support.google.com/notebooklm/answer/16213268?hl=en" target="_blank" rel="noopener noreferrer">Upgrade Gemini Notebook（Gemini Notebook Help）</a><br /><span class="official-why">官方講瀏覽器版喺支援地區開放畀達法定年齡用戶，另有付費計劃</span></li>
+      </ul>
+      <p class="updated"><time datetime="2026-09-25">最後核實：2026-09-25</time>（以上連結當日逐條打開核對；介面同額度可能更新，以官方為準）</p>
+
+      <h2>原帖</h2>
+      <p><a href="https://www.instagram.com/reel/DdkWoswKfWE/" target="_blank" rel="noopener noreferrer">睇原 Reel ↗</a>（2026-09-21 發佈）</p>
+    </article>
+
+    <section aria-labelledby="related-title">
+      <h2 id="related-title" class="section-title">相關頁面</h2>
+      <a class="card link-card" href="../../learn/notebooklm/">
+        <div class="link-card-title">NotebookLM 完整教學 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+        <div class="link-card-desc">來源管理、比較多份文件</div>
+      </a>
+      <a class="card link-card" href="../../learn/gemini-pdf/">
+        <div class="link-card-title">Gemini 讀 PDF 教學 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+        <div class="link-card-desc">香港官方支援地區可用嘅替代做法</div>
+      </a>
+      <a class="card link-card" href="../../prompts-hk/#4-4-課堂筆記-溫習閃卡">
+        <div class="link-card-title">可抄 Prompt：課堂筆記變溫習閃卡 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+        <div class="link-card-desc">讀完再溫</div>
+      </a>
+    </section>
+
+    <div class="ending-cta">
+      <a class="btn btn-primary" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">追蹤 @rabithead1881</a>
+      <p class="ending-note">每日 07:00・12:00 粵語實測，留言「1」攞密碼入 Workflow 庫。</p>
+    </div>
+
+    <p class="more-learn"><a href="../">← 返 Reel 總目錄</a></p>
+
+    <footer>
+      <nav class="footer-legal" aria-label="網站資訊">
+        <a href="../../about/">關於</a>
+        <span aria-hidden="true">·</span>
+        <a href="../../privacy/">私隱政策</a>
+        <span aria-hidden="true">·</span>
+        <a href="../../reels/">Reel 目錄</a>
+      </nav>
+      <a class="ig-handle" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">@rabithead1881</a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(text);
+        }
+        return new Promise(function (resolve, reject) {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "fixed";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            var ok = document.execCommand("copy");
+            document.body.removeChild(ta);
+            ok ? resolve() : reject(new Error("copy failed"));
+          } catch (e) {
+            document.body.removeChild(ta);
+            reject(e);
+          }
+        });
+      }
+      document.querySelectorAll(".code-block").forEach(function (block) {
+        var btn = block.querySelector(".copy-btn");
+        var pre = block.querySelector("pre");
+        if (!btn || !pre) return;
+        btn.addEventListener("click", function () {
+          copyText(pre.textContent || "").then(function () {
+            btn.textContent = "已複製";
+            btn.classList.add("copied");
+            setTimeout(function () { btn.textContent = "複製"; btn.classList.remove("copied"); }, 1600);
+          }).catch(function () {
+            btn.textContent = "失敗";
+            setTimeout(function () { btn.textContent = "複製"; }, 1600);
+          });
+        });
+      });
+    })();
+  </script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9ea0b7b1a8e14721b7368c280696dbce"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
