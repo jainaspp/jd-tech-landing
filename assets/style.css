@@ -717,3 +717,18 @@ footer {
   align-self: flex-start;
 }
 .tool-official:hover { color: var(--accent); }
+
+.footer-legal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 0.78rem;
+}
+.footer-legal a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.footer-legal a:hover { color: var(--accent); }
+.footer-legal span { color: rgba(160,160,160,0.5); }
