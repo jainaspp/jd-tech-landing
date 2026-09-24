@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Workflow pages are password-gated and already send noindex;
+# omitted from sitemap.xml. Disallow is optional hardening:
+Disallow: /jd-tech-landing/workflow/
+
+Sitemap: https://jainaspp.github.io/jd-tech-landing/sitemap.xml
