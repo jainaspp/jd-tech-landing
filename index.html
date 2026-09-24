@@ -8,270 +8,14 @@
   <meta property="og:title" content="JD Tech｜粵語 AI 工具清單" />
   <meta property="og:description" content="粵語 AI｜免費工具 3 步｜跟住抄" />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jainaspp.github.io/jd-tech-landing/" />
   <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://jainaspp.github.io/jd-tech-landing/" />
   <title>JD Tech｜粵語 AI 工具清單</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&amp;family=Noto+Sans+HK:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #0A0A0A;
-      --bg-card: #141414;
-      --bg-card-hover: #1a1a1a;
-      --border: rgba(0, 229, 255, 0.22);
-      --text: #ffffff;
-      --muted: #a0a0a0;
-      --accent: #00E5FF;
-      --glow: 0 0 20px rgba(0, 229, 255, 0.35);
-      --radius: 14px;
-      --max: 440px;
-      --safe-bottom: env(safe-area-inset-bottom, 0px);
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { -webkit-text-size-adjust: 100%; }
-
-    body {
-      font-family: "Noto Sans HK", "Noto Sans TC", -apple-system, BlinkMacSystemFont,
-        "PingFang TC", "Microsoft JhengHei", sans-serif;
-      background:
-        radial-gradient(ellipse 120% 70% at 50% -15%, rgba(0, 229, 255, 0.1), transparent 55%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-      min-height: 100dvh;
-      padding: 20px 16px calc(28px + var(--safe-bottom));
-    }
-
-    .wrap { max-width: var(--max); margin: 0 auto; }
-
-    header {
-      text-align: center;
-      padding: 8px 4px 18px;
-    }
-
-    .badge {
-      display: inline-block;
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      border: 1px solid rgba(0, 229, 255, 0.5);
-      border-radius: 999px;
-      padding: 4px 12px;
-      margin-bottom: 14px;
-      box-shadow: var(--glow);
-    }
-
-    h1 {
-      font-size: 1.35rem;
-      font-weight: 700;
-      letter-spacing: 0.01em;
-      color: var(--text);
-      margin-bottom: 8px;
-      line-height: 1.35;
-    }
-
-    .sub {
-      font-size: 0.88rem;
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-
-    .pitch {
-      font-size: 0.92rem;
-      color: var(--text);
-      margin-bottom: 18px;
-      line-height: 1.45;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      min-height: 52px;
-      padding: 14px 18px;
-      border-radius: 12px;
-      font-size: 1.05rem;
-      font-weight: 700;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .btn:active { transform: scale(0.98); }
-
-    .btn-primary {
-      color: #0A0A0A;
-      background: var(--accent);
-      box-shadow: 0 4px 24px rgba(0, 229, 255, 0.4);
-    }
-
-    .cta-micro {
-      margin-top: 10px;
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-
-    section { margin-top: 24px; }
-
-    .section-title {
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: var(--accent);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .section-title::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 10px var(--accent);
-      flex-shrink: 0;
-    }
-
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      margin-bottom: 10px;
-    }
-
-    .reel {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      text-decoration: none;
-      color: inherit;
-      padding: 14px;
-    }
-
-    .reel:hover { background: var(--bg-card-hover); border-radius: var(--radius); }
-
-    .reel-thumb {
-      width: 64px;
-      height: 64px;
-      border-radius: 10px;
-      flex-shrink: 0;
-      background: linear-gradient(145deg, rgba(0, 229, 255, 0.28), rgba(0, 229, 255, 0.06));
-      border: 1px solid rgba(0, 229, 255, 0.35);
-      display: grid;
-      place-items: center;
-      font-size: 1.25rem;
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    .reel-body { flex: 1; min-width: 0; }
-
-    .reel-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      line-height: 1.35;
-      margin-bottom: 4px;
-    }
-
-    .reel-meta {
-      font-size: 0.78rem;
-      color: var(--muted);
-      line-height: 1.4;
-    }
-
-    .section-note {
-      font-size: 0.75rem;
-      color: var(--muted);
-      text-align: center;
-      margin-top: 8px;
-    }
-
-    .section-note a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .tools-head {
-      display: grid;
-      grid-template-columns: 0.9fr 1fr 1.1fr;
-      gap: 6px;
-      padding: 0 4px 8px;
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--accent);
-      letter-spacing: 0.02em;
-    }
-
-    .tool {
-      display: grid;
-      grid-template-columns: 0.9fr 1fr 1.1fr;
-      gap: 6px;
-      align-items: start;
-      text-decoration: none;
-      color: inherit;
-      padding: 12px 10px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      margin-bottom: 8px;
-      transition: background 0.15s ease, border-color 0.15s ease;
-    }
-
-    .tool:hover {
-      background: var(--bg-card-hover);
-      border-color: rgba(0, 229, 255, 0.45);
-    }
-
-    .tool-name {
-      font-weight: 700;
-      font-size: 0.88rem;
-      color: var(--accent);
-    }
-
-    .tool-fit,
-    .tool-how {
-      font-size: 0.78rem;
-      color: var(--muted);
-      line-height: 1.35;
-    }
-
-    .tool-how { color: #d0d0d0; }
-
-    .tools-cta {
-      font-size: 0.78rem;
-      color: var(--muted);
-      text-align: center;
-      margin-top: 10px;
-      line-height: 1.4;
-    }
-
-    footer {
-      margin-top: 28px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(160, 160, 160, 0.25);
-      text-align: center;
-    }
-
-    .disclaimer {
-      font-size: 0.72rem;
-      color: var(--muted);
-      line-height: 1.55;
-    }
-
-    .ig-handle {
-      display: block;
-      margin-top: 12px;
-      font-size: 0.85rem;
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
   <div class="wrap">
@@ -319,6 +63,18 @@
         更多日更 →
         <a href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">返 IG 主頁睇 Grid</a>
       </p>
+    </section>
+
+    <section aria-labelledby="tutorials-title">
+      <h2 id="tutorials-title" class="section-title">免費教學｜由零開始</h2>
+      <a class="card link-card" href="beginner/">
+        <div class="link-card-title">AI 新手入門｜由零開始用得着 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+        <div class="link-card-desc">咩係 AI、先試邊個工具、邊啲資料唔好貼、點樣核對佢講錯嘢。</div>
+      </a>
+      <a class="card link-card" href="prompt/">
+        <div class="link-card-title">Prompt 3 步寫法｜講清楚先做得好 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+        <div class="link-card-desc">角色＋任務＋格式框架、壞例好例對比，同 6 個可抄模板。</div>
+      </a>
     </section>
 
     <section aria-labelledby="tools-title">
