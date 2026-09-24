@@ -60,7 +60,7 @@
       "description": "教你將幾份 PDF／網頁／Drive 文件放進 NotebookLM（Gemini Notebook），問問題拎筆記，再生成 Audio Overview 聽重點。適合要消化一疊資料嘅學生、做研究嘅上班族、要對齊供應商文件嘅小生意。",
       "url": "https://jainaspp.github.io/jd-tech-landing/learn/notebooklm/",
       "inLanguage": "zh-HK",
-      "dateModified": "2026-09-24",
+      "dateModified": "2026-09-25",
       "author": {
         "@type": "Organization",
         "name": "JD Tech",
@@ -90,8 +90,8 @@
     <header class="tut-header">
       <div class="badge">JD Tech</div>
       <h1>NotebookLM：一疊資料變筆記同語音摘要</h1>
-      <p class="sub">JD Tech｜粵語 AI 日更　·　免費工具 3 步實測</p>
-      <p class="updated"><time datetime="2026-09-24">最後更新：2026-09-24</time></p>
+      <p class="sub">JD Tech｜粵語 AI 日更　·　3 步實測（對照官方說明）</p>
+      <p class="updated"><time datetime="2026-09-25">最後更新：2026-09-25　·　最後核實：2026-09-25</time></p>
 </header>
 
     <article class="prose">
@@ -100,10 +100,21 @@
       <h2>開始前要準備咩</h2>
 
       <ul>
-        <li>Google 帳戶，開啟 <a href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer">NotebookLM</a>（或 Gemini 內嘅 Notebooks）</li>
+        <li>Google 帳戶，開啟 <a href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer">NotebookLM</a>（或 Gemini 內嘅 Notebooks）；官方寫明瀏覽器版開放畀支援國家／地區、達法定年齡嘅用戶（見下面「香港用戶留意」）</li>
         <li>電腦瀏覽器最齊功能；手機 App 部分功能可能受限</li>
-        <li>官方：免費用戶每個 notebook 來源數量有上限（文件寫最多約 50 個來源）；單一來源字數／檔案大小亦有上限。以官方「source limits」說明為準</li>
+        <li>官方寫明：免費用戶每個 notebook 最多 50 個來源；每個來源最多 500,000 字，上載檔案最大 200MB。付費計劃嘅上限睇官方 Google AI Plans 說明</li>
       </ul>
+
+      <h2>香港用戶留意（官方來源）</h2>
+
+      <ul>
+        <li><strong>支援地區：</strong> Gemini Notebook（NotebookLM）官方「Supported countries &amp; territories」名單截至最後核實日<strong>未見 Hong Kong</strong>；官方亦寫明手機 App 嘅開放地區可能唔同。本站唔教任何規避地區限制嘅方法。身處香港用唔到嘅話，可以改用 Gemini 網頁版上載 PDF 問問題（Gemini 網頁版官方地區名單包括 Hong Kong），步驟見 <a href="../gemini-pdf/">Gemini 讀 PDF 教學</a>。</li>
+        <li><strong>語言：</strong> Audio Overview 官方輸出語言列表有 <strong>Chinese (Traditional)</strong>，<strong>冇列 Cantonese（廣東話）</strong>，所以唔保證語音摘要會用廣東話口語講。（官方「匯入錄音檔」轉文字嘅語言列表有 Traditional Cantonese，但嗰個係上載錄音做來源，唔係 Audio Overview 輸出。）</li>
+        <li><strong>答案準確度：</strong> 官方講明佢係根據你上載嘅來源回答並附引用標記，但亦提醒 Gemini Notebook 可能出錯、音檔可能有不準或雜音；醫療、法律、財務問題要問專業人士。</li>
+      </ul>
+
+      <p>官方來源：<a href="https://support.google.com/notebooklm/answer/16164461?co=GENIE.Platform%3DDesktop&amp;hl=en" target="_blank" rel="noopener noreferrer">Learn about Gemini Notebook（支援國家／地區名單）</a>；<a href="https://support.google.com/notebooklm/answer/16212820?hl=en" target="_blank" rel="noopener noreferrer">Generate Audio Overview（輸出語言列表）</a>。</p>
+      <p class="updated"><time datetime="2026-09-25">最後核實：2026-09-25</time></p>
 
       <h2>逐步操作</h2>
 
@@ -111,7 +122,7 @@
         <li>開新 notebook，喺左側揀 <strong>Add sources</strong>。</li>
         <li>上載 PDF／貼網址／由 Google Drive 匯入你有權限嘅文件（可一次多選）。</li>
         <li>等來源載入後，喺對話框問具體問題（提來源名會更準）。</li>
-        <li>需要「聽」版本：右側 <strong>Studio</strong> 面板揀 <strong>Audio Overview</strong>，可選格式（例如 Deep Dive／The Brief），再生成；完成後可播放或下載。</li>
+        <li>需要「聽」版本：右側 <strong>Studio</strong> 面板揀 <strong>Audio Overview</strong>，可選格式（例如 Deep Dive 預設兩位 AI 主持對談／The Brief 單一講者兩分鐘內講重點）同輸出語言，再生成；完成後可播放或下載。</li>
         <li>產出當草稿：重要數字返來源核對；音檔官方提醒可能有不準或雜音。</li>
       </ol>
 
@@ -169,7 +180,7 @@
 
       <h2>點樣令筆記同語音真係慳到時間</h2>
 
-      <p>NotebookLM 強項係「有來源先講嘢」。你愈早整理來源標題（例如改做「供應商甲報價」「舊合約摘要」），之後發問愈準。</p>
+      <p>NotebookLM 官方定位係根據你上載嘅來源回答，並附引用標記；但官方亦提醒佢可能出錯，所以重要內容要返原文核對。你愈早整理來源標題（例如改做「供應商甲報價」「舊合約摘要」），之後發問愈準。</p>
 
       <p>實用節奏：</p>
 
@@ -188,7 +199,9 @@
       <ul>
         <li><a href="https://support.google.com/notebooklm/answer/16215270" target="_blank" rel="noopener noreferrer">Add or discover new sources（Gemini Notebook Help）</a></li>
         <li><a href="https://support.google.com/notebooklm/answer/16212820?hl=en" target="_blank" rel="noopener noreferrer">Generate Audio Overview（Gemini Notebook Help）</a></li>
+        <li><a href="https://support.google.com/notebooklm/answer/16164461?co=GENIE.Platform%3DDesktop&amp;hl=en" target="_blank" rel="noopener noreferrer">Learn about Gemini Notebook：支援國家／地區（Gemini Notebook Help）</a></li>
       </ul>
+      <p class="updated"><time datetime="2026-09-25">最後核實：2026-09-25</time></p>
 
       <h2>今日就可以試</h2>
 
