@@ -706,8 +706,8 @@ a.tool-primary {
 .tool-row {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 12px 10px;
+  gap: 6px;
+  padding: 10px 10px 8px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -725,12 +725,19 @@ a.tool-primary {
   align-items: center;
   text-decoration: none;
   color: inherit;
+  min-height: 44px;
+  padding: 6px 2px;
+  border-radius: 8px;
 }
 .tool-official {
-  font-size: 0.68rem;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
   color: var(--muted);
   text-decoration: none;
-  padding-left: 2px;
+  min-height: 28px;
+  padding: 4px 2px 2px;
   line-height: 1.3;
+  align-self: flex-start;
 }
 .tool-official:hover { color: var(--accent); }
