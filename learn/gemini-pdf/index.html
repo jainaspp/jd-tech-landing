@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="description" content="教你喺 Gemini 上載長 PDF，用幾條問題拎結論、重點同「要自己核對」嘅位。適合要趕功課、睇報告、睇報價說明嘅人。" />
+  <meta property="og:title" content="Gemini：讀長 PDF 拎重點｜JD Tech" />
+  <meta property="og:description" content="教你喺 Gemini 上載長 PDF，用幾條問題拎結論、重點同「要自己核對」嘅位。適合要趕功課、睇報告、睇報價說明嘅人。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://jainaspp.github.io/jd-tech-landing/learn/gemini-pdf/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://jainaspp.github.io/jd-tech-landing/learn/gemini-pdf/" />
+  <title>Gemini：讀長 PDF 拎重點｜JD Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&amp;family=Noto+Sans+HK:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="top-nav" aria-label="導航">
+      <a href="../">← 教學目錄</a>
+      <a href="../../">主頁</a>
+    </nav>
+
+    <header class="tut-header">
+      <div class="badge">JD Tech</div>
+      <h1>Gemini：讀長 PDF 拎重點</h1>
+      <p class="sub">JD Tech｜粵語 AI 日更　·　免費工具 3 步實測</p>
+    </header>
+
+    <article class="prose">
+      <p>教你喺 Gemini 上載長 PDF，用幾條問題拎結論、重點同「要自己核對」嘅位。適合要趕功課、睇報告、睇報價說明嘅人。</p>
+
+      <h2>開始前要準備咩</h2>
+
+      <ul>
+        <li>Google 帳戶，登入 <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer">gemini.google.com</a></li>
+        <li>電腦瀏覽器較易上載；手機 App 亦可（介面略有不同）</li>
+        <li>官方說明：同一個提示最多可加約 10 個支援檔案（視乎供應情況）；一般非影片檔案單檔上限約 100 MB。用量同上下文長度有滾動限制，超出時會提示稍後再試或升級方案——以官方頁為準</li>
+      </ul>
+
+      <h2>逐步操作</h2>
+
+      <ol>
+        <li>開啟 gemini.google.com 並登入。</li>
+        <li>喺下方輸入框先打你想問咩（例如「用中文列 5 個重點」）。</li>
+        <li>撳 <strong>Add files</strong> → 揀 <strong>Upload Files</strong>（由裝置上載），或 <strong>Add from Drive</strong>（由 Google Drive 加；需按提示連接相關權限）。</li>
+        <li>揀你嘅 PDF，確認後撳 <strong>Submit</strong>。</li>
+        <li>跟住追問：結論一句、行動項、邊段最唔肯定。覺得太長就叫佢「再短一半、只留可執行資訊」。</li>
+      </ol>
+
+      <h2>完整真實例子</h2>
+
+      <p><strong>場景：</strong> 理工學生要交專題，教授派咗 40 頁英文 PDF 要你一週內睇完。</p>
+
+      <p><strong>輸入（示意）：</strong> 上載課程閱讀 PDF，問：「用繁體中文：1）一句話主題；2）五個重點（每點 ≤25 字）；3）兩個可能考嘅概念；4）原文冇講清嘅地方標『未確定』。」</p>
+
+      <p><strong>預期輸出（示意）：</strong> 一段短結論＋五點列表＋兩個概念名；若 PDF 某章好技術，可能出現「未確定」或叫你翻原文某節。數字同定義請返 PDF 核對。</p>
+
+      <p>課堂同辦公室最實際嘅用法係「帶問題入去讀」，而唔係「請佢讀完先」。你愈早講自己要交咩（短報告、決定簽唔簽、溫習），佢整理嘅角度愈貼地。</p>
+
+      <p>若 PDF 係圖片掃瞄又糊，先問清楚學校／同事有冇文字版。實在只有圖片，就要預期重點會漏，自己翻頁補。</p>
+
+      <h2>可抄 Prompt</h2>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>請只根據我上載嘅 PDF，用繁體中文整理：
+1. 一句話結論
+2. 5 個重點（每點 25 字內）
+3. 1 個限制或風險（原文冇就寫「原文未提及」）
+唔好 invent 頁碼以外嘅數據。</pre>
+      </div>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>呢份 PDF 係【作業說明／報價條款／產品說明】。
+請抽出所有【限期／金額／必須提交項目】，做成表格：項目｜內容｜出處（大概章節）。
+搵唔到就留空，唔好估。</pre>
+      </div>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>假設我只有 15 分鐘複習。
+按「一定要記／可以略讀／可忽略」三類，幫我排呢份 PDF 嘅章節優先次序，並用一句解釋點解。</pre>
+      </div>
+
+      <h2>常見錯誤＋點樣改</h2>
+
+      <ul>
+        <li><strong>一次丟太多檔又問好闊：</strong> 改做「只根據呢一份」或分批上載。</li>
+        <li><strong>出現「You’ve reached your limit for chats with files」：</strong> 官方指有滾動用量限制；等一陣再試，或減少檔案。</li>
+        <li><strong>掃瞄版 PDF 冇文字層：</strong> 可能讀唔準；改用可搜尋文字嘅 PDF，或先用 OCR。</li>
+      </ul>
+
+      <ul>
+        <li><strong>把摘要直接交功課：</strong> 老師要嘅係你理解；摘要只係地圖，引用請返原文頁。</li>
+        <li><strong>一次問太多互不相關問題：</strong> 拆成兩三次，答案質素通常更好。</li>
+      </ul>
+
+      <h2>私隱／核對提醒</h2>
+
+      <p>唔好上載載有身份證、銀行資料、未公開合約嘅 PDF。上載檔會進入 Gemini Apps 活動儲存空間；唔要嘅對話可喺設定嘅 Activity 刪除。任何金額、日期、法例以原文同官方來源為準。</p>
+
+      <h2>點樣問，重點先用得着</h2>
+
+      <p>讀 PDF 最易犯嘅錯係問「幫我總結」。改用任務型問題：</p>
+
+      <ul>
+        <li>「我要喺五分鐘內決定係咪簽名，列必須睇嘅條款。」</li>
+        <li>「抽出所有日期同責任人，做成表。」</li>
+        <li>「用學生溫習角度：邊三個概念最常考？」</li>
+      </ul>
+
+      <p>長文可以分段問：先目錄／前 10 頁，再方法，再結論。官方亦提醒超過上下文「閱讀容量」時，答案可能漏細節——所以關鍵數字一定返 PDF 搜尋核對。</p>
+
+      <p>若提示出現儲存空間或用量限制相關訊息，可到 Gemini 設定入面嘅 Activity 清理舊對話後再上載。工作／學校 Google 帳戶或要管理員開權限，私人帳戶通常較易先試。</p>
+
+      <h2>佐證</h2>
+
+      <ul>
+        <li><a href="https://support.google.com/gemini/answer/14903178?hl=en&amp;co=GENIE.Platform%3DDesktop" target="_blank" rel="noopener noreferrer">Upload &amp; analyze files in Gemini Apps（Google）</a></li>
+      </ul>
+
+      <h2>今日就可以試</h2>
+
+      <p>拎一份你本週真正要睇嘅 PDF（課堂閱讀或產品說明都得），上載後只用文中第一條可抄 Prompt。出嚟後，用 PDF 搜尋功能抽查兩個數字或兩個專有名詞，養成「摘要＋抽查」習慣，之後先加速。</p>
+
+      <p>另外記低：上載前把檔名改做睇得明嘅中文名，對話紀錄會較易搵返。同一份 PDF 若要問第二次，可以直接喺原對話追問，唔使重複上載。</p>
+
+      <p>遇到掃瞄件又急住交差，可以先叫佢標「低信心」段落，你只精讀嗰幾段，總好過全信一段流暢但無根嘅摘要。 養成「先小範圍實測、再放大到正式場合」嘅次序，出錯成本會低好多。</p>
+    </article>
+
+    <div class="ending-cta">
+      <a
+        class="btn btn-primary"
+        href="https://www.instagram.com/rabithead1881/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >追蹤 @rabithead1881</a>
+      <p class="ending-note">每日 07:00・12:00 粵語實測，留言數字即拎可抄 workflow。</p>
+    </div>
+
+    <nav class="tut-pager" aria-label="上一篇下一篇">
+      <a class="pager-link pager-prev" href="../chatgpt/">← ChatGPT</a>
+      <a class="pager-link pager-next" href="../notebooklm/">NotebookLM →</a>
+    </nav>
+
+    <footer>
+      <a class="ig-handle" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">
+        @rabithead1881
+      </a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(text);
+        }
+        return new Promise(function (resolve, reject) {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "fixed";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            var ok = document.execCommand("copy");
+            document.body.removeChild(ta);
+            if (ok) resolve();
+            else reject(new Error("copy failed"));
+          } catch (e) {
+            document.body.removeChild(ta);
+            reject(e);
+          }
+        });
+      }
+
+      document.querySelectorAll(".code-block").forEach(function (block) {
+        var btn = block.querySelector(".copy-btn");
+        var pre = block.querySelector("pre");
+        if (!btn || !pre) return;
+        btn.addEventListener("click", function () {
+          var text = pre.textContent || "";
+          copyText(text).then(function () {
+            var prev = btn.textContent;
+            btn.textContent = "已複製";
+            btn.classList.add("copied");
+            setTimeout(function () {
+              btn.textContent = prev || "複製";
+              btn.classList.remove("copied");
+            }, 1600);
+          }).catch(function () {
+            btn.textContent = "失敗";
+            setTimeout(function () {
+              btn.textContent = "複製";
+            }, 1600);
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

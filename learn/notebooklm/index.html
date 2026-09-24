@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="description" content="教你將幾份 PDF／網頁／Drive 文件放進 NotebookLM（Gemini Notebook），問問題拎筆記，再生成 Audio Overview 聽重點。適合要消化一疊資料嘅學生、做研究嘅上班族、要對齊供應商文件嘅小生意。" />
+  <meta property="og:title" content="NotebookLM：一疊資料變筆記同語音摘要｜JD Tech" />
+  <meta property="og:description" content="教你將幾份 PDF／網頁／Drive 文件放進 NotebookLM（Gemini Notebook），問問題拎筆記，再生成 Audio Overview 聽重點。適合要消化一疊資料嘅學生、做研究嘅上班族、要對齊供應商文件嘅小生意。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://jainaspp.github.io/jd-tech-landing/learn/notebooklm/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://jainaspp.github.io/jd-tech-landing/learn/notebooklm/" />
+  <title>NotebookLM：一疊資料變筆記同語音摘要｜JD Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&amp;family=Noto+Sans+HK:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="top-nav" aria-label="導航">
+      <a href="../">← 教學目錄</a>
+      <a href="../../">主頁</a>
+    </nav>
+
+    <header class="tut-header">
+      <div class="badge">JD Tech</div>
+      <h1>NotebookLM：一疊資料變筆記同語音摘要</h1>
+      <p class="sub">JD Tech｜粵語 AI 日更　·　免費工具 3 步實測</p>
+    </header>
+
+    <article class="prose">
+      <p>教你將幾份 PDF／網頁／Drive 文件放進 NotebookLM（Gemini Notebook），問問題拎筆記，再生成 Audio Overview 聽重點。適合要消化一疊資料嘅學生、做研究嘅上班族、要對齊供應商文件嘅小生意。</p>
+
+      <h2>開始前要準備咩</h2>
+
+      <ul>
+        <li>Google 帳戶，開啟 <a href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer">NotebookLM</a>（或 Gemini 內嘅 Notebooks）</li>
+        <li>電腦瀏覽器最齊功能；手機 App 部分功能可能受限</li>
+        <li>官方：免費用戶每個 notebook 來源數量有上限（文件寫最多約 50 個來源）；單一來源字數／檔案大小亦有上限。以官方「source limits」說明為準</li>
+      </ul>
+
+      <h2>逐步操作</h2>
+
+      <ol>
+        <li>開新 notebook，喺左側揀 <strong>Add sources</strong>。</li>
+        <li>上載 PDF／貼網址／由 Google Drive 匯入你有權限嘅文件（可一次多選）。</li>
+        <li>等來源載入後，喺對話框問具體問題（提來源名會更準）。</li>
+        <li>需要「聽」版本：右側 <strong>Studio</strong> 面板揀 <strong>Audio Overview</strong>，可選格式（例如 Deep Dive／The Brief），再生成；完成後可播放或下載。</li>
+        <li>產出當草稿：重要數字返來源核對；音檔官方提醒可能有不準或雜音。</li>
+      </ol>
+
+      <h2>完整真實例子</h2>
+
+      <p><strong>場景：</strong> 觀塘小店老闆要比較三間供應商報價 PDF 同兩頁條款。</p>
+
+      <p><strong>輸入：</strong> 五個來源一齊放入同一個 notebook，問：「用廣東話列點：邊間運費最低、邊間最短貨期、有冇最低訂貨量？做表：供應商｜運費條件｜貨期｜MOQ。來源冇寫就『未提及』。」</p>
+
+      <p><strong>預期輸出（示意）：</strong> 一張對照表＋一句建議你再問供應商確認嘅位；Audio Overview 可能係兩個 AI 主持討論「三間分別同要注意嘅條款」——當聽書用，唔好當已簽約解釋。</p>
+
+      <p>小生意同學生都可以用同一邏輯：來源愈乾淨，答案愈少廢話。上載前刪走唔相關附件、舊版本，避免模型把過期價目當現價。</p>
+
+      <p>若你之後要把筆記貼去群組，先用「未定／待確認」標所有無來源支撐嘅句子，減少以訛傳訛。</p>
+
+      <h2>可抄 Prompt</h2>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>只根據已選來源，用繁體中文產出：
+- 一句結論
+- 重點列表（最多 7 點）
+- 「未解決／原文不清」列表
+每點尽量標明來自邊個來源標題。冇寫過嘅唔好補。</pre>
+      </div>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>請比較【來源 A】同【來源 B】：
+相同點 3 個、不同點 3 個、對我做【採購／溫習／簡報】最關鍵嘅 1 個差異。
+用表格。</pre>
+      </div>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>幫我將以上討論收成一頁會議筆記：決定｜待辦｜負責人（冇就寫未定）｜限期（冇就寫未定）。</pre>
+      </div>
+
+      <h2>常見錯誤＋點樣改</h2>
+
+      <ul>
+        <li><strong>來源太多又問「總結全部」：</strong> 先喺 Source 面板只剔要嘅幾份，再問。</li>
+        <li><strong>Audio Overview 講錯數字：</strong> 官方表明 AI 音檔可能有錯；當導讀，數字返原文。</li>
+        <li><strong>付費牆網頁：</strong> 官方指 paywalled 頁面唔支援以 URL 匯入；改下載允許嘅 PDF 再上載。</li>
+      </ul>
+
+      <ul>
+        <li><strong>來源重複版本未刪：</strong> 舊價同新價一齊喺本，模型可能混用；上載前整理。</li>
+        <li><strong>音檔當會議紀錄外傳：</strong> 先轉文字再人工批核，唔好直接轉發 AI 音檔做正式紀要。</li>
+      </ul>
+
+      <h2>私隱／核對提醒</h2>
+
+      <p>只上載你有權使用嘅文件。分享 notebook 或 Audio Overview 連結前，檢查權限（唔好公開有客人報價嘅本）。引用時跟 notebook 內引用標記返原文。</p>
+
+      <h2>點樣令筆記同語音真係慳到時間</h2>
+
+      <p>NotebookLM 強項係「有來源先講嘢」。你愈早整理來源標題（例如改做「供應商甲報價」「舊合約摘要」），之後發問愈準。</p>
+
+      <p>實用節奏：</p>
+
+      <ol>
+        <li>先問「呢幾份最大分歧係咩」。</li>
+        <li>再問「做決定前我要再問供應商邊三條」。</li>
+        <li>最後先生成 Audio Overview，通勤聽；聽到可疑數字就暫停，返 Source Guide 或原文。</li>
+      </ol>
+
+      <p>Audio Overview 可揀較短嘅 Brief 或較長嘅 Deep Dive；亦可喺生成前用短提示指定焦點（例如「只討論付款同貨期」）。官方提醒音檔可能有不準同雜音，所以佢係導讀，唔係最終會議紀錄。</p>
+
+      <p>分享之前檢查 notebook 係咪只畀需要嘅人開啟，尤其有報價同成本嘅本。</p>
+
+      <h2>佐證</h2>
+
+      <ul>
+        <li><a href="https://support.google.com/notebooklm/answer/16215270" target="_blank" rel="noopener noreferrer">Add or discover new sources（Gemini Notebook Help）</a></li>
+        <li><a href="https://support.google.com/notebooklm/answer/16212820?hl=en" target="_blank" rel="noopener noreferrer">Generate Audio Overview（Gemini Notebook Help）</a></li>
+      </ul>
+
+      <h2>今日就可以試</h2>
+
+      <p>開一個新 notebook，只放入兩至三份同主題來源，問一個比較題同埋一個「我仲要查咩」題。若有時間，再生成一條短 Audio Overview，通勤聽一次，返到來源核對你覺得可疑嘅一句就得。</p>
+
+      <p>另外記低：來源超過你真正要用嘅數量時，先喺左側取消剔選，再發問，答案會乾淨好多。音檔聽完若覺得某段誇張，返聊天問「請出示呢句對應來源原文」。</p>
+
+      <p>一個 notebook 一個主題就夠；唔好把完全無關嘅稅務同設計稿塞埋一齊，否則問答會串台。先用非機密材料練習，確認流程同用字，先代入真正工作內容。</p>
+    </article>
+
+    <div class="ending-cta">
+      <a
+        class="btn btn-primary"
+        href="https://www.instagram.com/rabithead1881/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >追蹤 @rabithead1881</a>
+      <p class="ending-note">每日 07:00・12:00 粵語實測，留言數字即拎可抄 workflow。</p>
+    </div>
+
+    <nav class="tut-pager" aria-label="上一篇下一篇">
+      <a class="pager-link pager-prev" href="../gemini-pdf/">← Gemini</a>
+      <a class="pager-link pager-next" href="../copilot/">Copilot →</a>
+    </nav>
+
+    <footer>
+      <a class="ig-handle" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">
+        @rabithead1881
+      </a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(text);
+        }
+        return new Promise(function (resolve, reject) {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "fixed";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            var ok = document.execCommand("copy");
+            document.body.removeChild(ta);
+            if (ok) resolve();
+            else reject(new Error("copy failed"));
+          } catch (e) {
+            document.body.removeChild(ta);
+            reject(e);
+          }
+        });
+      }
+
+      document.querySelectorAll(".code-block").forEach(function (block) {
+        var btn = block.querySelector(".copy-btn");
+        var pre = block.querySelector("pre");
+        if (!btn || !pre) return;
+        btn.addEventListener("click", function () {
+          var text = pre.textContent || "";
+          copyText(text).then(function () {
+            var prev = btn.textContent;
+            btn.textContent = "已複製";
+            btn.classList.add("copied");
+            setTimeout(function () {
+              btn.textContent = prev || "複製";
+              btn.classList.remove("copied");
+            }, 1600);
+          }).catch(function () {
+            btn.textContent = "失敗";
+            setTimeout(function () {
+              btn.textContent = "複製";
+            }, 1600);
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

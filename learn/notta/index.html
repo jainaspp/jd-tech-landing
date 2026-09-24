@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="description" content="教你用 Notta Bot 入 Zoom／Google Meet／Teams 等會議，轉寫完成後用 AI Notes 模板產出重點同行動項。適合開完會要跟進嘅上班族同小團隊。" />
+  <meta property="og:title" content="Notta：會議錄音變紀錄同行動項｜JD Tech" />
+  <meta property="og:description" content="教你用 Notta Bot 入 Zoom／Google Meet／Teams 等會議，轉寫完成後用 AI Notes 模板產出重點同行動項。適合開完會要跟進嘅上班族同小團隊。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://jainaspp.github.io/jd-tech-landing/learn/notta/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://jainaspp.github.io/jd-tech-landing/learn/notta/" />
+  <title>Notta：會議錄音變紀錄同行動項｜JD Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&amp;family=Noto+Sans+HK:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="top-nav" aria-label="導航">
+      <a href="../">← 教學目錄</a>
+      <a href="../../">主頁</a>
+    </nav>
+
+    <header class="tut-header">
+      <div class="badge">JD Tech</div>
+      <h1>Notta：會議錄音變紀錄同行動項</h1>
+      <p class="sub">JD Tech｜粵語 AI 日更　·　免費工具 3 步實測</p>
+    </header>
+
+    <article class="prose">
+      <p>教你用 Notta Bot 入 Zoom／Google Meet／Teams 等會議，轉寫完成後用 AI Notes 模板產出重點同行動項。適合開完會要跟進嘅上班族同小團隊。</p>
+
+      <h2>開始前要準備咩</h2>
+
+      <ul>
+        <li>Notta 帳戶（Web 或手機 App）；官方指相關錄音轉寫同 AI Notes 功能喺各計劃都有提供，但免費額度、Bot 名稱自訂、隱藏錄製提示等可能有計劃限制——以 <a href="https://support.notta.ai/" target="_blank" rel="noopener noreferrer">Notta 說明中心</a> 同帳戶顯示為準</li>
+        <li>電腦瀏覽器做「Record online meeting」較齊；手機可選 Online meetings</li>
+        <li>會議已開始、你有會議連結；主持人或有權限者要批准 Bot 進入同錄製</li>
+      </ul>
+
+      <h2>逐步操作</h2>
+
+      <ol>
+        <li>登入 Notta Web，撳 <strong>Record online meeting</strong>。</li>
+        <li>將 <strong>Transcription language</strong> 設成會議實際語言（粵語場合通常揀中文相關選項；雙語會議可睇官方 Bilingual transcription 說明）。</li>
+        <li>貼上會議連結，需要時展開 <strong>Advanced options</strong>，再撳 <strong>Transcribe now</strong>。</li>
+        <li>會議主持人批准 Notta Bot 進入；會議期間可睇即時逐字稿。</li>
+        <li>結束後開啟該筆記錄：先快速改錯講者名／明顯錯字 → 喺 <strong>AI Notes</strong> 區揀模板（或 <strong>Template library</strong>／<strong>See All templates</strong>）生成摘要 → 複製行動項出去待辦工具。</li>
+      </ol>
+
+      <h2>完整真實例子</h2>
+
+      <p><strong>場景：</strong> 旺角設計工作室週會，Google Meet 開 40 分鐘講客戶改稿同出貨日。</p>
+
+      <p><strong>輸入：</strong> Meet 連結貼入 Notta → 語言設中文 → 會後喺 AI Notes 揀偏「會議紀要／行動項」類模板（實際模板名以產品庫為準），再叫自己核對一次。</p>
+
+      <p><strong>預期輸出（示意）：</strong> 幾段重點（邊個客戶要改色、邊日要交初稿）＋行動項列表（可能連時間戳）；若逐字稿把「下星期三」聽錯，摘要亦可能錯——所以一定要對返錄音關鍵句。</p>
+
+      <p>若會議好短、唔想用 Bot，亦可會後上載錄音檔做轉寫（視乎你計劃同產品入口）。重點仍然係：轉寫 → 改錯 → 先再摘要。</p>
+
+      <p>行動項寄出群組時，建議格式統一做「人名｜事項｜日期」，少啲散文，跟進率會高啲。</p>
+
+      <h2>可抄 Prompt</h2>
+
+      <p>（若你將逐字稿貼去其他 AI 再整理，可用：）</p>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>你係會議秘書。以下係逐字稿，請整理：
+1. 結論（3 點內）
+2. 行動項表：事項｜負責人｜限期
+3. 未解決問題
+逐字稿冇寫負責人／限期就填「未定」，唔好估。
+逐字稿：
+【貼上內容】</pre>
+      </div>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>只保留同【專案名稱】有關嘅決定同待辦，其他閒聊刪走。
+用繁體中文列點。</pre>
+      </div>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>將以下行動項改寫成可直接貼去 WhatsApp 嘅短訊（每項一行，前加負責人名）：
+【貼上行動項】</pre>
+      </div>
+
+      <h2>常見錯誤＋點樣改</h2>
+
+      <ul>
+        <li><strong>Bot 入唔到會：</strong> 確認會議進行中、連結正確；Zoom 或需允許外部參與者錄製等設定；公司政策可能禁止 Bot。</li>
+        <li><strong>摘要好空或好奇怪：</strong> 官方建議生成 AI Notes 前先改好轉寫同講者名；內容少於約 200 字元可能無法生成。</li>
+        <li><strong>講開粵語夾英文：</strong> 檢查語言設定；必要時會後手動改關鍵專有名詞。</li>
+      </ul>
+
+      <ul>
+        <li><strong>未改講者名就出摘要：</strong> 行動項會變成「某人」，跟進困難。</li>
+        <li><strong>整段逐字稿丟去公開群：</strong> 可能有閒聊同個人資料，先删先摘要。</li>
+      </ul>
+
+      <h2>私隱／核對提醒</h2>
+
+      <p>開會前告知所有人會錄音／有轉寫 Bot。唔好錄有薪資、醫療、未公開併購內容嘅會，除非已有合規批准。AI Notes 係摘要，寄出會議紀錄前自己聽返爭議段落。</p>
+
+      <h2>會後 10 分鐘收尾清單</h2>
+
+      <p>轉寫完成唔等於收工。建議固定做：</p>
+
+      <ol>
+        <li>改講者名（例如「Speaker 1」→「阿文」）。</li>
+        <li>搜尋關鍵詞：價錢、日期、交貨、負責。</li>
+        <li>生成 AI Notes，複製行動項去待辦或群組。</li>
+        <li>爭議段落倒轉聽 20 秒再改摘要。</li>
+      </ol>
+
+      <p>若你係會議主持人：會前喺議程寫「本會有轉寫 Bot」；會中見到 Bot 入嚟先批准；會後決定邊啲段落可以外傳。對外客戶會，寧可會後人手記三點，都好過未經同意就錄低成段投訴。</p>
+
+      <p>雙語會議（粵語＋英文專有名詞）好常見：專有名詞錯唔緊要，重要決定句一定人手改。模板唔啱就換另一個，再生成一版放上面比較。</p>
+
+      <h2>佐證</h2>
+
+      <ul>
+        <li><a href="https://support.notta.ai/hc/en-us/articles/20903974921243-Record-and-transcribe-online-meetings" target="_blank" rel="noopener noreferrer">Record and transcribe online meetings（Notta）</a></li>
+        <li><a href="https://support.notta.ai/hc/en-us/articles/15451756393243-Generate-AI-Notes-with-templates" target="_blank" rel="noopener noreferrer">Generate AI Notes with templates（Notta）</a></li>
+      </ul>
+
+      <h2>今日就可以試</h2>
+
+      <p>下次內部短會（甚至兩人 Meet）先徵求同意，用 Notta Bot 走一次完整流程：入會、轉寫、改講者名、生成 AI Notes、把行動項貼去群組。第一次唔求完美，只求你知每個按鈕喺邊。</p>
+
+      <p>另外記低：第一次建議揀內部短會練手，唔好一開始就錄對外客戶談判。熟咗流程、知點改錯，先考慮用喺更正式場合，並寫入團隊會議規範。</p>
+
+      <p>若主持拒絕 Bot，就改做會後三人各寫三點再合併，唔好偷偷錄——信任貴過功能。</p>
+    </article>
+
+    <div class="ending-cta">
+      <a
+        class="btn btn-primary"
+        href="https://www.instagram.com/rabithead1881/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >追蹤 @rabithead1881</a>
+      <p class="ending-note">每日 07:00・12:00 粵語實測，留言數字即拎可抄 workflow。</p>
+    </div>
+
+    <nav class="tut-pager" aria-label="上一篇下一篇">
+      <a class="pager-link pager-prev" href="../copilot/">← Copilot</a>
+      <a class="pager-link pager-next" href="../canva/">Canva →</a>
+    </nav>
+
+    <footer>
+      <a class="ig-handle" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">
+        @rabithead1881
+      </a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(text);
+        }
+        return new Promise(function (resolve, reject) {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "fixed";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            var ok = document.execCommand("copy");
+            document.body.removeChild(ta);
+            if (ok) resolve();
+            else reject(new Error("copy failed"));
+          } catch (e) {
+            document.body.removeChild(ta);
+            reject(e);
+          }
+        });
+      }
+
+      document.querySelectorAll(".code-block").forEach(function (block) {
+        var btn = block.querySelector(".copy-btn");
+        var pre = block.querySelector("pre");
+        if (!btn || !pre) return;
+        btn.addEventListener("click", function () {
+          var text = pre.textContent || "";
+          copyText(text).then(function () {
+            var prev = btn.textContent;
+            btn.textContent = "已複製";
+            btn.classList.add("copied");
+            setTimeout(function () {
+              btn.textContent = prev || "複製";
+              btn.classList.remove("copied");
+            }, 1600);
+          }).catch(function () {
+            btn.textContent = "失敗";
+            setTimeout(function () {
+              btn.textContent = "複製";
+            }, 1600);
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

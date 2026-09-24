@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="description" content="教你用 Perplexity 問問題時同時睇來源連結，養成「先睇引用再相信」嘅习惯。適合要查資料寫功課、比較產品、睇政策摘要嘅人。" />
+  <meta property="og:title" content="Perplexity：帶來源搜尋同核對｜JD Tech" />
+  <meta property="og:description" content="教你用 Perplexity 問問題時同時睇來源連結，養成「先睇引用再相信」嘅习惯。適合要查資料寫功課、比較產品、睇政策摘要嘅人。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://jainaspp.github.io/jd-tech-landing/learn/perplexity/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://jainaspp.github.io/jd-tech-landing/learn/perplexity/" />
+  <title>Perplexity：帶來源搜尋同核對｜JD Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&amp;family=Noto+Sans+HK:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="top-nav" aria-label="導航">
+      <a href="../">← 教學目錄</a>
+      <a href="../../">主頁</a>
+    </nav>
+
+    <header class="tut-header">
+      <div class="badge">JD Tech</div>
+      <h1>Perplexity：帶來源搜尋同核對</h1>
+      <p class="sub">JD Tech｜粵語 AI 日更　·　免費工具 3 步實測</p>
+    </header>
+
+    <article class="prose">
+      <p>教你用 Perplexity 問問題時同時睇來源連結，養成「先睇引用再相信」嘅习惯。適合要查資料寫功課、比較產品、睇政策摘要嘅人。</p>
+
+      <h2>開始前要準備咩</h2>
+
+      <ul>
+        <li>瀏覽器打開 <a href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer">perplexity.ai</a>（可登入以同步紀錄；未登入通常亦可問）</li>
+        <li>手機或電腦都得</li>
+        <li>免費可用基本問答；進階模型／用量或有限制——以頁面同官方說明為準</li>
+      </ul>
+
+      <h2>逐步操作</h2>
+
+      <ol>
+        <li>用完整問題提問：對象、地區、時間範圍寫清（例如「香港」「2026」「官方」）。</li>
+        <li>等答案出現後，睇編號引用／來源列表；撳開一兩條最關鍵來源。</li>
+        <li>核對：呢頁係咪真係支持佢嗰句？係咪過時？係咪官網／一手來源？</li>
+        <li>唔滿意就追問：「只引用政府或大學來源」「列相反意見」「標明邊句唔肯定」。</li>
+        <li>需要引用喺作業／報告：抄來源標題同網址，返原文再引，唔好只寫「根據 AI」。</li>
+      </ol>
+
+      <h2>完整真實例子</h2>
+
+      <p><strong>場景：</strong> 屯門大學生寫短報告，想知香港公共圖書館借電子書大致點開始。</p>
+
+      <p><strong>輸入：</strong> 「香港公共圖書館怎樣登記借電子書？請用繁體中文步驟說明，並附官方來源連結；唔肯定嘅步驟請標明。」</p>
+
+      <p><strong>預期輸出（示意）：</strong> 一段步驟式答案＋多個編號來源；你應點進圖書館或相關政府／圖書館官網，確認登記入口同最新規則，而唔係只複製 AI 段落交功課。</p>
+
+      <p>如果你喺查「可唔可以」類問題（簽證、資助、報稅），答案再完整都只當線索：最後一步一定去對應部門嘅官方頁或表格。</p>
+
+      <p>可以叫佢「列出你可能錯嘅假設」——呢句好有用，會逼出答案入面嘅弱點，方便你針對性去核對。</p>
+
+      <h2>可抄 Prompt</h2>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>問題：【你嘅問題】
+地區：香港
+請用繁體中文回答，並：
+1. 先給結論
+2. 列步驟或要點
+3. 每個要點都要有可點開嘅來源
+4. 資訊可能過時嘅地方請明確寫出</pre>
+      </div>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>請比較【A】同【B】（只限【年份／地區】）：
+做成表：項目｜A｜B｜來源。
+搵唔到就寫「未找到」，唔好估。</pre>
+      </div>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>我搵到呢句說法：【貼上】
+請幫我核對係咪有可靠來源支持；若有，俾連結同原文關鍵句；若無，請直說證據不足。</pre>
+      </div>
+
+      <h2>常見錯誤＋點樣改</h2>
+
+      <ul>
+        <li><strong>問題太闊（「講下 AI」）：</strong> 收窄用途、地區、你要嘅輸出格式。</li>
+        <li><strong>唔開來源就信：</strong> 強制自己至少點兩條連結。</li>
+        <li><strong>把來源標籤當保證：</strong> 即使出現政府／學術等標籤，都要核對該頁係咪支持嗰句具體講法。</li>
+      </ul>
+
+      <ul>
+        <li><strong>只睇第一條來源：</strong> 至少對兩類來源（例如官網＋另一獨立頁）。</li>
+        <li><strong>把摘要語氣當成肯定事實：</strong> 見到「可能」「一般」就要再查。</li>
+      </ul>
+
+      <h2>私隱／核對提醒</h2>
+
+      <p>唔好貼密碼、醫療病歷、未公開商業數據入問題。AI 會錯；作業、報稅、健康、法律決定一定返官方原文。對外引用請引用原始網頁而唔係只引用 Perplexity。</p>
+
+      <h2>核對來源嘅最低標準</h2>
+
+      <p>當答案睇落好完整，用呢三條先過機：</p>
+
+      <ol>
+        <li><strong>來源係咪一手？</strong> 政府／機構官網、原文論文，好過轉述媒體。</li>
+        <li><strong>日期係咪夠新？</strong> 手續、收費、申請連結好易改。</li>
+        <li><strong>句子係咪真係咁寫？</strong> 打開連結搜關鍵句，唔好只睇標題。</li>
+      </ol>
+
+      <p>寫功課時，建議自己建立「來源表」：問題｜AI 摘要｜我打開嘅網址｜我確認嘅句子。交功課引用嗰行，用你打開過嘅頁。</p>
+
+      <p>若要比較產品或服務，叫佢列出「相同點／不同點／我仲要問嘅問題」，比起直接問「邊個最好」更少誤導。記住：帶來源唔等於一定啱，只係令你更快去查。</p>
+
+      <h2>佐證</h2>
+
+      <ul>
+        <li><a href="https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work" target="_blank" rel="noopener noreferrer">How does Perplexity work?（Perplexity Help Center）</a></li>
+        <li><a href="https://www.perplexity.ai/help-center/en/articles/20260806-understanding-source-labels" target="_blank" rel="noopener noreferrer">Understanding source labels（Perplexity Help Center）</a></li>
+      </ul>
+
+      <p>（註：以上為官方 Help Center 條目；擷取時部分網路環境會遇到驗證頁，操作描述已按公開說明同產品常見流程寫成通用步驟。）</p>
+
+      <h2>今日就可以試</h2>
+
+      <p>問一條你這週要查嘅實務問題，強制自己打開兩條來源連結，並寫低「已確認／未確認」。若兩條來源互相矛盾，把矛盾寫出嚟再追問，而唔係隨便揀睇落較順嘅答案。</p>
+
+      <p>另外記低：把常用問題存成自己嘅筆記模板，例如「官方步驟＋連結＋更新日期」。下次同類問題，你會愈問愈快，亦愈少被漂亮空文帶走。</p>
+
+      <p>查完把「最終採用嘅官方連結」收藏，下次唔使重新喺 AI 答案入面翻。 養成「先小範圍實測、再放大到正式場合」嘅次序，出錯成本會低好多。</p>
+    </article>
+
+    <div class="ending-cta">
+      <a
+        class="btn btn-primary"
+        href="https://www.instagram.com/rabithead1881/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >追蹤 @rabithead1881</a>
+      <p class="ending-note">每日 07:00・12:00 粵語實測，留言數字即拎可抄 workflow。</p>
+    </div>
+
+    <nav class="tut-pager" aria-label="上一篇下一篇">
+      <a class="pager-link pager-prev" href="../capcut/">← CapCut</a>
+      <a class="pager-link pager-next" href="../claude/">Claude →</a>
+    </nav>
+
+    <footer>
+      <a class="ig-handle" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">
+        @rabithead1881
+      </a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(text);
+        }
+        return new Promise(function (resolve, reject) {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "fixed";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            var ok = document.execCommand("copy");
+            document.body.removeChild(ta);
+            if (ok) resolve();
+            else reject(new Error("copy failed"));
+          } catch (e) {
+            document.body.removeChild(ta);
+            reject(e);
+          }
+        });
+      }
+
+      document.querySelectorAll(".code-block").forEach(function (block) {
+        var btn = block.querySelector(".copy-btn");
+        var pre = block.querySelector("pre");
+        if (!btn || !pre) return;
+        btn.addEventListener("click", function () {
+          var text = pre.textContent || "";
+          copyText(text).then(function () {
+            var prev = btn.textContent;
+            btn.textContent = "已複製";
+            btn.classList.add("copied");
+            setTimeout(function () {
+              btn.textContent = prev || "複製";
+              btn.classList.remove("copied");
+            }, 1600);
+          }).catch(function () {
+            btn.textContent = "失敗";
+            setTimeout(function () {
+              btn.textContent = "複製";
+            }, 1600);
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

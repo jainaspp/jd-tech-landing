@@ -518,3 +518,95 @@ footer {
   color: var(--muted);
   margin-bottom: 24px;
 }
+
+
+/* Learn hub cards */
+.learn-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px 16px;
+}
+
+.learn-card-num {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid rgba(0, 229, 255, 0.35);
+}
+
+.learn-card-body { flex: 1; min-width: 0; }
+
+.learn-tool {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin-bottom: 2px;
+}
+
+.hub-intro { margin-bottom: 8px; }
+.hub-intro p { font-size: 0.9rem; color: #e8e8e8; line-height: 1.6; }
+
+.hub-cta-card {
+  border-color: rgba(0, 229, 255, 0.55);
+  background: rgba(0, 229, 255, 0.08);
+}
+.hub-cta-card .link-card-title {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.top-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  align-items: center;
+}
+
+.more-learn {
+  text-align: center;
+  margin: 20px 0 0;
+}
+.more-learn a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.tut-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(160, 160, 160, 0.25);
+}
+
+.pager-link {
+  flex: 1;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  line-height: 1.4;
+}
+.pager-next { text-align: right; }
+.pager-disabled { visibility: hidden; }
+
+.prose code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.85em;
+  color: #d8faff;
+  background: rgba(0, 229, 255, 0.08);
+  padding: 1px 5px;
+  border-radius: 4px;
+}

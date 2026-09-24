@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="description" content="教你用 Claude 上載長文或貼草稿，改語氣、收短、出可再改嘅版本。適合要改 proposal、報告、封面信嘅上班族同學生。" />
+  <meta property="og:title" content="Claude：長文改稿同寫作｜JD Tech" />
+  <meta property="og:description" content="教你用 Claude 上載長文或貼草稿，改語氣、收短、出可再改嘅版本。適合要改 proposal、報告、封面信嘅上班族同學生。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://jainaspp.github.io/jd-tech-landing/learn/claude/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://jainaspp.github.io/jd-tech-landing/learn/claude/" />
+  <title>Claude：長文改稿同寫作｜JD Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&amp;family=Noto+Sans+HK:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="top-nav" aria-label="導航">
+      <a href="../">← 教學目錄</a>
+      <a href="../../">主頁</a>
+    </nav>
+
+    <header class="tut-header">
+      <div class="badge">JD Tech</div>
+      <h1>Claude：長文改稿同寫作</h1>
+      <p class="sub">JD Tech｜粵語 AI 日更　·　免費工具 3 步實測</p>
+    </header>
+
+    <article class="prose">
+      <p>教你用 Claude 上載長文或貼草稿，改語氣、收短、出可再改嘅版本。適合要改 proposal、報告、封面信嘅上班族同學生。</p>
+
+      <h2>開始前要準備咩</h2>
+
+      <ul>
+        <li>Anthropic Claude 帳戶，開啟 <a href="https://claude.ai" target="_blank" rel="noopener noreferrer">claude.ai</a></li>
+        <li>網頁或桌面較易處理長文；手機亦可對話</li>
+        <li>官方：對話可經 <strong>+</strong> → <strong>Add files or photos</strong> 上載 PDF／DOCX 等；單一聊天檔案數量同大小有上限（例如每檔較大上限、每個 chat 檔案數上限，PDF 頁數亦有上限）。免費用戶可用 Projects 但數量有上限。以官方 Upload files／Projects 說明為準</li>
+      </ul>
+
+      <h2>逐步操作</h2>
+
+      <ol>
+        <li>開新對話（或喺 Project 內開，方便同一主題重複改）。</li>
+        <li>撳輸入框旁 <strong>+</strong> → <strong>Add files or photos</strong>，上載你嘅文稿；或直接貼文。</li>
+        <li>講清：讀者係邊個、目的、語氣、長度、唔可變嘅事實。</li>
+        <li>叫佢先出「改動說明」再出全文，方便你對稿。</li>
+        <li>唔滿意就追加：「第二段再短」「刪形容詞」「保留我哋嘅三個數據唔好改」。需要時可再要求做成可分享文件類輸出（視乎你計劃是否提供 Docs／Artifacts 功能）。</li>
+      </ol>
+
+      <h2>完整真實例子</h2>
+
+      <p><strong>場景：</strong> 中環中小企經理要交兩頁英文「服務升級」短提案畀客，自己草稿好散。</p>
+
+      <p><strong>輸入：</strong> 上載 DOCX 草稿，吩咐：「讀者係現有企業客嘅決策人。請改成清楚英文：先痛點再方案再時程。保留我標咗黃色嘅三個價錢同日期，唔好改動。先列你改咗咩，再出全文。唔好加我冇寫過嘅保證。」</p>
+
+      <p><strong>預期輸出（示意）：</strong> 一段改動摘要＋通順全文；價錢日期應同你原稿一致。你再用人眼對一次黃標數字。</p>
+
+      <p>改自己唔擅長嘅語言（例如英文提案）時，請佢保留你嘅意思，但標出「佢為求通順而改過」嘅句子，你再決定接唔接受。</p>
+
+      <p>有版本爭議就叫佢出對照：左欄原文要點、右欄改稿要點，避免大段覆蓋後你唔記得自己本來想講咩。</p>
+
+      <h2>可抄 Prompt</h2>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>你係嚴謹嘅編輯。請改寫以下文稿：
+讀者：【】
+目的：【】
+語氣：【專業／友善／直接】
+長度：【例如 400 字內】
+硬性保留：【列出唔可改嘅事實／數字】
+先用列點說明你改咗咩，再出全文。唔好發明新數據。
+原文：
+【貼上或見附件】</pre>
+      </div>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>將以下長文收成一頁：
+- 結論一句
+- 三個支撐點
+- 一個風險／限制
+只根據原文。
+【貼上】</pre>
+      </div>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>同一內容出兩個版本：A 給【老闆】、B 給【前線同事】。
+A 偏決策，B 偏點做。都用繁體中文。
+【貼上重點】</pre>
+      </div>
+
+      <h2>常見錯誤＋點樣改</h2>
+
+      <ul>
+        <li><strong>一次叫佢「寫到完美」但冇讀者同限制：</strong> 補齊讀者、目的、唔可變事實。</li>
+        <li><strong>上載好大掃瞄 PDF：</strong> 長 PDF 可能只抽文字、圖表理解有限；可分段或轉文字檔。</li>
+        <li><strong>把初稿直接寄出：</strong> Claude 會寫得順，唔等於事實啱；對外必核對。</li>
+      </ul>
+
+      <ul>
+        <li><strong>一次貼多份互相矛盾舊稿：</strong> 先告訴佢以邊份為準，或分段處理。</li>
+        <li><strong>改完唔對讀出聲：</strong> 尤其係要上台講嘅稿，出聲先知順唔順。</li>
+      </ul>
+
+      <h2>私隱／核對提醒</h2>
+
+      <p>唔好上載載有客戶身份證、薪資表、未公開合約全文（可用代號同刪敏感段）。公司有資料外傳政策就跟政策。法律、醫療、財務結論要專業人士把關。</p>
+
+      <h2>改稿循環：兩輪就夠大多數情況</h2>
+
+      <p>第一輪：結構同讀者（佢睇完知唔知要做咩）。 第二輪：句子同語氣（删空話、統一用詞、核對數字）。</p>
+
+      <p>可以咁追問：「列我仍然模糊嘅三句」「標出你最唔肯定嘅段落」「比較你改版同我原文，邊度可能改壞意思」。</p>
+
+      <p>長文超過模型一次消化得好嘅長度時，按章節分段改，最後再叫佢檢查全文用語一致。Projects 適合把公司用語、過往已批核範本放埋一齊做參考（一樣唔好放機密原文）。</p>
+
+      <p>寄出前用列印預覽或另一部裝置重讀；唔好喺同一個對話窗睇到眼花就按傳送。</p>
+
+      <h2>佐證</h2>
+
+      <ul>
+        <li><a href="https://support.claude.com/en/articles/8241126-upload-files-to-claude" target="_blank" rel="noopener noreferrer">Upload files to Claude（Claude Help Center）</a></li>
+        <li><a href="https://support.claude.com/en/articles/9517075-what-are-projects" target="_blank" rel="noopener noreferrer">What are projects?（Claude Help Center）</a></li>
+      </ul>
+
+      <h2>今日就可以試</h2>
+
+      <p>拎一篇你要交嘅草稿（email、報告、封面信任一），上載或貼上，用文中第一條可抄 Prompt 跑一輪。只接受「結構變清楚、事實冇被改」嘅版本；若事實被改，叫佢重來並收緊紅線。</p>
+
+      <p>另外記低：改稿對話可以改名保存（例如「客提案 v3」），方便一週後回看你點樣收窄要求。呢種過程紀錄，本身就係你自己嘅寫作提示庫。</p>
+
+      <p>對客文件建議保留「人類最後編輯」痕跡：你至少改一句開場，避免通篇 AI 腔。先用非機密材料練習，確認流程同用字，先代入真正工作內容。</p>
+    </article>
+
+    <div class="ending-cta">
+      <a
+        class="btn btn-primary"
+        href="https://www.instagram.com/rabithead1881/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >追蹤 @rabithead1881</a>
+      <p class="ending-note">每日 07:00・12:00 粵語實測，留言數字即拎可抄 workflow。</p>
+    </div>
+
+    <nav class="tut-pager" aria-label="上一篇下一篇">
+      <a class="pager-link pager-prev" href="../perplexity/">← Perplexity</a>
+      <span class="pager-link pager-next pager-disabled"></span>
+    </nav>
+
+    <footer>
+      <a class="ig-handle" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">
+        @rabithead1881
+      </a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(text);
+        }
+        return new Promise(function (resolve, reject) {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "fixed";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            var ok = document.execCommand("copy");
+            document.body.removeChild(ta);
+            if (ok) resolve();
+            else reject(new Error("copy failed"));
+          } catch (e) {
+            document.body.removeChild(ta);
+            reject(e);
+          }
+        });
+      }
+
+      document.querySelectorAll(".code-block").forEach(function (block) {
+        var btn = block.querySelector(".copy-btn");
+        var pre = block.querySelector("pre");
+        if (!btn || !pre) return;
+        btn.addEventListener("click", function () {
+          var text = pre.textContent || "";
+          copyText(text).then(function () {
+            var prev = btn.textContent;
+            btn.textContent = "已複製";
+            btn.classList.add("copied");
+            setTimeout(function () {
+              btn.textContent = prev || "複製";
+              btn.classList.remove("copied");
+            }, 1600);
+          }).catch(function () {
+            btn.textContent = "失敗";
+            setTimeout(function () {
+              btn.textContent = "複製";
+            }, 1600);
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

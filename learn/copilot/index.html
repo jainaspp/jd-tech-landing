@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="description" content="教你喺 Microsoft Edge 用內建 Copilot，對住而家開緊嘅長網頁或 PDF，三步拎摘要同行動項。適合要快讀政策、教學文、產品說明嘅人。" />
+  <meta property="og:title" content="Copilot：長網頁 3 步變重點｜JD Tech" />
+  <meta property="og:description" content="教你喺 Microsoft Edge 用內建 Copilot，對住而家開緊嘅長網頁或 PDF，三步拎摘要同行動項。適合要快讀政策、教學文、產品說明嘅人。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://jainaspp.github.io/jd-tech-landing/learn/copilot/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://jainaspp.github.io/jd-tech-landing/learn/copilot/" />
+  <title>Copilot：長網頁 3 步變重點｜JD Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&amp;family=Noto+Sans+HK:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="top-nav" aria-label="導航">
+      <a href="../">← 教學目錄</a>
+      <a href="../../">主頁</a>
+    </nav>
+
+    <header class="tut-header">
+      <div class="badge">JD Tech</div>
+      <h1>Copilot：長網頁 3 步變重點</h1>
+      <p class="sub">JD Tech｜粵語 AI 日更　·　免費工具 3 步實測</p>
+    </header>
+
+    <article class="prose">
+      <p>教你喺 Microsoft Edge 用內建 Copilot，對住而家開緊嘅長網頁或 PDF，三步拎摘要同行動項。適合要快讀政策、教學文、產品說明嘅人。</p>
+
+      <h2>開始前要準備咩</h2>
+
+      <ul>
+        <li>安裝／開啟 <strong>Microsoft Edge</strong></li>
+        <li>用個人 Microsoft 帳戶登入 Edge（官方指需登入先用 Copilot in Edge）</li>
+        <li>電腦較穩；Edge 手機版亦有 Copilot，但側欄體驗以桌面為準</li>
+        <li>免費可用頁面摘要類功能；部分語音／Vision 能力或需 Microsoft 365 等方案——以你帳戶實際顯示同官方說明為準</li>
+      </ul>
+
+      <h2>逐步操作</h2>
+
+      <ol>
+        <li>用 Edge 打開你要讀嘅網頁或 PDF。</li>
+        <li>撳視窗右上角 <strong>Copilot</strong> 圖示，打開側欄。</li>
+        <li>三選一開始：<ul><li>撳 <strong>Create a Summary</strong> 直接要摘要；或</li><li>打字：「用繁體中文列 5 個重點同 1 個結論」；或</li><li>揀側欄建議嘅相關提示。</li></ul></li>
+        <li>若摘要答唔到頁面內容：去 Edge <strong>⋯</strong> → <strong>Copilot and AI</strong>，確認已開啟允許 Copilot 讀取網頁脈絡（官方用字約為允許讀取 context clues／page content）相關開關。</li>
+        <li>追問「邊啲係行動項」「邊句最可能過時」，再自己點返原文核對。</li>
+      </ol>
+
+      <h2>完整真實例子</h2>
+
+      <p><strong>場景：</strong> 人力資源助理要讀一長篇「混合辦公指引」內聯網文，十分鐘後要同主管講重點。</p>
+
+      <p><strong>輸入：</strong> 開住該頁 → Copilot →「用書面中文：一句結論；五個員工要注意嘅規則；兩個要問 IT 嘅位。只根據呢頁，唔好加其他公司做法。」</p>
+
+      <p><strong>預期輸出（示意）：</strong> 短摘要＋五點（例如預約座位、核心時段、設備申請）；若頁面冇寫罰則，不應出現罰則細節。你再掃標題同粗體核對一次就交得。</p>
+
+      <p>讀完記得把有用重點貼去你自己嘅筆記，而唔係只留喺側欄對話。Edge 對話可能會清，你自己嘅待辦先係執行源。</p>
+
+      <p>遇到要翻譯又要摘要，可以分兩步：先中文重點，再問「呢五點有冇同英文標題意思衝突」。</p>
+
+      <h2>可抄 Prompt</h2>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>請摘要呢一頁，用繁體中文：
+1. 一句話結論
+2. 5 個重點（每點 20 字內）
+3. 1 個我應該自己再查嘅地方
+只根據目前頁面，唔好用頁外知識補完。</pre>
+      </div>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>將呢頁變成行動清單表格：要做咩｜邊類人負責｜有冇限期（冇就寫未提及）。</pre>
+      </div>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>我係【職位】。用 mid-career 聽得明嘅比喻，解釋呢頁最重要嘅 3 個概念，每個概念兩句。</pre>
+      </div>
+
+      <h2>常見錯誤＋點樣改</h2>
+
+      <ul>
+        <li><strong>側欄答得好空泛：</strong> 多數係未允許讀取頁面脈絡，或開錯 tab；開準頁再問「summarize this page」。</li>
+        <li><strong>公司政策鎖咗功能：</strong> 工作帳戶可能被管理員關閉 page context；改用個人檔案測試，或改手動複製公開段落去對話（注意機密）。</li>
+        <li><strong>一次開好多 tab：</strong> 官方指回應可能用到開緊嘅分頁資訊；敏感分頁先關。</li>
+      </ul>
+
+      <ul>
+        <li><strong>摘要後唔截圖唔筆記：</strong> 對話一清就冇；即刻複製去自己文件。</li>
+        <li><strong>用工作檔案測個人 Copilot：</strong> 注意公司政策同保密條款。</li>
+      </ul>
+
+      <h2>私隱／核對提醒</h2>
+
+      <p>唔好喺會被用作 browsing context 嘅情況下打開載有密碼、薪資、客人資料嘅分頁。可隨時喺 Copilot and AI 設定關閉讀取網頁脈絡。摘要唔等於法律／合規意見，重要規定返原文。</p>
+
+      <h2>三步流程點樣變成日常</h2>
+
+      <p>建議你固定用同一套追問，形成肌肉記憶：</p>
+
+      <ol>
+        <li><strong>Create a Summary</strong> 或「列五個重點」。</li>
+        <li>「邊啲係我今日要做」。</li>
+        <li>「邊句最可能過時或只係例子」。</li>
+      </ol>
+
+      <p>讀完政策頁、長教學文、產品比較文都可以同一套。若答案講咗頁面冇嘅東西，多半係讀錯 tab，或者 page context 未開。</p>
+
+      <p>公司電腦若鎖咗 Copilot 讀頁，唔好為咗方便就將內部文件貼去公用 AI；改用公司批准嘅工具，或者只摘要已公開資訊。個人學習用個人 Microsoft 帳戶同個人檔案會較清楚。</p>
+
+      <p>關掉唔要嘅分頁再問，可以減少「答錯頁」同減少敏感脈絡被一併參考。</p>
+
+      <h2>佐證</h2>
+
+      <ul>
+        <li><a href="https://support.microsoft.com/en-us/microsoft-copilot/getting-started-with-copilot-in-microsoft-edge" target="_blank" rel="noopener noreferrer">Getting started with Copilot in Microsoft Edge</a></li>
+      </ul>
+
+      <h2>今日就可以試</h2>
+
+      <p>用 Edge 打開一篇你收藏咗又一直未讀嘅長文，開 Copilot 撳 Create a Summary，再用「五個重點＋一個行動」追問。把結果貼去備忘錄，標註邊句已核對、邊句未核對，呢個標註習慣比工具本身更值錢。</p>
+
+      <p>另外記低：PDF 喺 Edge 打開都可以用同一套摘要流程。若公司政策唔准用側欄 AI，就改用已批准工具，或者只處理公開網頁，唔好硬來。</p>
+
+      <p>摘要出嚟若有清單，試下即刻變成你日曆上嘅一格任務，工具先同行動接埋。 養成「先小範圍實測、再放大到正式場合」嘅次序，出錯成本會低好多。</p>
+
+      <p>先用非機密材料練習，確認流程同用字，先代入真正工作內容。</p>
+    </article>
+
+    <div class="ending-cta">
+      <a
+        class="btn btn-primary"
+        href="https://www.instagram.com/rabithead1881/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >追蹤 @rabithead1881</a>
+      <p class="ending-note">每日 07:00・12:00 粵語實測，留言數字即拎可抄 workflow。</p>
+    </div>
+
+    <nav class="tut-pager" aria-label="上一篇下一篇">
+      <a class="pager-link pager-prev" href="../notebooklm/">← NotebookLM</a>
+      <a class="pager-link pager-next" href="../notta/">Notta →</a>
+    </nav>
+
+    <footer>
+      <a class="ig-handle" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">
+        @rabithead1881
+      </a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(text);
+        }
+        return new Promise(function (resolve, reject) {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "fixed";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            var ok = document.execCommand("copy");
+            document.body.removeChild(ta);
+            if (ok) resolve();
+            else reject(new Error("copy failed"));
+          } catch (e) {
+            document.body.removeChild(ta);
+            reject(e);
+          }
+        });
+      }
+
+      document.querySelectorAll(".code-block").forEach(function (block) {
+        var btn = block.querySelector(".copy-btn");
+        var pre = block.querySelector("pre");
+        if (!btn || !pre) return;
+        btn.addEventListener("click", function () {
+          var text = pre.textContent || "";
+          copyText(text).then(function () {
+            var prev = btn.textContent;
+            btn.textContent = "已複製";
+            btn.classList.add("copied");
+            setTimeout(function () {
+              btn.textContent = prev || "複製";
+              btn.classList.remove("copied");
+            }, 1600);
+          }).catch(function () {
+            btn.textContent = "失敗";
+            setTimeout(function () {
+              btn.textContent = "複製";
+            }, 1600);
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="description" content="教你用 Gamma 將大綱或筆記變成可編輯簡報草稿，再改主題同文字。適合要趕堂課報告、內部短講、小型提案嘅人。" />
+  <meta property="og:title" content="Gamma：大綱變簡報｜JD Tech" />
+  <meta property="og:description" content="教你用 Gamma 將大綱或筆記變成可編輯簡報草稿，再改主題同文字。適合要趕堂課報告、內部短講、小型提案嘅人。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://jainaspp.github.io/jd-tech-landing/learn/gamma/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://jainaspp.github.io/jd-tech-landing/learn/gamma/" />
+  <title>Gamma：大綱變簡報｜JD Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&amp;family=Noto+Sans+HK:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="top-nav" aria-label="導航">
+      <a href="../">← 教學目錄</a>
+      <a href="../../">主頁</a>
+    </nav>
+
+    <header class="tut-header">
+      <div class="badge">JD Tech</div>
+      <h1>Gamma：大綱變簡報</h1>
+      <p class="sub">JD Tech｜粵語 AI 日更　·　免費工具 3 步實測</p>
+    </header>
+
+    <article class="prose">
+      <p>教你用 Gamma 將大綱或筆記變成可編輯簡報草稿，再改主題同文字。適合要趕堂課報告、內部短講、小型提案嘅人。</p>
+
+      <h2>開始前要準備咩</h2>
+
+      <ul>
+        <li>Gamma 帳戶，登入後到 Dashboard</li>
+        <li>電腦瀏覽器</li>
+        <li>一段已整理大綱（愈具體愈好）。免費／付費用量同一次改多頁 AI 功能或有分別——以帳戶同官方說明為準</li>
+      </ul>
+
+      <h2>逐步操作</h2>
+
+      <ol>
+        <li>喺 Dashboard 撳 <strong>Create New AI</strong>。</li>
+        <li>三個模式揀一個：<ul><li><strong>Generate</strong>：只得主題，畀 AI 起草；</li><li><strong>Paste</strong>：貼你已有大綱／筆記（最適合課堂）；</li><li><strong>Import</strong>：上載現有檔或貼連結再轉成 Gamma。</li></ul></li>
+        <li>揀 Presentation，按提示設定語言、細節程度、風格等（畫面有進階選項可再收窄）。</li>
+        <li>預覽大綱後確認 <strong>Generate</strong>，等卡片（投影片）生成。</li>
+        <li>逐頁改：可撳頁面左上角 sparkle（AI）微調單頁；改主題用右上 <strong>Theme</strong>。講稿自己再讀一次出聲。</li>
+      </ol>
+
+      <h2>完整真實例子</h2>
+
+      <p><strong>場景：</strong> 大學小組下星期一要講「香港食物浪費」八分鐘。</p>
+
+      <p><strong>輸入（Paste 示意）：</strong> 「1 問題有幾大 2 常見原因 3 超市同家居兩例子 4 三個學生做得到嘅行動 5 結語一句 call to action。對象：同學。語氣：認真但唔說教。語言：繁體中文。約 8 頁。」</p>
+
+      <p><strong>預期輸出（示意）：</strong> 一疊有標題同要點嘅簡報卡，或會配圖；你要刪走誇張統計、補上你組真正搵到嘅來源，再調頁序。</p>
+
+      <p>小組分工建議：一人負責大綱事實、一人負責 Gamma 起稿、一人負責出聲計時。唔好三人同時喺同一份亂改風格。</p>
+
+      <p>若老師要求指定頁數，喺提示寫明「不多於 X 頁」；生成後仍超頁就合併相似頁，而唔係細字硬塞。</p>
+
+      <h2>可抄 Prompt</h2>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>主題：【簡報題目】
+對象：【例如老闆／同學／客人】
+時長：【例如 5 分鐘】
+大綱：
+【貼上 5–8 點】
+請做成簡報結構，每頁一個重點，繁體中文，語氣【專業／輕鬆】，唔好捏造統計數字。</pre>
+      </div>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>將以下筆記轉成簡報大綱（只保留可講出口嘅要點，刪廢話）：
+【貼上筆記】</pre>
+      </div>
+
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>這一頁太長：請改成「標題＋最多 3 個要點」，保留原意，用繁體中文。
+原文：
+【貼上該頁文字】</pre>
+      </div>
+
+      <h2>常見錯誤＋點樣改</h2>
+
+      <ul>
+        <li><strong>一開始就 Generate 一個好闊主題：</strong> 改用 Paste 自己大綱，內容先控得到。</li>
+        <li><strong>圖太多搶戲：</strong> 生成時可選少圖／placeholder（官方有 Don’t add images／Image placeholders 等選項），或生成後刪圖。</li>
+        <li><strong>AI 改完意思飄咗：</strong> 用 View Source Prompt 睇返當初提示；單頁用 sparkle 微調，重要數據手打。</li>
+      </ul>
+
+      <ul>
+        <li><strong>每頁段落好似文章：</strong> 簡報要點到即止；細節留口講或講者註。</li>
+        <li><strong>忽視對象：</strong> 同一題畀教授同畀同學，用詞同深度應不同，提示要寫明。</li>
+      </ul>
+
+      <h2>私隱／核對提醒</h2>
+
+      <p>唔好匯入載有未公開財務、客人名單嘅檔案到個人帳戶就隨意分享連結。簡報內數字、引文要有來源；對外發表前刪草稿備註。</p>
+
+      <h2>簡報由「出得嚟」變成「講得出口」</h2>
+
+      <p>生成後唔好直接投影。用呢個短流程：</p>
+
+      <ol>
+        <li>刪走你講唔出嘅術語同無來源統計。</li>
+        <li>每頁只留一個訊息；要點超過三句就拆頁。</li>
+        <li>自己計時講一次，超過時限就再叫 AI 收短該頁。</li>
+        <li>封面寫清場合同你名；尾頁放聯絡或 Q&amp;A。</li>
+      </ol>
+
+      <p>Paste 模式通常比空白 Generate 更穩，因為內容主權喺你。Import 舊 PowerPoint 都得，但課堂報告多數「大綱貼上」更快。</p>
+
+      <p>對外提案，把成本同利潤頁設為講嘅時候先 overlay，唔好連公開連結一齊傳到唔相關嘅人。主題（Theme）可以最後先換，避免中段不斷改風格浪費時間。</p>
+
+      <h2>佐證</h2>
+
+      <ul>
+        <li><a href="https://help.gamma.app/en/articles/7838093-how-do-i-create-a-new-presentation-document-or-webpage-in-gamma" target="_blank" rel="noopener noreferrer">How do I create a new presentation, document, or webpage in Gamma?</a></li>
+        <li><a href="https://help.gamma.app/en/articles/11047840-how-can-i-import-slides-or-documents-into-gamma" target="_blank" rel="noopener noreferrer">How can I import slides or content into Gamma?</a></li>
+      </ul>
+
+      <h2>今日就可以試</h2>
+
+      <p>把你下一次要講嘅題目写成七點大綱，用 Paste 模式生成簡報。自己站起來計時講三分鐘：邊頁講唔完就删，邊頁無嘢講就合併。改到口順，先諗動畫同配圖。</p>
+
+      <p>另外記低：生成後先改文字事實，再換 Theme，最後先理圖片。次序倒轉好易花半日喺美化，內容錯誤仍然喺。對外簡報記得删講者備註入面嘅內部吐槽。</p>
+
+      <p>如果你嘅大綱本身係英文，亦可要求輸出繁中簡報，但專有名詞保留原文，避免翻譯到唔認得。 養成「先小範圍實測、再放大到正式場合」嘅次序，出錯成本會低好多。</p>
+
+      <p>先用非機密材料練習，確認流程同用字，先代入真正工作內容。</p>
+
+      <p>課堂報告可以用「大綱 Paste → 生成 → 出聲計時 → 刪頁」四步做完；美化留到最後半小時就夠。</p>
+
+      <p>對外提案記得刪講者備註入面嘅內部吐槽，避免投屏時尷尬。</p>
+    </article>
+
+    <div class="ending-cta">
+      <a
+        class="btn btn-primary"
+        href="https://www.instagram.com/rabithead1881/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >追蹤 @rabithead1881</a>
+      <p class="ending-note">每日 07:00・12:00 粵語實測，留言數字即拎可抄 workflow。</p>
+    </div>
+
+    <nav class="tut-pager" aria-label="上一篇下一篇">
+      <a class="pager-link pager-prev" href="../canva/">← Canva</a>
+      <a class="pager-link pager-next" href="../capcut/">CapCut →</a>
+    </nav>
+
+    <footer>
+      <a class="ig-handle" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">
+        @rabithead1881
+      </a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(text);
+        }
+        return new Promise(function (resolve, reject) {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "fixed";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            var ok = document.execCommand("copy");
+            document.body.removeChild(ta);
+            if (ok) resolve();
+            else reject(new Error("copy failed"));
+          } catch (e) {
+            document.body.removeChild(ta);
+            reject(e);
+          }
+        });
+      }
+
+      document.querySelectorAll(".code-block").forEach(function (block) {
+        var btn = block.querySelector(".copy-btn");
+        var pre = block.querySelector("pre");
+        if (!btn || !pre) return;
+        btn.addEventListener("click", function () {
+          var text = pre.textContent || "";
+          copyText(text).then(function () {
+            var prev = btn.textContent;
+            btn.textContent = "已複製";
+            btn.classList.add("copied");
+            setTimeout(function () {
+              btn.textContent = prev || "複製";
+              btn.classList.remove("copied");
+            }, 1600);
+          }).catch(function () {
+            btn.textContent = "失敗";
+            setTimeout(function () {
+              btn.textContent = "複製";
+            }, 1600);
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
