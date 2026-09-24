@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="description" content="JD Tech Workflow 庫：喺 IG 留言數字，或者直接喺度搵號碼，即睇可抄 AI workflow。" />
+  <meta property="og:title" content="Workflow 庫｜留言數字即睇｜JD Tech" />
+  <meta property="og:description" content="喺 IG 留言數字，或者直接喺度搵號碼，即睇可抄 AI workflow。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jainaspp.github.io/jd-tech-landing/workflow/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://jainaspp.github.io/jd-tech-landing/workflow/" />
+  <title>Workflow 庫｜留言數字即睇｜JD Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&amp;family=Noto+Sans+HK:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="top-nav" aria-label="返回">
+      <a href="../">← 返主頁</a>
+      <a href="../learn/">教學目錄</a>
+    </nav>
+
+    <header class="tut-header">
+      <div class="badge">JD Tech</div>
+      <h1>Workflow 庫｜留言數字即睇</h1>
+      <p class="sub">對齊 IG @rabithead1881　·　留言數字＝即日可抄</p>
+    </header>
+
+    <div class="prose hub-intro">
+      <p>喺 IG 留言數字，或者直接喺度搵號碼。每個號碼對應一條可抄 workflow：工具、步驟、prompt、常見錯同官方說明連結。投票用嘅「回 1／2／3」唔等於呢度嘅 workflow 編號。</p>
+    </div>
+
+    <form class="wf-jump" id="wf-jump" action="#" method="get">
+      <label for="wf-num">輸入號碼</label>
+      <div class="wf-jump-row">
+        <input id="wf-num" name="n" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" placeholder="例如 01" autocomplete="off" />
+        <button type="submit" class="btn btn-primary wf-jump-btn">跳去</button>
+      </div>
+      <p class="wf-jump-hint" id="wf-jump-hint" hidden>搵唔到呢個號碼，試下 01–05。</p>
+    </form>
+
+    <section aria-labelledby="wf-list-title">
+      <h2 id="wf-list-title" class="section-title">全部 workflow</h2>
+      <a class="card link-card learn-card" href="01/" id="01">
+        <div class="learn-card-num" aria-hidden="true">01</div>
+        <div class="learn-card-body">
+          <div class="learn-tool">Canva</div>
+          <div class="link-card-title">Canva 海報 3 步｜零設計底都出得 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+          <div class="link-card-desc">零設計底都出到可發海報</div>
+        </div>
+      </a>
+      <a class="card link-card learn-card" href="02/" id="02">
+        <div class="learn-card-num" aria-hidden="true">02</div>
+        <div class="learn-card-body">
+          <div class="learn-tool">Copilot</div>
+          <div class="link-card-title">Copilot 讀長文 3 步｜一頁拎重點 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+          <div class="link-card-desc">長網頁 3 點重點即抄</div>
+        </div>
+      </a>
+      <a class="card link-card learn-card" href="03/" id="03">
+        <div class="learn-card-num" aria-hidden="true">03</div>
+        <div class="learn-card-body">
+          <div class="learn-tool">ChatGPT／Gemini</div>
+          <div class="link-card-title">ChatGPT／Gemini 改 CV 3 步｜對齊職位 JD <span class="link-card-arrow" aria-hidden="true">→</span></div>
+          <div class="link-card-desc">STAR＋數字改子彈，對齊 JD</div>
+        </div>
+      </a>
+      <a class="card link-card learn-card" href="04/" id="04">
+        <div class="learn-card-num" aria-hidden="true">04</div>
+        <div class="learn-card-body">
+          <div class="learn-tool">Gamma</div>
+          <div class="link-card-title">Gamma 簡報 3 步｜大綱變 slides <span class="link-card-arrow" aria-hidden="true">→</span></div>
+          <div class="link-card-desc">貼大綱出齊可改簡報</div>
+        </div>
+      </a>
+      <a class="card link-card learn-card" href="05/" id="05">
+        <div class="learn-card-num" aria-hidden="true">05</div>
+        <div class="learn-card-body">
+          <div class="learn-tool">Notta</div>
+          <div class="link-card-title">Notta 會議紀要 3 步｜錄音變行動項 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+          <div class="link-card-desc">錄音轉文字再出行動項</div>
+        </div>
+      </a>
+    </section>
+
+    <div class="ending-cta">
+      <a class="btn btn-primary" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">追蹤 @rabithead1881</a>
+      <p class="ending-note">每日 07:00・12:00 粵語實測；留言數字即拎可抄 workflow。</p>
+    </div>
+
+    <footer>
+      <a class="ig-handle" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">@rabithead1881</a>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var map = {"01":"01/","1":"01/", "02":"02/","2":"02/", "03":"03/","3":"03/", "04":"04/","4":"04/", "05":"05/","5":"05/"};
+      var form = document.getElementById("wf-jump");
+      var input = document.getElementById("wf-num");
+      var hint = document.getElementById("wf-jump-hint");
+      if (!form || !input) return;
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var raw = (input.value || "").trim();
+        var key = raw;
+        if (/^\d$/.test(raw)) key = "0" + raw;
+        if (/^\d{2}$/.test(raw)) key = raw;
+        var dest = map[key] || map[raw];
+        if (dest) {
+          hint.hidden = true;
+          window.location.href = dest;
+        } else {
+          hint.hidden = false;
+        }
+      });
+      // hash #07 style
+      var h = (location.hash || "").replace(/^#/, "");
+      if (h && map[h]) {
+        var el = document.getElementById(h.length === 1 ? "0"+h : h) || document.getElementById(h);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    })();
+  </script>
+</body>
+</html>
