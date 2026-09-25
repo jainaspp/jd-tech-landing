@@ -85,6 +85,7 @@
     .quick-nav a:hover { background: rgba(0, 229, 255, 0.14); }
     .quick-nav a:focus-visible,
     .see-all:focus-visible,
+    .tut-chips a:focus-visible,
     .home-tool:focus-visible,
     .pack-card:focus-visible {
       outline: 2px solid var(--accent);
@@ -115,6 +116,30 @@
       text-decoration: none;
     }
     .see-all:hover { background: rgba(0, 229, 255, 0.14); }
+
+    .tut-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .tut-chips a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 229, 255, 0.4);
+      background: rgba(0, 229, 255, 0.06);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .tut-chips a:hover { background: rgba(0, 229, 255, 0.14); }
 
     .pack-card {
       display: block;
@@ -294,6 +319,12 @@
         </a>
       </div>
       <a class="see-all" href="learn/">睇全部 15 個 →</a>
+      <nav class="tut-chips" aria-label="其他教學">
+        <a href="prompt-builder/">Prompt 產生器</a>
+        <a href="updates/">每月 AI 更新</a>
+        <a href="compare/">工具比較</a>
+        <a href="reels/">Reel 目錄</a>
+      </nav>
     </section>
 
     <section aria-labelledby="pack-title">
