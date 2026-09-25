@@ -58,6 +58,185 @@
   ]
 }
   </script>
+  <style>
+    #reels, #tutorials, #tools, #play { scroll-margin-top: 12px; }
+
+    .quick-nav {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .quick-nav a {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 8px 4px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 229, 255, 0.4);
+      background: rgba(0, 229, 255, 0.06);
+      color: var(--accent);
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      line-height: 1.2;
+    }
+    .quick-nav a:hover { background: rgba(0, 229, 255, 0.14); }
+    .quick-nav a:focus-visible,
+    .see-all:focus-visible,
+    .tut-chips a:focus-visible,
+    .home-tool:focus-visible,
+    .pack-card:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .home-grid,
+    .home-tools {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .home-grid .card { margin-bottom: 0; }
+
+    .see-all {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      background: rgba(0, 229, 255, 0.08);
+      color: var(--accent);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .see-all:hover { background: rgba(0, 229, 255, 0.14); }
+
+    .tut-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .tut-chips a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 229, 255, 0.4);
+      background: rgba(0, 229, 255, 0.06);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .tut-chips a:hover { background: rgba(0, 229, 255, 0.14); }
+
+    .pack-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: linear-gradient(165deg, #3a2a14 0%, #1c140c 58%, #14110e 100%);
+      border: 1px solid rgba(255, 186, 92, 0.72);
+      box-shadow: 0 8px 28px rgba(255, 160, 40, 0.1);
+    }
+    .pack-card:hover { background: linear-gradient(165deg, #463318 0%, #24190f 58%, #18140f 100%); }
+    .pack-badge {
+      display: inline-block;
+      margin-bottom: 8px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #ffc56a;
+      color: #1a1208;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+    .pack-name {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.98rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+    .pack-desc {
+      display: block;
+      margin-bottom: 8px;
+      color: #e6d3b8;
+      font-size: 0.78rem;
+      line-height: 1.4;
+    }
+    .pack-price {
+      display: block;
+      color: #ffc56a;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .pack-trial a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .home-tool {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2px;
+      min-height: 52px;
+      padding: 8px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: inherit;
+      text-decoration: none;
+    }
+    .home-tool:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(0, 229, 255, 0.45);
+    }
+    .home-tool-name {
+      color: var(--accent);
+      font-size: 0.92rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .home-tool-use {
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
+
+    @media (min-width: 768px) {
+      .wrap { max-width: 800px; }
+      header .btn,
+      .quick-nav {
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .home-grid,
+      .home-tools {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="wrap">
@@ -72,11 +251,18 @@
         target="_blank"
         rel="noopener noreferrer"
       >追蹤 @rabithead1881</a>
+      <nav class="quick-nav" aria-label="快速跳去">
+        <a href="#reels">Reel</a>
+        <a href="#tutorials">教學</a>
+        <a href="#tools">工具</a>
+        <a href="#play">遊戲</a>
+      </nav>
       <p class="cta-micro">日更兩條｜粵語講清楚｜唔踩雷</p>
     </header>
 
-    <section aria-labelledby="reels-title">
+    <section id="reels" aria-labelledby="reels-title">
       <h2 id="reels-title" class="section-title">最新 Reel｜跟住做</h2>
+      <!-- latest-reels:start -->
       <a
         class="card reel"
         href="https://www.instagram.com/reel/Ddp-T6BKRQG/"
@@ -86,7 +272,7 @@
         <div class="reel-thumb" aria-hidden="true">1</div>
         <div class="reel-body">
           <div class="reel-title">Canva 海報 3 步｜零設計底都出得</div>
-          <div class="reel-meta">上晝實測｜留言「1」拎密碼</div>
+          <div class="reel-meta">上晝實測｜留言 1 拎 Workflow 密碼</div>
         </div>
       </a>
       <a
@@ -98,9 +284,10 @@
         <div class="reel-thumb" aria-hidden="true">2</div>
         <div class="reel-body">
           <div class="reel-title">Copilot 讀長文 3 步｜一頁拎重點</div>
-          <div class="reel-meta">朝早實測｜留言「1」拎密碼</div>
+          <div class="reel-meta">朝早實測｜留言 1 拎 Workflow 密碼</div>
         </div>
       </a>
+      <!-- latest-reels:end -->
       <p class="section-note">
         更多日更 →
         <a href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">返 IG 主頁睇 Grid</a>
@@ -108,149 +295,97 @@
     </section>
 
     <section aria-labelledby="workflow-title">
-      <h2 id="workflow-title" class="section-title">Workflow 庫｜留言「1」攞密碼</h2>
+      <h2 id="workflow-title" class="section-title">Workflow 庫｜留言 1 拎 Workflow 密碼</h2>
       <a class="card link-card hub-cta-card" href="workflow/">
-        <div class="link-card-title">去 IG 留言「1」攞密碼，入嚟照抄 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+        <div class="link-card-title">留言 1 拎 Workflow 密碼 <span class="link-card-arrow" aria-hidden="true">→</span></div>
         <div class="link-card-desc">01 Canva · 02 Copilot · 03 改 CV · 04 Gamma · 05 Notta——步驟、prompt、官方說明齊。</div>
       </a>
     </section>
 
-    <section aria-labelledby="tutorials-title">
+    <section id="tutorials" aria-labelledby="tutorials-title">
       <h2 id="tutorials-title" class="section-title">免費教學｜由零開始</h2>
-      <a class="card link-card" href="beginner/">
-        <div class="link-card-title">AI 新手入門｜由零開始用得着 <span class="link-card-arrow" aria-hidden="true">→</span></div>
-        <div class="link-card-desc">咩係 AI、先試邊個工具、邊啲資料唔好貼、點樣核對佢講錯嘢。</div>
-      </a>
-      <a class="card link-card" href="prompt/">
-        <div class="link-card-title">Prompt 3 步寫法｜講清楚先做得好 <span class="link-card-arrow" aria-hidden="true">→</span></div>
-        <div class="link-card-desc">角色＋任務＋格式框架、壞例好例對比，同 6 個可抄模板。</div>
-      </a>
-      <a class="card link-card hub-cta-card" href="learn/">
-        <div class="link-card-title">睇全部 12 篇教學 →</div>
-        <div class="link-card-desc">基礎篇＋10 個工具 3 步實測，由日常事開始學。</div>
-      </a>
-      <a class="card link-card" href="reels/">
-        <div class="link-card-title">Reel 總目錄｜全部日更一句拎重點 <span class="link-card-arrow" aria-hidden="true">→</span></div>
-        <div class="link-card-desc">工具實測、AI 新聞、入門短片——按主題分類，連返 IG 同教學頁。</div>
-      </a>
-      <a class="card link-card" href="prompts-hk/">
-        <div class="link-card-title">香港 Prompt 庫｜30 條可抄 <span class="link-card-arrow" aria-hidden="true">→</span></div>
-        <div class="link-card-desc">返工、搵工、租樓、學生、小生意、政府表格——填【】就用。</div>
-      </a>
-      <a class="card link-card" href="prompt-builder/">
-        <div class="link-card-title">Prompt 產生器｜揀場景・填空・一撳複製 <span class="link-card-arrow" aria-hidden="true">→</span></div>
-        <div class="link-card-desc">30 個香港場景逐格填【】，即時砌好完整 prompt；全部喺你部機組合，唔會傳出。</div>
-      </a>
-      <a class="card link-card" href="https://jainaspark4.gumroad.com/l/jd-tech-hk-ai-prompt-pack" target="_blank" rel="noopener">
-        <div class="link-card-title">Prompt Pack 完整版｜104 條（付費）<span class="link-card-arrow" aria-hidden="true">↗</span></div>
-        <div class="link-card-desc">每條連示範同改良貼士，PDF＋可改 Markdown｜HK$10.40（Gumroad）</div>
-      </a>
-      <p class="section-note">想先試？<a href="https://jainaspark4.gumroad.com/l/jd-tech-hk-ai-prompt-free" target="_blank" rel="noopener">免費試用版（6 條）→</a></p>
-      <a class="card link-card" href="compare/">
-        <div class="link-card-title">工具比較｜官方文件對住睇 <span class="link-card-arrow" aria-hidden="true">→</span></div>
-        <div class="link-card-desc">ChatGPT vs Gemini、Canva vs Gamma；查證日期同來源齊。</div>
-      </a>
-      <a class="card link-card" href="tools/">
-        <div class="link-card-title">香港 AI 工具庫｜10 個工具香港用唔用到 <span class="link-card-arrow" aria-hidden="true">→</span></div>
-        <div class="link-card-desc">香港可否用、免費版限制、廣東話支援，每項連官方來源同核實日期。</div>
-      </a>
-      <a class="card link-card" href="updates/">
-        <div class="link-card-title">AI 新功能香港用唔用到｜每月一期 <span class="link-card-arrow" aria-hidden="true">→</span></div>
-        <div class="link-card-desc">2026 年 9 月：Gemini、Copilot、Canva、Claude 等 10 項更新，逐項講香港用唔用到。</div>
-      </a>
+      <div class="home-grid">
+        <a class="card link-card" href="beginner/">
+          <div class="link-card-title">AI 新手入門｜由零開始用得着 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+          <div class="link-card-desc">咩係 AI、先試邊個工具、邊啲資料唔好貼、點樣核對佢講錯嘢。</div>
+        </a>
+        <a class="card link-card" href="prompt/">
+          <div class="link-card-title">Prompt 3 步寫法｜講清楚先做得好 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+          <div class="link-card-desc">角色＋任務＋格式框架、壞例好例對比，同 6 個可抄模板。</div>
+        </a>
+        <a class="card link-card" href="prompts-hk/">
+          <div class="link-card-title">香港 Prompt 庫｜30 條可抄 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+          <div class="link-card-desc">返工、搵工、租樓、學生、小生意、政府表格——填【】就用。</div>
+        </a>
+      </div>
+      <a class="see-all" href="learn/">睇全部 15 個 →</a>
+      <nav class="tut-chips" aria-label="其他教學">
+        <a href="prompt-builder/">Prompt 產生器</a>
+        <a href="updates/">每月 AI 更新</a>
+        <a href="compare/">工具比較</a>
+        <a href="reels/">Reel 目錄</a>
+      </nav>
     </section>
 
-    <section aria-labelledby="tools-title">
+    <section aria-labelledby="pack-title">
+      <h2 id="pack-title" class="section-title">Prompt Pack</h2>
+      <a class="pack-card" href="https://jainaspark4.gumroad.com/l/jd-tech-hk-ai-prompt-pack" target="_blank" rel="noopener">
+        <span class="pack-badge">付費</span>
+        <span class="pack-name">Prompt Pack 完整版｜104 條</span>
+        <span class="pack-desc">每條連示範同改良貼士，PDF＋可改 Markdown</span>
+        <span class="pack-price">HK$10.40</span>
+      </a>
+      <p class="section-note pack-trial"><a href="https://jainaspark4.gumroad.com/l/jd-tech-hk-ai-prompt-free" target="_blank" rel="noopener">想先試？免費試用版（6 條）→</a></p>
+    </section>
+
+    <section id="tools" aria-labelledby="tools-title">
       <h2 id="tools-title" class="section-title">常用工具｜免費／平價優先</h2>
-      <div class="tools-head" aria-hidden="true">
-        <span>工具</span>
-        <span>適合做咩</span>
-        <span>我點用</span>
-      </div>
-      <div class="tool-row">
-        <a class="tool-primary" href="learn/canva/">
-          <span class="tool-name">Canva</span>
-          <span class="tool-fit">海報／封面</span>
-          <span class="tool-how">3 步出一張可發</span>
+      <div class="home-tools">
+        <a class="home-tool" href="tools/canva/">
+          <span class="home-tool-name">Canva</span>
+          <span class="home-tool-use">海報／封面｜3 步出一張可發</span>
         </a>
-        <a class="tool-official" href="https://www.canva.com/" target="_blank" rel="noopener noreferrer">官網：Canva ↗</a>
-      </div>
-      <div class="tool-row">
-        <a class="tool-primary" href="learn/copilot/">
-          <span class="tool-name">Copilot</span>
-          <span class="tool-fit">長網頁／長文</span>
-          <span class="tool-how">拎重點＋可抄摘要</span>
+        <a class="home-tool" href="tools/copilot/">
+          <span class="home-tool-name">Copilot</span>
+          <span class="home-tool-use">長網頁／長文｜拎重點＋可抄摘要</span>
         </a>
-        <a class="tool-official" href="https://copilot.microsoft.com/" target="_blank" rel="noopener noreferrer">官網：Microsoft Copilot ↗</a>
-      </div>
-      <div class="tool-row">
-        <a class="tool-primary" href="learn/notta/">
-          <span class="tool-name">Notta</span>
-          <span class="tool-fit">會議錄音</span>
-          <span class="tool-how">轉筆記＋行動項</span>
+        <a class="home-tool" href="tools/notta/">
+          <span class="home-tool-name">Notta</span>
+          <span class="home-tool-use">會議錄音｜轉筆記＋行動項</span>
         </a>
-        <a class="tool-official" href="https://www.notta.ai/" target="_blank" rel="noopener noreferrer">官網：Notta ↗</a>
-      </div>
-      <div class="tool-row">
-        <a class="tool-primary" href="learn/chatgpt/">
-          <span class="tool-name">ChatGPT</span>
-          <span class="tool-fit">文案／清單</span>
-          <span class="tool-how">粵語 workflow 模板</span>
+        <a class="home-tool" href="tools/chatgpt/">
+          <span class="home-tool-name">ChatGPT</span>
+          <span class="home-tool-use">文案／清單｜粵語 workflow 模板</span>
         </a>
-        <a class="tool-official" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">官網：ChatGPT ↗</a>
-      </div>
-      <div class="tool-row">
-        <a class="tool-primary" href="learn/notebooklm/">
-          <span class="tool-name">NotebookLM</span>
-          <span class="tool-fit">一疊資料</span>
-          <span class="tool-how">問答＋提綱</span>
+        <a class="home-tool" href="tools/notebooklm/">
+          <span class="home-tool-name">NotebookLM</span>
+          <span class="home-tool-use">一疊資料｜問答＋提綱</span>
         </a>
-        <a class="tool-official" href="https://notebooklm.google.com/" target="_blank" rel="noopener noreferrer">官網：NotebookLM ↗</a>
-      </div>
-      <div class="tool-row">
-        <a class="tool-primary" href="learn/gemini-pdf/">
-          <span class="tool-name">Gemini</span>
-          <span class="tool-fit">多模態問答</span>
-          <span class="tool-how">圖文一齊問</span>
+        <a class="home-tool" href="tools/gemini/">
+          <span class="home-tool-name">Gemini</span>
+          <span class="home-tool-use">多模態問答｜圖文一齊問</span>
         </a>
-        <a class="tool-official" href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">官網：Gemini ↗</a>
-      </div>
-      <div class="tool-row">
-        <a class="tool-primary" href="learn/claude/">
-          <span class="tool-name">Claude</span>
-          <span class="tool-fit">長文／程式</span>
-          <span class="tool-how">精讀＋改稿</span>
+        <a class="home-tool" href="tools/claude/">
+          <span class="home-tool-name">Claude</span>
+          <span class="home-tool-use">長文／程式｜精讀＋改稿</span>
         </a>
-        <a class="tool-official" href="https://claude.ai/" target="_blank" rel="noopener noreferrer">官網：Claude ↗</a>
-      </div>
-      <div class="tool-row">
-        <a class="tool-primary" href="learn/perplexity/">
-          <span class="tool-name">Perplexity</span>
-          <span class="tool-fit">帶出處搜尋</span>
-          <span class="tool-how">查資料＋引用</span>
+        <a class="home-tool" href="tools/perplexity/">
+          <span class="home-tool-name">Perplexity</span>
+          <span class="home-tool-use">帶出處搜尋｜查資料＋引用</span>
         </a>
-        <a class="tool-official" href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">官網：Perplexity ↗</a>
-      </div>
-      <div class="tool-row">
-        <a class="tool-primary" href="learn/gamma/">
-          <span class="tool-name">Gamma</span>
-          <span class="tool-fit">簡報</span>
-          <span class="tool-how">幾句出一疊 slide</span>
+        <a class="home-tool" href="tools/gamma/">
+          <span class="home-tool-name">Gamma</span>
+          <span class="home-tool-use">簡報｜幾句出一疊 slide</span>
         </a>
-        <a class="tool-official" href="https://gamma.app/" target="_blank" rel="noopener noreferrer">官網：Gamma ↗</a>
-      </div>
-      <div class="tool-row">
-        <a class="tool-primary" href="learn/capcut/">
-          <span class="tool-name">CapCut</span>
-          <span class="tool-fit">短影音剪輯</span>
-          <span class="tool-how">Reel／Shorts 出片</span>
+        <a class="home-tool" href="tools/capcut/">
+          <span class="home-tool-name">CapCut</span>
+          <span class="home-tool-use">短影音剪輯｜Reel／Shorts 出片</span>
         </a>
-        <a class="tool-official" href="https://www.capcut.com/" target="_blank" rel="noopener noreferrer">官網：CapCut ↗</a>
       </div>
-      <p class="tools-cta">撳工具名睇免費 3 步教學；想要可抄 workflow → 返 IG 留言「1」攞密碼</p>
+      <a class="see-all" href="tools/">香港 AI 工具庫 →</a>
     </section>
 
-    <section aria-labelledby="play-title">
+    <section id="play" aria-labelledby="play-title">
       <h2 id="play-title" class="section-title">休閒區｜AI 遊戲</h2>
       <a class="card link-card" href="play/">
         <div class="link-card-title">休閒區：AI 遊戲｜免費玩＋同 AI 玩遊戲 <span class="link-card-arrow" aria-hidden="true">→</span></div>
