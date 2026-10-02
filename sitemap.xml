@@ -354,4 +354,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://jainaspp.github.io/jd-tech-landing/reels/google-lens-plant/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jainaspp.github.io/jd-tech-landing/reels/adobe-express-insert-object/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
