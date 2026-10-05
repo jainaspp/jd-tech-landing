@@ -1,0 +1,38 @@
+--- a/gen.py	2026-10-05 23:45:27.502134939 +0000
++++ b/gen.py	2026-10-05 23:55:02.842100777 +0000
+@@ -134,7 +134,8 @@
+     org = {"@type": "Organization", "name": "JD Tech", "sameAs": [IG_PROFILE],
+            "logo": SITE + "assets/apple-touch-icon.png"}
+     base = {"name": spec["title"], "headline": spec["title"], "description": spec["description"], "url": url,
+-            "inLanguage": "zh-HK", "datePublished": spec["published"], "dateModified": spec["verified"],
++            "inLanguage": "zh-Hant-HK", "image": SITE + "assets/og-share.png",
++            "datePublished": spec["published"], "dateModified": spec["verified"],
+             "author": org, "publisher": org,
+             "isPartOf": {"@type": "WebSite", "name": "JD Tech", "url": SITE},
+             "citation": [l["url"] for l in links]}
+@@ -217,7 +218,7 @@
+     ld = jsonld(spec, url, links)
+     otype = "article"
+     return f"""<!DOCTYPE html>
+-<html lang="zh-HK">
++<html lang="zh-Hant-HK">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+@@ -237,6 +238,7 @@
+   <meta name="twitter:title" content="{esc(title_full)}" />
+   <meta name="twitter:description" content="{d}" />
+   <meta name="twitter:image" content="{SITE}assets/og-share.png" />
++  <meta name="twitter:image:alt" content="JD Tech｜粵語 AI 日更 — 免費 AI 工具 3 步實測" />
+   <link rel="canonical" href="{url}" />
+   <title>{esc(title_full)}</title>
+   <link rel="stylesheet" href="../../assets/style.css" />
+@@ -244,7 +246,7 @@
+   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+   <link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32" />
+   <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" sizes="180x180" />
+-  <style>.code-block pre{{padding-right:72px}}.official-why{{color:var(--muted);font-size:.85rem}}.reel-steps li p{{margin:.3em 0}}</style>
++  <style>.official-why{{color:var(--muted);font-size:.85rem}}.reel-steps li p{{margin:.3em 0}}</style>
+   <script type="application/ld+json">
+ {ld}
+   </script>

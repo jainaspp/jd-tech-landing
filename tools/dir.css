@@ -35,4 +35,33 @@
 .upd-what { font-size: 0.88rem; color: #e8e8e8; line-height: 1.6; margin-bottom: 8px; }
 .upd-hk { font-size: 0.82rem; color: #e0e0e0; line-height: 1.55; margin-bottom: 8px; }
 .upd-src { font-size: 0.75rem; color: var(--muted); line-height: 1.5; }
-.hub-intro .st { font-size: 0.68rem; }
+.hub-intro .st { font-size: 0.75rem; }
+
+/* Phone tap targets on directory cards (IG in-app browser has no hover). */
+.st { font-size: 0.75rem; white-space: normal; }
+.tc-name a,
+.tc-more,
+.upd-tool a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 8px 6px;
+}
+.tc-dl a,
+.upd-src a,
+.upd-hk a,
+.facts a,
+.tool-card a,
+.upd-card a {
+  display: inline-block;
+  box-sizing: border-box;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 10px 6px;
+  line-height: 1.4;
+  text-align: start;
+}
+.tool-card a:active,
+.upd-card a:active { text-decoration: underline; }
