@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-HK">
+<html lang="zh-Hant-HK">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -19,6 +19,7 @@
   <meta name="twitter:title" content="Prompt 產生器｜揀場景・填空・一撳複製｜JD Tech" />
   <meta name="twitter:description" content="30 個香港場景，逐格填【】即時砌好 prompt。免費、唔使登入、資料唔會傳出。" />
   <meta name="twitter:image" content="https://jainaspp.github.io/jd-tech-landing/assets/og-share.png" />
+  <meta name="twitter:image:alt" content="JD Tech｜粵語 AI 日更 — 免費 AI 工具 3 步實測" />
   <link rel="canonical" href="https://jainaspp.github.io/jd-tech-landing/prompt-builder/" />
   <title>Prompt 產生器｜揀場景・填空・一撳複製｜JD Tech</title>
   <link rel="stylesheet" href="../assets/style.css" />
@@ -55,7 +56,8 @@
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "browserRequirements": "Requires JavaScript",
-      "inLanguage": "zh-HK",
+      "image": "https://jainaspp.github.io/jd-tech-landing/assets/og-share.png",
+      "inLanguage": "zh-Hant-HK",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -93,7 +95,7 @@
     .pb-chips { display: flex; flex-wrap: wrap; gap: 8px; }
     .pb-chip { position: relative; }
     .pb-chip input, .pb-scn input, .pb-opt input {
-      position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0;
+      position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer;
     }
     .pb-chip span {
       display: inline-flex; align-items: center; min-height: 44px;
@@ -144,7 +146,7 @@
     .pb-opt input[type="checkbox"]:checked + span::before { content: "✓ "; }
     .pb-opt-clear {
       margin-top: 4px; background: none; border: 0; color: var(--muted); font: inherit;
-      font-size: 0.78rem; cursor: pointer; padding: 8px 0; min-height: 36px; text-decoration: underline;
+      font-size: 0.8125rem; cursor: pointer; padding: 8px 0; min-height: 44px; text-decoration: underline;
     }
     .pb-opt-clear:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     .pb-warn { font-size: 0.78rem; color: #ffcc80; margin-top: 6px; line-height: 1.45; }
@@ -162,7 +164,7 @@
     .pb-status.err { color: #ff8a80; }
     .pb-fallback { margin-top: 8px; }
     .pb-next { font-size: 0.86rem; color: #e8e8e8; line-height: 1.6; margin-top: 16px; }
-    .pb-next a, .pb-pack a, .pb-intro a { color: var(--accent); text-decoration: none; font-weight: 700; }
+    .pb-next a, .pb-pack a, .pb-intro a { color: var(--accent); text-decoration: none; font-weight: 700; display: inline-block; box-sizing: border-box; min-height: 44px; padding: 10px 2px; line-height: 1.4; }
     .pb-next a:hover, .pb-pack a:hover, .pb-intro a:hover { text-decoration: underline; }
     .pb-pack { font-size: 0.84rem; color: var(--muted); line-height: 1.6; margin-top: 10px; }
     .pb-intro { font-size: 0.9rem; color: #e8e8e8; line-height: 1.6; margin-bottom: 12px; }

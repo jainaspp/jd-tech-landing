@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="zh-HK" class="staticrypt-html">
+<html lang="zh-Hant-HK" class="staticrypt-html">
 <head>
   <meta charset="utf-8" />
   <title>Workflow 庫｜會員通道</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#0A0A0A" />
   <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="密碼：jdtech3（喺 /workflow/ 輸入），入嚟照抄可抄 AI workflow。" />
+  <link rel="canonical" href="https://jainaspp.github.io/jd-tech-landing/workflow/09/" />
   <meta property="og:title" content="Workflow 庫｜會員通道｜JD Tech" />
   <meta property="og:description" content="密碼：jdtech3（喺 /workflow/ 輸入），入嚟照抄可抄 AI workflow。" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://jainaspp.github.io/jd-tech-landing/workflow/" />
+  <meta property="og:url" content="https://jainaspp.github.io/jd-tech-landing/workflow/09/" />
   <meta property="og:image" content="https://jainaspp.github.io/jd-tech-landing/assets/og-share.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -20,6 +22,7 @@
   <meta name="twitter:title" content="Workflow 庫｜會員通道｜JD Tech" />
   <meta name="twitter:description" content="密碼：jdtech3（喺 /workflow/ 輸入），入嚟照抄可抄 AI workflow。" />
   <meta name="twitter:image" content="https://jainaspp.github.io/jd-tech-landing/assets/og-share.png" />
+  <meta name="twitter:image:alt" content="JD Tech｜粵語 AI 日更 — 免費 AI 工具 3 步實測" />
   <link rel="icon" href="https://jainaspp.github.io/jd-tech-landing/assets/favicon.ico" sizes="any" />
   <link rel="icon" href="https://jainaspp.github.io/jd-tech-landing/assets/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="https://jainaspp.github.io/jd-tech-landing/assets/favicon-32.png" type="image/png" sizes="32x32" />
@@ -38,10 +41,11 @@
       --accent: #00E5FF;
       --glow: 0 0 20px rgba(0, 229, 255, 0.35);
       --danger: #ff6b6b;
+      color-scheme: dark;
       --safe-bottom: env(safe-area-inset-bottom, 0px);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { -webkit-text-size-adjust: 100%; height: 100%; }
+    html { -webkit-text-size-adjust: 100%; height: 100%; overflow-x: clip; background: #0A0A0A; color-scheme: dark; touch-action: manipulation; }
     body.staticrypt-body {
       font-family: -apple-system, BlinkMacSystemFont, "PingFang HK", "PingFang TC",
         "Noto Sans HK", "Noto Sans TC", "Microsoft JhengHei", "Segoe UI", sans-serif;
@@ -70,7 +74,12 @@
     @keyframes spinner-border { 100% { transform: rotate(360deg); } }
     .staticrypt-content {
       min-height: 100dvh;
-      padding: 20px 16px calc(28px + var(--safe-bottom));
+      overflow-x: clip;
+      padding:
+        calc(20px + env(safe-area-inset-top, 0px))
+        calc(16px + env(safe-area-inset-right, 0px))
+        calc(28px + env(safe-area-inset-bottom, 0px))
+        calc(16px + env(safe-area-inset-left, 0px));
     }
     .wrap {
       max-width: 440px;
@@ -79,7 +88,7 @@
     }
     .badge {
       display: inline-block;
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       letter-spacing: 0.08em;
       color: var(--accent);
       border: 1px solid rgba(0, 229, 255, 0.5);
@@ -123,20 +132,23 @@
       font-size: 16px;
       font-family: inherit;
       outline: 0;
-      padding: 15px 44px 15px 14px;
+      padding: 15px 52px 15px 14px;
+      min-height: 52px;
       width: 100%;
     }
     .staticrypt-form input::placeholder { color: #666; }
     .staticrypt-toggle-password-visibility {
       cursor: pointer;
-      height: 20px;
-      opacity: 0.55;
-      padding: 12px;
+      box-sizing: border-box;
+      width: 44px;
+      height: 44px;
+      padding: 10px;
+      object-fit: contain;
+      opacity: 0.85;
       position: absolute;
       right: 2px;
       top: 50%;
       transform: translateY(-50%);
-      width: 20px;
       filter: invert(1);
     }
     .staticrypt-decrypt-button {
@@ -168,7 +180,7 @@
     .staticrypt-error.is-visible { display: block; }
     .staticrypt-footer-note {
       margin-top: 18px;
-      font-size: 0.78rem;
+      font-size: 0.8125rem;
       color: var(--muted);
       text-align: center;
       line-height: 1.45;
@@ -176,11 +188,18 @@
     .staticrypt-footer-note a {
       color: var(--accent);
       text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 8px 2px;
     }
     .logout-link {
-      display: inline-block;
-      margin-top: 16px;
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      margin-top: 8px;
+      padding: 8px 2px;
+      font-size: 0.8125rem;
       color: var(--muted);
       text-decoration: underline;
       text-underline-offset: 2px;

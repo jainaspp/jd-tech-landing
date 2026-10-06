@@ -1,8 +1,12 @@
 User-agent: *
 Allow: /
 
-# Workflow pages are password-gated and already send noindex;
-# omitted from sitemap.xml. Disallow is optional hardening:
+# Password-gated /workflow/ pages send noindex and are omitted from sitemap.xml.
+# robots.txt paths are host-root. This file is published with the project site, so
+# crawlers only apply it if it is served from https://jainaspp.github.io/robots.txt.
+# Both prefixes are listed: the project path on github.io, and /workflow/ if the
+# same file is ever used at a domain root.
 Disallow: /jd-tech-landing/workflow/
+Disallow: /workflow/
 
 Sitemap: https://jainaspp.github.io/jd-tech-landing/sitemap.xml
