@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="description" content="跟 Reel 用免費 Gemini 網頁版：輸入框左邊撳「＋」揀檔案，上載電費單相，打一句「邊項用多咗？同上期比較」撳傳送，本期、上期用電同多咗幾多度一次過列出。附真實畫面截圖（虛構樣本電費單）、可抄 Prompt，同遮個人資料、數字以帳單為準嘅提醒。" />
+  <meta property="og:title" content="Gemini 3 步：電費單影相上載，即知用多咗幾多度｜JD Tech" />
+  <meta property="og:description" content="跟 Reel 用免費 Gemini 網頁版：輸入框左邊撳「＋」揀檔案，上載電費單相，打一句「邊項用多咗？同上期比較」撳傳送，本期、上期用電同多咗幾多度一次過列出。附真實畫面截圖（虛構樣本電費單）、可抄 Prompt，同遮個人資料、數字以帳單為準嘅提醒。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://jainaspp.github.io/jd-tech-landing/reels/gemini-bill-upload/" />
+  <meta property="og:image" content="https://jainaspp.github.io/jd-tech-landing/assets/og-share.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="JD Tech｜粵語 AI 日更 — 免費 AI 工具 3 步實測" />
+  <meta property="og:site_name" content="JD Tech" />
+  <meta property="og:locale" content="zh_HK" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gemini 3 步：電費單影相上載，即知用多咗幾多度｜JD Tech" />
+  <meta name="twitter:description" content="跟 Reel 用免費 Gemini 網頁版：輸入框左邊撳「＋」揀檔案，上載電費單相，打一句「邊項用多咗？同上期比較」撳傳送，本期、上期用電同多咗幾多度一次過列出。附真實畫面截圖（虛構樣本電費單）、可抄 Prompt，同遮個人資料、數字以帳單為準嘅提醒。" />
+  <meta name="twitter:image" content="https://jainaspp.github.io/jd-tech-landing/assets/og-share.png" />
+  <meta name="twitter:image:alt" content="JD Tech｜粵語 AI 日更 — 免費 AI 工具 3 步實測" />
+  <link rel="canonical" href="https://jainaspp.github.io/jd-tech-landing/reels/gemini-bill-upload/" />
+  <title>Gemini 3 步：電費單影相上載，即知用多咗幾多度｜JD Tech</title>
+  <link rel="stylesheet" href="../../assets/style.css" />
+  <link rel="icon" href="../../assets/favicon.ico" sizes="any" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" sizes="180x180" />
+  <style>.official-why{color:var(--muted);font-size:.85rem}.reel-steps li p{margin:.3em 0}</style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "主頁",
+          "item": "https://jainaspp.github.io/jd-tech-landing/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Reel 總目錄",
+          "item": "https://jainaspp.github.io/jd-tech-landing/reels/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Gemini 3 步：電費單影相上載，即知用多咗幾多度",
+          "item": "https://jainaspp.github.io/jd-tech-landing/reels/gemini-bill-upload/"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Gemini 3 步：電費單影相上載，即知用多咗幾多度",
+      "description": "跟 Reel 用免費 Gemini 網頁版：輸入框左邊撳「＋」揀檔案，上載電費單相，打一句「邊項用多咗？同上期比較」撳傳送，本期、上期用電同多咗幾多度一次過列出。附真實畫面截圖（虛構樣本電費單）、可抄 Prompt，同遮個人資料、數字以帳單為準嘅提醒。",
+      "url": "https://jainaspp.github.io/jd-tech-landing/reels/gemini-bill-upload/",
+      "image": "https://jainaspp.github.io/jd-tech-landing/assets/og-share.png",
+      "inLanguage": "zh-Hant-HK",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-06",
+      "author": {
+        "@type": "Organization",
+        "name": "JD Tech",
+        "sameAs": [
+          "https://www.instagram.com/rabithead1881/"
+        ],
+        "logo": "https://jainaspp.github.io/jd-tech-landing/assets/apple-touch-icon.png"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "JD Tech",
+        "sameAs": [
+          "https://www.instagram.com/rabithead1881/"
+        ],
+        "logo": "https://jainaspp.github.io/jd-tech-landing/assets/apple-touch-icon.png"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "JD Tech",
+        "url": "https://jainaspp.github.io/jd-tech-landing/"
+      },
+      "citation": [
+        "https://support.google.com/gemini/answer/14903178?hl=en",
+        "https://support.google.com/gemini/answer/13575153?hl=en",
+        "https://support.google.com/gemini/answer/13594961"
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "撳＋揀檔案",
+          "text": "gemini.google.com 輸入框左邊撳「＋」，喺彈出選單揀「檔案」，再揀電費單相上載。",
+          "url": "https://jainaspp.github.io/jd-tech-landing/reels/gemini-bill-upload/#step-1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "打問題撳傳送",
+          "text": "打「呢張電費單邊項用多咗？同上期比較，再俾我 3 個慳電方法，用廣東話答，簡短啲」，撳右下角箭咀傳送。",
+          "url": "https://jainaspp.github.io/jd-tech-landing/reels/gemini-bill-upload/#step-2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "睇用電量比較",
+          "text": "本期、上期用電同多咗幾多度一次過列出（示範：本期 512 度、上期 341 度，多咗 171 度，約 50%），下面再有 3 個慳電方法。",
+          "url": "https://jainaspp.github.io/jd-tech-landing/reels/gemini-bill-upload/#step-3"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- generated by /workspace/kol-content/reel-pages/gen.py from specs/gemini-bill-upload.json — edit the spec, not this file -->
+</head>
+<body>
+  <div class="wrap">
+    <nav class="top-nav" aria-label="導航">
+      <a href="../">← Reel 目錄</a>
+      <a href="../../">主頁</a>
+    </nav>
+
+    <header class="tut-header">
+      <div class="badge">JD Tech｜Reel 詳解</div>
+      <h1>Gemini 3 步：電費單影相上載，即知用多咗幾多度</h1>
+      <p class="sub">電費單影相上載 Gemini，即知用多咗幾多度</p>
+      <p class="updated"><time datetime="2026-10-06">最後核實：2026-10-06</time></p>
+    </header>
+
+    <article class="prose">
+      <p>跟 Reel 用免費 Gemini 網頁版：輸入框左邊撳「＋」揀檔案，上載電費單相，打一句「邊項用多咗？同上期比較」撳傳送，本期、上期用電同多咗幾多度一次過列出。附真實畫面截圖（虛構樣本電費單）、可抄 Prompt，同遮個人資料、數字以帳單為準嘅提醒。</p>
+
+      <blockquote><strong>Reel 一句講晒：</strong>電費單影相上載 Gemini，即知用多咗幾多度</blockquote>
+
+      <h2>你會學到</h2>
+      <ul>
+        <li>點樣喺 Gemini 網頁版輸入框撳「＋」上載電費單相</li>
+        <li>用一句問題叫佢同上期比較，列出多咗幾多度</li>
+        <li>點樣睇用電量比較，同逐個數字對返帳單</li>
+      </ul>
+
+      <h2>開始前準備</h2>
+      <ul>
+        <li>手機或電腦瀏覽器開 gemini.google.com，用 Google 帳戶登入（示範用免費版，畫面顯示 Gemini Flash）</li>
+        <li>電費單相：影正、影清楚「用電量比較」嗰部分</li>
+        <li>上載前遮走或裁走地址、帳戶號碼、姓名</li>
+      </ul>
+
+      <h2>3 步做法</h2>
+      <ol class="reel-steps">
+        <li id="step-1"><p><strong>撳＋揀檔案：</strong>gemini.google.com 輸入框左邊撳「＋」，喺彈出選單揀「檔案」，再揀電費單相上載。</p><p>示範用我哋自製嘅虛構樣本電費單，冇任何電力公司名稱、logo 或真實帳戶資料。</p><p>官方說明（英文版）寫法係撳 Add files → Upload files；示範畫面（窄視窗、繁體中文）選單顯示「檔案」「雲端硬碟」「Google 相片」，你畫面上嘅按鈕名稱可能略有不同。</p><figure class="reel-shot" style="margin:12px 0 4px"><img src="./step-1-plus-files.jpg" alt="Gemini 網頁版撳「＋」後彈出選單：上面一排係「檔案」「雲端硬碟」「Google 相片」，下面係製作圖像、製作音樂、Canvas、Deep Research、輔導學習；底部係「問 Gemini」輸入框" width="860" height="960" loading="lazy" decoding="async" style="display:block;width:100%;max-width:430px;height:auto;border-radius:12px;border:1px solid rgba(128,128,128,.35)" /><figcaption style="font-size:.85em;opacity:.8;margin-top:6px">真實畫面（2026-10-06 自行截圖，窄視窗）：撳「＋」後選單左上角就係「檔案」。</figcaption></figure></li>
+        <li id="step-2"><p><strong>打問題撳傳送：</strong>打「呢張電費單邊項用多咗？同上期比較，再俾我 3 個慳電方法，用廣東話答，簡短啲」，撳右下角箭咀傳送。</p><p>「同上期比較」係重點：帳單通常列咗本期、上期（甚至去年同期）用電，講明要比較，佢先會逐項列數字。</p><p>唔想要慳電貼士可以刪走後半句；想睇得清楚啲可以加「用表格列出」。</p><figure class="reel-shot" style="margin:12px 0 4px"><img src="./step-2-typed-send.jpg" alt="Gemini 輸入框：上面係虛構樣本電費單縮圖，下面已打好問題「呢張電費單邊項用多咗？同上期比較，再俾我 3 個慳電方法，用廣東話答，簡短啲」，右下角係箭咀傳送掣" width="860" height="640" loading="lazy" decoding="async" style="display:block;width:100%;max-width:430px;height:auto;border-radius:12px;border:1px solid rgba(128,128,128,.35)" /><figcaption style="font-size:.85em;opacity:.8;margin-top:6px">真實畫面（2026-10-06 自行截圖）：電費單縮圖＋問題打好，右下角係傳送掣。</figcaption></figure></li>
+        <li id="step-3"><p><strong>睇用電量比較：</strong>本期、上期用電同多咗幾多度一次過列出（示範：本期 512 度、上期 341 度，多咗 171 度，約 50%），下面再有 3 個慳電方法。</p><p>示範數字來自虛構樣本電費單。用你自己張單時，逐個度數同金額對返帳單：AI 讀相有機會睇錯數字，Gemini 畫面底亦寫明「Gemini 是 AI，可能會出錯」。</p><p>慳電方法（例如冷氣調高 1°C）係 AI 一般建議，唔係電力公司計算；實際慳幾多以之後嘅帳單為準。</p><figure class="reel-shot" style="margin:12px 0 4px"><img src="./step-3-usage-compare.jpg" alt="Gemini 回覆「用電量比較」：本期用電 512 度（每日平均 8.3 度）、上期用電 341 度（每日平均 5.6 度）、結果：本期比上期用多咗 171 度電（增加約 50%）；下面係「3 個實用慳電方法」標題" width="860" height="1087" loading="lazy" decoding="async" style="display:block;width:100%;max-width:430px;height:auto;border-radius:12px;border:1px solid rgba(128,128,128,.35)" /><figcaption style="font-size:.85em;opacity:.8;margin-top:6px">真實畫面（2026-10-06 自行截圖）：上面係上載咗嘅樣本電費單同問題，下面列出本期、上期同多咗幾多度。</figcaption></figure></li>
+      </ol>
+
+      <h2>可抄 Prompt</h2>
+      <p><strong>Reel 用嘅一句（上載電費單相之後打）</strong></p>
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>呢張電費單邊項用多咗？同上期比較，再俾我 3 個慳電方法，用廣東話答，簡短啲</pre>
+      </div>
+      <p><strong>只要比較（表格版）</strong></p>
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>睇呢張電費單，用表格列出本期、上期同去年同期用電（度數同每日平均），再計多咗或者少咗幾多度同百分比，用廣東話答。數字照帳單寫，睇唔清楚就話我知，唔好估。</pre>
+      </div>
+      <p><strong>睇收費明細</strong></p>
+      <div class="code-block">
+        <button type="button" class="copy-btn" aria-label="複製">複製</button>
+        <pre>逐項解釋呢張電費單嘅收費明細，邊項令今期貴咗？用廣東話簡短答，金額照帳單寫。</pre>
+      </div>
+
+      <h2>常見錯誤／注意事項</h2>
+      <ul>
+        <li><strong>上載前唔遮個人資料：</strong>地址、帳戶號碼、姓名先遮走或者裁走，只留用電量同收費部分。</li>
+        <li><strong>唔對帳單就信數字：</strong>AI 讀相可能睇錯，度數、金額一律以帳單為準。</li>
+        <li><strong>相影得太矇：</strong>反光、斜角或者太細字都容易讀錯；影正、影清楚「用電量比較」嗰部分。</li>
+        <li><strong>以為免費版無限用：</strong>官方說明寫明上載檔案有用量上限（一段時間後重設），想要更高上限要升級 Google AI 方案。</li>
+      </ul>
+
+      <h2>香港用戶留意</h2>
+      <p>Gemini 網頁版官方地區名單包括 Hong Kong。</p>
+
+      <h2>官方說明</h2>
+      <ul>
+        <li><a href="https://support.google.com/gemini/answer/14903178?hl=en" target="_blank" rel="noopener noreferrer">Upload &amp; analyze files in Gemini Apps（Gemini Apps Help）</a><br /><span class="official-why">官方上載檔案步驟（Add files → Upload files）同檔案上限</span></li>
+        <li><a href="https://support.google.com/gemini/answer/13575153?hl=en" target="_blank" rel="noopener noreferrer">Where you can use the Gemini web app（Gemini Apps Help）</a><br /><span class="official-why">官方地區名單（包括 Hong Kong）</span></li>
+        <li><a href="https://support.google.com/gemini/answer/13594961" target="_blank" rel="noopener noreferrer">Gemini Apps Privacy Hub（Gemini Apps Help）</a><br /><span class="official-why">官方講 Gemini 點樣處理你貼入去嘅內容同活動紀錄設定</span></li>
+      </ul>
+      <p class="updated"><time datetime="2026-10-06">最後核實：2026-10-06</time>（以上連結當日逐條打開核對；介面同額度可能更新，以官方為準）</p>
+
+      <h2>原帖</h2>
+      <p>呢則 Reel 喺 IG <a href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">@rabithead1881</a> 主頁。</p>
+    </article>
+
+    <section aria-labelledby="related-title">
+      <h2 id="related-title" class="section-title">相關頁面</h2>
+      <a class="card link-card" href="../../reels/google-ai-mode-followup/">
+        <div class="link-card-title">相關 Reel：Google AI 模式追問一句改長洲行程 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+        <div class="link-card-desc">香港人 AI 一招 · 第16集</div>
+      </a>
+      <a class="card link-card" href="../../reels/gemini-notice-3-points/">
+        <div class="link-card-title">相關 Reel：Gemini 法團通告變 3 個日期重點 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+        <div class="link-card-desc">香港人 AI 一招 · 第12集</div>
+      </a>
+      <a class="card link-card" href="../../reels/gemini-lease-pdf/">
+        <div class="link-card-title">相關 Reel：Gemini 租約 PDF 抽限期同金額 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+        <div class="link-card-desc">上載文件再逐項核對</div>
+      </a>
+      <a class="card link-card" href="../../reels/">
+        <div class="link-card-title">全部 Reel 目錄 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+        <div class="link-card-desc">其他工具 3 步實測</div>
+      </a>
+      <a class="card link-card" href="../../tools/gemini/">
+        <div class="link-card-title">Gemini｜AI 工具目錄 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+        <div class="link-card-desc">功能、價錢同官方連結</div>
+      </a>
+      <a class="card link-card" href="../../tools/">
+        <div class="link-card-title">AI 工具目錄 <span class="link-card-arrow" aria-hidden="true">→</span></div>
+        <div class="link-card-desc">免費 AI 工具一覽</div>
+      </a>
+    </section>
+
+    <div class="ending-cta">
+      <a class="btn btn-primary" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">追蹤 @rabithead1881</a>
+      <p class="ending-note">每日 07:00・12:00 粵語實測，Workflow 庫密碼喺 <a href="../../workflow/">Workflow 頁</a>。</p>
+    </div>
+
+    <p class="more-learn"><a href="../">← 返 Reel 總目錄</a></p>
+
+    <footer>
+      <nav class="footer-legal" aria-label="網站資訊">
+        <a href="../../about/">關於</a>
+        <span aria-hidden="true">·</span>
+        <a href="../../privacy/">私隱政策</a>
+        <span aria-hidden="true">·</span>
+        <a href="../../reels/">Reel 目錄</a>
+      </nav>
+      <a class="ig-handle" href="https://www.instagram.com/rabithead1881/" target="_blank" rel="noopener noreferrer">@rabithead1881</a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(text);
+        }
+        return new Promise(function (resolve, reject) {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "fixed";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            var ok = document.execCommand("copy");
+            document.body.removeChild(ta);
+            ok ? resolve() : reject(new Error("copy failed"));
+          } catch (e) {
+            document.body.removeChild(ta);
+            reject(e);
+          }
+        });
+      }
+      document.querySelectorAll(".code-block").forEach(function (block) {
+        var btn = block.querySelector(".copy-btn");
+        var pre = block.querySelector("pre");
+        if (!btn || !pre) return;
+        btn.addEventListener("click", function () {
+          copyText(pre.textContent || "").then(function () {
+            btn.textContent = "已複製";
+            btn.classList.add("copied");
+            setTimeout(function () { btn.textContent = "複製"; btn.classList.remove("copied"); }, 1600);
+          }).catch(function () {
+            btn.textContent = "失敗";
+            setTimeout(function () { btn.textContent = "複製"; }, 1600);
+          });
+        });
+      });
+    })();
+  </script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9ea0b7b1a8e14721b7368c280696dbce"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
