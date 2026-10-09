@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://jainaspp.github.io/jd-tech-landing/reels/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
@@ -441,6 +441,18 @@
   <url>
     <loc>https://jainaspp.github.io/jd-tech-landing/reels/ilovepdf-compress/</loc>
     <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jainaspp.github.io/jd-tech-landing/reels/grok-interview-intro/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jainaspp.github.io/jd-tech-landing/reels/duckai-share-chat/</loc>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
