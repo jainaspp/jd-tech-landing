@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jainaspp.github.io/jd-tech-landing/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://jainaspp.github.io/jd-tech-landing/reels/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
@@ -453,6 +453,18 @@
   <url>
     <loc>https://jainaspp.github.io/jd-tech-landing/reels/duckai-share-chat/</loc>
     <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jainaspp.github.io/jd-tech-landing/reels/hk-smart-traffic/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jainaspp.github.io/jd-tech-landing/reels/3ai-mold-clothes/</loc>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
