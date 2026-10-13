@@ -151,6 +151,10 @@
         <li>預留時間下載模型。SmolLM2 135M Instruct 嘅權重會存入呢個瀏覽器嘅 IndexedDB，第一次會慢過之後</li>
         <li>用一句短提示試。示範用英文 Haiku。135M 主要係英文細模型，廣東話長問答唔好期望佢答得穩</li>
       </ul>
+      <figure class="reel-shot">
+        <img src="./step-0-before.jpg" alt="MicroLLM lab 模型清單，未載入任何模型：頂欄寫 Loaded on this device: none，SmolLM2 135M Instruct 卡下面係 Load 掣" width="1100" height="688" loading="lazy" decoding="async" />
+        <figcaption>真實畫面（2026-10-13 自行截圖）：未撳 Load。頂欄寫 Loaded on this device: none。</figcaption>
+      </figure>
 
       <h2>可抄提示</h2>
       <p>下面係打入 Chat 之後撳 Generate 嘅示範句。Gigazine 2026-10-13 實測用過另一句改寫電郵；本集跟片，用一首 Haiku。回覆可能唔成俳句、可能中途停，唔好當成品。</p>
@@ -166,8 +170,8 @@
           <p>官方頁寫：撳 Load 之後，權重會快取喺瀏覽器私人 IndexedDB。頁面亦寫到可以 Load all models；本集只載一個就夠傾偈。</p>
           <p>未見到 Loaded 就唔好打提示。下載中斷就再撳一次 Load。</p>
           <figure class="reel-shot">
-            <img src="./step-1-load.svg" alt="預留截圖：MicroLLM lab 揀 SmolLM2 135M Instruct 撳 Load。畫面稍後補，而家係標記位。" width="860" height="480" loading="lazy" decoding="async" />
-            <figcaption>截圖稍後補。預留位：揀 SmolLM2 135M Instruct，撳 Load，等到 Loaded。呢格唔係真實畫面。</figcaption>
+            <img src="./step-1-load.jpg" alt="SmolLM2 135M Instruct 卡寫 Loaded 80.3 MB，頂欄寫已載入 80.3 MB、1 model" width="1100" height="688" loading="lazy" decoding="async" />
+            <figcaption>真實畫面（2026-10-13 自行截圖）：揀 SmolLM2 135M Instruct，撳 Load 之後卡上寫 Loaded，80.3 MB。</figcaption>
           </figure>
         </li>
         <li id="step-2">
@@ -175,8 +179,8 @@
           <p>Gigazine 2026-10-13 嘅實測同樣係喺 Chat 打提示，再撳 Generate。佢哋見到預設輸出上限可以令句子中途停。見到回覆停喺半句，就當細模型限制，唔好當佢講完。</p>
           <p>提示留喺自己部機。開發者說明用戶輸入唔會送去外部 AI 服務。</p>
           <figure class="reel-shot">
-            <img src="./step-2-generate.svg" alt="預留截圖：SmolLM2 Loaded 之後打 Haiku 提示，撳 Generate。畫面稍後補，而家係標記位。" width="860" height="480" loading="lazy" decoding="async" />
-            <figcaption>截圖稍後補。預留位：Loaded 後打示範 Haiku，撳 Generate。呢格唔係真實畫面。</figcaption>
+            <img src="./step-2-generate.jpg" alt="MicroLLM Chat 輸入框寫 Write a haiku about rain.，max new 係 128，Generate 未撳，Runtime 顯示模型未載入" width="1100" height="688" loading="lazy" decoding="async" />
+            <figcaption>真實畫面（2026-10-13 自行截圖）：Chat 打好「Write a haiku about rain.」，未撳 Generate。</figcaption>
           </figure>
         </li>
         <li id="step-3">
@@ -184,8 +188,8 @@
           <p>頁面 Runtime 可以見到 backend。如果寫 WASM 或者 JS，代表冇行到 GPU，仍然係本地計算，只係慢啲。</p>
           <p>細模型質素有限，容易幻覺。Haiku 示範唔好當文學成品，亦唔好用呢個 135M 答事實、醫療或者錢銀問題。</p>
           <figure class="reel-shot">
-            <img src="./step-3-reply.svg" alt="預留截圖：瀏覽器內本地回覆。畫面稍後補，而家係標記位。" width="860" height="480" loading="lazy" decoding="async" />
-            <figcaption>截圖稍後補。預留位：睇本地回覆。WASM／CPU 亦可，WebGPU 可選。呢格唔係真實畫面。</figcaption>
+            <img src="./step-3-reply.jpg" alt="SmolLM2 回覆一首關於雨的俳句，Runtime 寫 backend wasm、模型 smollm2-135m-instruct，Prefer WebGPU 會 fallback" width="1100" height="688" loading="lazy" decoding="async" />
+            <figcaption>真實畫面（2026-10-13 自行截圖）：瀏覽器內本地回覆。Runtime 寫 wasm；Prefer WebGPU，行唔到會 fallback。</figcaption>
           </figure>
         </li>
       </ol>
@@ -210,7 +214,7 @@
         <li><a href="https://gigazine.net/news/20261013-microllm-lab-browser-webgpu/" target="_blank" rel="noopener noreferrer">Gigazine：瀏覽器跑 MicroLLM lab（2026-10-13）</a><br /><span class="official-why">2026-10-13 20:45（日本時間）報道。實測揀 SmolLM2 135M Instruct，Chat 打提示後撳 Generate；無 WebGPU 會用 WebAssembly 或 JavaScript 喺 CPU 跑。輸入唔送去外部 AI 服務</span></li>
         <li><a href="https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct" target="_blank" rel="noopener noreferrer">HuggingFaceTB/SmolLM2-135M-Instruct</a><br /><span class="official-why">本集載入嘅模型卡。135M 係細模型，唔好用嚟頂替大型聊天機械人</span></li>
       </ul>
-      <p class="updated"><time datetime="2026-10-13">最後核實：2026-10-13</time>（實驗室頁同 Gigazine 當日打開。逐步畫面未放入呢頁，預留位標明「截圖稍後補」。介面可能更新，以官方頁為準）</p>
+      <p class="updated"><time datetime="2026-10-13">最後核實：2026-10-13</time>（實驗室頁同 Gigazine 當日打開。逐步畫面係 2026-10-13 自行截圖。介面可能更新，以官方頁為準）</p>
 
       <h2>原帖</h2>
       <p>2026-10-14 12:00 先出街。IG 連結未有，而家跟上面 3 步做就得。</p>
