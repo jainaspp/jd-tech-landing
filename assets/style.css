@@ -963,3 +963,36 @@ textarea:focus-visible {
 input,
 select,
 textarea { font-size: 16px; }
+
+/* Soft Bridge P0 「新聞背景」. Rollback: delete this block with assets/news-context.js. */
+.news-context {
+  margin-top: 22px;
+  padding: 14px 14px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+}
+.news-context-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.news-context-cta {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.news-context-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+.news-context-link:hover { text-decoration: underline; }
