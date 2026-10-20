@@ -996,3 +996,28 @@ textarea { font-size: 16px; }
   text-decoration: none;
 }
 .news-context-link:hover { text-decoration: underline; }
+
+/* Soft Bridge receipt bar. Rollback: delete this block with assets/receipt-bar.js. */
+.receipt-bar {
+  margin: 2px 0 14px;
+  padding: 10px 12px 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+}
+.receipt-bar-line {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+.receipt-bar-return {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+.receipt-bar-return:hover { text-decoration: underline; }
