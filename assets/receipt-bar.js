@@ -15,7 +15,7 @@
  * a new utm_campaign name.
  */
 (function () {
-  var LINE = "你由世界頭條《LlamaParse 分產品 MCP…》過來｜教學頁，非新聞正文。";
+  var LINE = "你由文明編年史《LlamaParse 分產品 MCP…》過來｜教學頁，非新聞正文。";
   var RETURN_LABEL = "← 返回懶人包";
   var RETURN_HREF = "https://world-news.xyz/explainer/2026-10-19-llamaparse-per-product-mcp-c15c091b4276/?utm_source=jdtech&utm_medium=referral&utm_campaign=companion&utm_content=receipt-bar&utm_term=llamaparse";
 
