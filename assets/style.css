@@ -765,6 +765,10 @@ footer {
   font-size: 0.75rem;
 }
 .reel-date { color: var(--muted); }
+.reel-pending {
+  color: var(--muted);
+  font-weight: 700;
+}
 .reel-ig, .reel-learn {
   color: var(--accent);
   text-decoration: none;
@@ -885,7 +889,8 @@ a, button, input, label, .copy-btn, .pack-card, .card {
   justify-content: center;
 }
 .reel-ig,
-.reel-learn {
+.reel-learn,
+.reel-entry-meta .reel-pending {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
