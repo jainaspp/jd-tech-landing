@@ -92,7 +92,9 @@
     .see-all:focus-visible,
     .tut-chips a:focus-visible,
     .home-tool:focus-visible,
-    .pack-card:focus-visible {
+    .pack-card:focus-visible,
+    .caption-draft summary:focus-visible,
+    .caption-draft .copy-btn:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 2px;
     }
@@ -198,6 +200,61 @@
       font-size: 0.88rem;
       font-weight: 700;
     }
+
+    /* Operator helper: paste-ready IG sticky caption. Collapsed by default.
+       Source: docs/ig-prompt-pack-sticky.md. Human copy only. */
+    .caption-draft {
+      margin-top: 12px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg-card);
+      text-align: left;
+    }
+    .caption-draft summary {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 10px 14px;
+      cursor: pointer;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--muted);
+      list-style: none;
+    }
+    .caption-draft summary::-webkit-details-marker { display: none; }
+    .caption-draft summary::marker { content: ""; }
+    .caption-draft summary::before {
+      content: "▸";
+      color: var(--accent);
+      font-size: 0.8rem;
+      line-height: 1;
+    }
+    .caption-draft[open] summary {
+      color: var(--accent);
+    }
+    .caption-draft[open] summary::before { content: "▾"; }
+    .caption-draft-body {
+      padding: 0 14px 14px;
+    }
+    .caption-draft-note,
+    .caption-draft-label {
+      font-size: 0.8125rem;
+      line-height: 1.5;
+    }
+    .caption-draft-note {
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .caption-draft-label {
+      color: var(--text);
+      font-weight: 700;
+      margin: 0 0 6px;
+    }
+    .caption-draft .code-block {
+      margin: 0 0 14px;
+    }
+    .caption-draft .code-block:last-child { margin-bottom: 0; }
 
     .home-tool {
       display: flex;
@@ -351,6 +408,24 @@
         <span class="pack-price">HK$10.40</span>
       </a>
       <p class="section-note pack-trial"><a href="https://jainaspark4.gumroad.com/l/jd-tech-hk-ai-prompt-free" target="_blank" rel="noopener">想先試？免費試用版（6 條）→</a></p>
+      <details class="caption-draft">
+        <summary>貼文草稿</summary>
+        <div class="caption-draft-body">
+          <p class="caption-draft-note">人手抄去 IG 限動精選或置頂留言。下面係可直接貼上嘅文字。呢頁只係俾你複製，唔會自動發帖，唔會打去 Instagram，亦唔會改 bio。</p>
+          <p class="caption-draft-label">Sticky</p>
+          <div class="code-block">
+            <button type="button" class="copy-btn" aria-label="複製 sticky 貼文">複製</button>
+            <pre>104 條香港實戰 prompt，HK$10.40。每條有示範同改良貼士。
+https://jainaspark4.gumroad.com/l/jd-tech-hk-ai-prompt-pack?utm_source=instagram&amp;utm_medium=social&amp;utm_campaign=promptpack&amp;utm_content=sticky</pre>
+          </div>
+          <p class="caption-draft-label">想先試（可選，第二行）</p>
+          <div class="code-block">
+            <button type="button" class="copy-btn" aria-label="複製試用貼文">複製</button>
+            <pre>想先試？免費 6 條 →
+https://jainaspark4.gumroad.com/l/jd-tech-hk-ai-prompt-free?utm_source=instagram&amp;utm_medium=social&amp;utm_campaign=promptpack&amp;utm_content=sticky-trial</pre>
+          </div>
+        </div>
+      </details>
     </section>
 
     <section id="tools" aria-labelledby="tools-title">
@@ -426,6 +501,52 @@
       </a>
     </footer>
   </div>
+  <script>
+    (function () {
+      var root = document.querySelector(".caption-draft");
+      if (!root) return;
+      function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(text);
+        }
+        return new Promise(function (resolve, reject) {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "fixed";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            var ok = document.execCommand("copy");
+            document.body.removeChild(ta);
+            ok ? resolve() : reject(new Error("copy failed"));
+          } catch (e) {
+            document.body.removeChild(ta);
+            reject(e);
+          }
+        });
+      }
+      root.querySelectorAll(".code-block").forEach(function (block) {
+        var btn = block.querySelector(".copy-btn");
+        var pre = block.querySelector("pre");
+        if (!btn || !pre) return;
+        btn.addEventListener("click", function () {
+          copyText(pre.textContent || "").then(function () {
+            btn.textContent = "已複製";
+            btn.classList.add("copied");
+            setTimeout(function () {
+              btn.textContent = "複製";
+              btn.classList.remove("copied");
+            }, 1600);
+          }).catch(function () {
+            btn.textContent = "失敗";
+            setTimeout(function () { btn.textContent = "複製"; }, 1600);
+          });
+        });
+      });
+    })();
+  </script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9ea0b7b1a8e14721b7368c280696dbce"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
