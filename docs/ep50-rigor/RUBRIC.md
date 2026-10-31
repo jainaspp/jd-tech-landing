@@ -7,7 +7,7 @@
 ## 評分維度（每項 0–10）
 
 | ID | 維度 | 10 分標準 | Critical 觸發（該項直接一票否決） |
-    10||---|---|---|---|
+|---|---|---|---|
 | R1 | 事實嚴謹 | 每句功能／免費／地區／步驟有可核對依據；無誇大 | 無來源嘅硬事實；教 VPN；假「官方支援香港」 |
 | R2 | 示範一致 | 畫面步驟＝caption／cover 承諾；掣名 verbatim | 畫面做唔到 caption 所講；假 UI |
 | R3 | 封面誠實 | 大字得益＝片內結果；唔掛羊頭 | 封面承諾結果片內冇出現 |
@@ -17,7 +17,7 @@
 | R7 | 合規／字形 | 繁體為主；簡體風險有披露同緩解 | 公開 caption 簡體／日文 HARD；Pip 混入 |
 | R8 | 可傳性／場景 | 港場景＋即用結果；intent 清楚 | — |
 
-    20|## 輸出格式（必須）
+## 輸出格式（必須）
 
 1. 總評：**PASS** 或 **FAIL（退回）**
 2. 每維度：分數／一句理由／證據（檔名或畫面描述）
@@ -27,7 +27,7 @@
 
 唔好因為「已經 APPROVED／已發佈」就放水——今次係檢驗閘試行。
 
-    30|---
+---
 
 ## v1 補：R9 吸引力（2026-10-19 · PP O「冇人睇有用？」）
 
@@ -37,7 +37,7 @@
 
 評分要問：
 1. 0–2s 有冇即時結果或痛點衝突？
-    40|2. 封面大字陌生人 1 秒明唔明「睇完攞到咩」？
+2. 封面大字陌生人 1 秒明唔明「睇完攞到咩」？
 3. 完結 CTA／結果卡有冇令想跟住做／傳？
 4. 會唔會滑走（填料開場、無場景、無結果）？
 
@@ -47,7 +47,7 @@
 
 ---
 
-    50|## 未達標 → 重做（2026-10-19 · PP O）
+## 未達標 → 重做（2026-10-19 · PP O）
 
 `rigor_PASS? = NO`（均分＜8／R9＜8／Critical＞0／多數 FAIL）→ **整則重做**（題材可留，封面／步驟／文案／成片重出），**禁止**：
 - 用「小改 caption」頂住發佈
@@ -57,14 +57,14 @@
 重做後必須重新跑三 model 閘；過全 8 先准 noon Share。
 
 ---
-    60|
+
 ## v2 補：R10 劃位／safe zone（2026-10-21 · PP O「劃錯晒仍出到」）
 
 | ID | 維度 | 10 分標準 | Critical |
 |---|---|---|---|
-| R10 | 劃位／safe | 文字卡＋shot 落喺 spec v1.1 SAFE；箭／圈／高亮指中目標；無 half_cut；UI 字 ≥22px @1080 | **Critical**：`reel_qa` 任一 `half_cut`／明顯錯指／文字卡越界；或 Art 人眼確認劃位錯。**Share 硬規則：見雙閘 v1.4**——`layout_PASS` 要 0 FAIL＋gates／ring／tip＋排版簽＋Art「圈心＝掣心」；qa status 可 WARN（須 LAYOUT-SIGNOFF 人眼 OK）。禁止 FAIL 人眼放水。 |
+| R10 | 劃位／safe | 文字卡＋shot 落喺 spec v1.1 SAFE；箭咀／圈／高亮指中目標；無 half_cut；UI 字 ≥22px @1080 | **Critical**：`reel_qa` 任一 `half_cut`／明顯錯指／文字卡越界；或 Art 人眼確認劃位錯。**Share 硬規則：見雙閘 v1.4**——`layout_PASS` 要 0 FAIL＋gates／ring／tip＋排版簽＋Art「圈心＝掣心」；qa status 可 WARN（須 LAYOUT-SIGNOFF 人眼 OK）。禁止 FAIL 人眼放水。 |
 
 **雙閘：** `rigor_PASS`（R1–R9，三大 model）**且** `layout_PASS` 先准 noon Share。
 
 ### layout_PASS v1.1（2026-10-21 GM）
-    70|`_qa` **0 FAIL**（status=PASS 或 WARN＋LAYOUT-SIGNOFF 人眼 OK）＋ gates VERDICT PASS ＋ **ring_on_target／tip≤40** ＋ **排版 LAYOUT-SIGNOFF** ＋ Art「**圈心＝掣心 PASS**」。禁止 FAIL 人眼放水。詳見 SHARE-DUAL-GATE v1.4。
+`_qa` **0 FAIL**（status=PASS 或 WARN＋LAYOUT-SIGNOFF 人眼 OK）＋ gates VERDICT PASS ＋ **ring_on_target／tip≤40** ＋ **排版 LAYOUT-SIGNOFF** ＋ Art「**圈心＝掣心 PASS**」。禁止 FAIL 人眼放水。詳見 SHARE-DUAL-GATE v1.4。
